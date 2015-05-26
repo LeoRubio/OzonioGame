@@ -18,8 +18,8 @@ class OGSun: SKSpriteNode {
         super.init(texture: texture, color: UIColor.clearColor(), size: texture.size())
         name = "SUN"
  
-        self.size.height /= 8
-        self.size.width /= 8
+        self.size.height /= 3
+        self.size.width /= 3
         
         //adding sunFire
         let sunFirePath = NSBundle.mainBundle().pathForResource("fireSun", ofType: "sks")

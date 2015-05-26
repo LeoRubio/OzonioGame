@@ -12,6 +12,8 @@ import SpriteKit
 var backgroundNode : OGBackground?
 var planetNode : OGPlanet?
 var sunNode : OGSun?
+var factoryNode : OGFactory?
+var moleculeNode : OGMolecule?
 
 
 class GameScene: SKScene {
@@ -29,7 +31,7 @@ class GameScene: SKScene {
         backgroundNode!.position = CGPoint(x: size.width / 2.0, y: 0.0)
         addChild(backgroundNode!)
         
-        // adding the planet
+        // adding the planet (com camadas de ozonio e fabricas -> moleculas)
         planetNode = OGPlanet()
         planetNode!.position = CGPoint (x: size.width/2, y: 0.0)
         addChild(planetNode!)
