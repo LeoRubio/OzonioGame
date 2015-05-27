@@ -15,16 +15,20 @@ class OGMolecule: SKSpriteNode {
         let texture = SKTexture(imageNamed: "BlackCircle")
         super.init(texture: texture, color: UIColor.clearColor(), size: texture.size())
         name = "MOLECULE"
-        //        self.size.width *= 1.5
-        //        self.size.height *= 1.5
+                self.size.width *= 0.5
+                self.size.height *= 0.5
         self.physicsBody = SKPhysicsBody (circleOfRadius: self.size.width / 2)
-        
-        self.physicsBody!.affectedByGravity = false
-        self.physicsBody!.applyForce(CGVector(dx: 0.0, dy: 10.0))
+
+    }
+    
+    func update(){
+        self.physicsBody!.applyForce(CGVectorMake(0.0, 1.0))
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    
     
 }

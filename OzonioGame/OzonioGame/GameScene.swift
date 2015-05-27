@@ -12,8 +12,7 @@ import SpriteKit
 var backgroundNode : OGBackground?
 var planetNode : OGPlanet?
 var sunNode : OGSun?
-var factoryNode : OGFactory?
-var moleculeNode : OGMolecule?
+
 
 
 class GameScene: SKScene {
@@ -25,6 +24,9 @@ class GameScene: SKScene {
     override init(size: CGSize) {
         
         super.init(size: size)
+        
+        //gravity
+        physicsWorld.gravity = CGVectorMake(0.0, -0.1)
         
         // adding the background
         backgroundNode = OGBackground()
@@ -46,20 +48,11 @@ class GameScene: SKScene {
         let rotate = SKAction.rotateByAngle(1, duration: 10)
         planetNode!.runAction(SKAction.repeatActionForever(rotate))
         
-        
-  
-        
-
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+    }
+    
+    override func update(currentTime: NSTimeInterval) {
+        super.update(currentTime)
+        planetNode!.update()
         
     }
 }

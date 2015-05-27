@@ -9,6 +9,10 @@
 import UIKit
 import SpriteKit
 
+
+var factoryNode : OGFactory?
+
+
 class OGPlanet : SKSpriteNode {
     
     init(){
@@ -22,7 +26,11 @@ class OGPlanet : SKSpriteNode {
         createOzoneLayer("ozonio-01")
         createOzoneLayer("ozonio-02")
         createOzoneLayer("ozonio-03")
-        createFactorys("BlackSquare")
+        for var i : CGFloat = 0.0; i<20.0; i++
+        {
+            createFactorys("BlackSquare", positionFactor: CGPointMake(10.0*i, 10.0*i))
+        }
+        
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -41,15 +49,16 @@ class OGPlanet : SKSpriteNode {
     }
     
     
-    func createFactorys(imageName: String){
+    func createFactorys(imageName: String, positionFactor: CGPoint){
         
-        let factoryNode : OGFactory?
-        
-        let texture = SKTexture(imageNamed: imageName)
-        
-        factoryNode = OGFactory(texture: texture, position: CGPoint (x: 0.0, y: 200.0))
-//        factoryNode!.position = CGPoint(x: 0.0, y: 200.0)
+        factoryNode = OGFactory(texture: texture!, position: CGPoint (x: 0.0, y: 200.0))
         self.addChild(factoryNode!)
+    }
+    
+    func update(){
+        
+        factoryNode?.update()
+        
     }
     
 }

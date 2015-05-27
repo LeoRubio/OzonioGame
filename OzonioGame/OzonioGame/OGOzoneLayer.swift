@@ -19,6 +19,11 @@ class OGOzoneLayer: SKSpriteNode {
         self.size.height *= 1.5
     }
     
+    
+    func update(){
+        
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
