@@ -10,7 +10,7 @@ import UIKit
 import SpriteKit
 
 
-var factoryNode : OGFactory?
+
 
 
 class OGPlanet : SKSpriteNode {
@@ -51,13 +51,23 @@ class OGPlanet : SKSpriteNode {
     
     func createFactorys(imageName: String, positionFactor: CGPoint){
         
-        factoryNode = OGFactory(texture: texture!, position: CGPoint (x: 0.0, y: 200.0))
-        self.addChild(factoryNode!)
+        let factoryNode = OGFactory(texture: texture!, position: positionFactor)
+        self.addChild(factoryNode)
     }
     
     func update(){
         
-        factoryNode?.update()
+        self.enumerateChildNodesWithName("FACTORY") {
+            node, stop in
+            
+            // CHAMA O UPDATE DE TODOS OS FILHOS FACTORY
+            var factoryAux : OGFactory?
+            factoryAux = node as? OGFactory
+            factoryAux?.update()
+            
+            //stop.memory = true
+            
+        }
         
     }
     

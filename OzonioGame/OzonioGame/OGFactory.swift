@@ -10,7 +10,6 @@ import UIKit
 import SpriteKit
 
 
-var molecule = OGMolecule()
 
 class OGFactory: SKSpriteNode {
     init(texture: SKTexture, position: CGPoint){
@@ -35,14 +34,24 @@ class OGFactory: SKSpriteNode {
     
     func spawnMolecule(){
             
-        
+        let molecule = OGMolecule()
         molecule.position = CGPoint(x: 0.0, y: 200.0)
         addChild(molecule)
         
     }
     
     func update(){
-        molecule.update()
+        self.enumerateChildNodesWithName("MOLECULE") {
+            node, stop in
+            
+            // CHAMA O UPDATE DE TODOS OS FILHOS MOLECULA
+            var moleculeAux : OGMolecule?
+            moleculeAux = node as? OGMolecule
+            moleculeAux?.update()
+            
+//            stop.memory = true
+            
+        }
         
     }
 }
