@@ -12,6 +12,7 @@ import SpriteKit
 var backgroundNode : OGBackground?
 var planetNode : OGPlanet?
 var sunNode : OGSun?
+var scoreTextNode: OGLabel?
 
 
 
@@ -42,6 +43,16 @@ class GameScene: SKScene {
         sunNode = OGSun()
         sunNode!.position = CGPoint (x: size.width/2, y: size.height)
         addChild(sunNode!)
+        
+        // adding score
+        scoreTextNode = OGLabel(nome: "SCORE")
+        scoreTextNode!.position = CGPointMake(size.width - 760, size.height - 20)
+        addChild(scoreTextNode!)
+        
+        // adding years counting
+        scoreTextNode = OGLabel(nome: "YEARS")
+        scoreTextNode!.position = CGPointMake(size.width - 760, size.height - 40)
+        addChild(scoreTextNode!)
         
         
         //açao de girar Terra e Camadas

@@ -23,13 +23,9 @@ class OGPlanet : SKSpriteNode {
         self.size.width *= 1.5
         self.size.height *= 1.5
         
-        createOzoneLayer("ozonio-01")
-        createOzoneLayer("ozonio-02")
-        createOzoneLayer("ozonio-03")
-        for var i : CGFloat = 0.0; i<5.0; i++
-        {
-            createFactory("BlackSquare", positionFactory: CGPointMake(50.0*(i/2), 100.0*i))
-        }
+
+        createObjects()
+
         
     }
 
@@ -69,6 +65,34 @@ class OGPlanet : SKSpriteNode {
             
         }
         
+    }
+    
+    func createObjects(){
+        
+        
+        createOzoneLayer("ozonio-01")
+        createOzoneLayer("ozonio-02")
+        createOzoneLayer("ozonio-03")
+        
+        createFactorys("BlackSquare", positionFactor: CGPointMake(randomNum(), randomNum()))
+        createFactorys("BlackSquare", positionFactor: CGPointMake(randomNum(), randomNum()))
+        createFactorys("BlackSquare", positionFactor: CGPointMake(randomNum(), randomNum()))
+        createFactorys("BlackSquare", positionFactor: CGPointMake(randomNum(), randomNum()))
+        createFactorys("BlackSquare", positionFactor: CGPointMake(randomNum(), randomNum()))
+        createFactorys("BlackSquare", positionFactor: CGPointMake(randomNum(), randomNum()))
+        createFactorys("BlackSquare", positionFactor: CGPointMake(randomNum(), randomNum()))
+        createFactorys("BlackSquare", positionFactor: CGPointMake(randomNum(), randomNum()))
+        
+        
+    }
+    
+    
+    func randomNum() -> CGFloat{
+        var random = CGFloat(arc4random_uniform(520))
+        if random > 260 {
+            random = (random - 260) * -1
+        }
+        return random
     }
     
 }
