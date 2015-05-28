@@ -21,10 +21,10 @@ class OGFactory: SKSpriteNode {
         self.position.x = position.x
         self.position.y = position.y
         
-        let createMolecule = SKAction.sequence([SKAction.runBlock({
-            self.spawnMolecule() }),
-            SKAction.waitForDuration(1)])
-        runAction(createMolecule)
+        //Action de criação de moleculas
+        runAction(SKAction.repeatActionForever(SKAction.sequence([SKAction.runBlock({self.spawnMolecule()}), SKAction.waitForDuration(1.0)])))
+        
+        //runAction(createMolecule)
         
     }
 

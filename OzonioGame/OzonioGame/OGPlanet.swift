@@ -26,9 +26,9 @@ class OGPlanet : SKSpriteNode {
         createOzoneLayer("ozonio-01")
         createOzoneLayer("ozonio-02")
         createOzoneLayer("ozonio-03")
-        for var i : CGFloat = 0.0; i<20.0; i++
+        for var i : CGFloat = 0.0; i<100.0; i++
         {
-            createFactorys("BlackSquare", positionFactor: CGPointMake(10.0*i, 10.0*i))
+            createFactorys("BlackSquare", positionFactor: CGPointMake(50.0*(i/2), 100.0*i))
         }
         
     }
