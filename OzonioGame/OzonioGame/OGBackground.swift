@@ -9,7 +9,7 @@
 import UIKit
 import SpriteKit
 
-class OGBackground: SKSpriteNode {
+class OGBackground : SKSpriteNode {
     
     init (){
         

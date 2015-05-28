@@ -11,20 +11,15 @@ import SpriteKit
 
 
 
-class OGFactory: SKSpriteNode {
-    init(texture: SKTexture, position: CGPoint){
+class OGFactory : OGHideRequired {
+    init(imageNamed imageName:String){
         
-        let texture = SKTexture(imageNamed: "BlackSquare")
+        let color = UIColor.clearColor()
+        let texture = SKTexture(imageNamed: imageName)
+        let size = texture.size()
+        
         super.init(texture: texture, color: UIColor.clearColor(), size: texture.size())
-        name = "FACTORY"
-
-        self.position.x = position.x
-        self.position.y = position.y
         
-        //Action de criação de moleculas
-        runAction(SKAction.repeatActionForever(SKAction.sequence([SKAction.runBlock({self.spawnMolecule()}), SKAction.waitForDuration(1.0)])))
-        
-        //runAction(createMolecule)
         
     }
 
@@ -33,25 +28,15 @@ class OGFactory: SKSpriteNode {
     }
     
     func spawnMolecule(){
-            
-        let molecule = OGMolecule()
-        molecule.position = CGPoint(x: 0.0, y: 200.0)
-        addChild(molecule)
+        
+        fatalError("MUST OVERRIDE THIS FUNCTION")
         
     }
     
     func update(){
-        self.enumerateChildNodesWithName("MOLECULE") {
-            node, stop in
-            
-            // CHAMA O UPDATE DE TODOS OS FILHOS MOLECULA
-            var moleculeAux : OGMolecule?
-            moleculeAux = node as? OGMolecule
-            moleculeAux?.update()
-            
-//            stop.memory = true
-            
-        }
+        
+        fatalError("MUST OVERRIDE THIS FUNCTION")
         
     }
+    
 }
