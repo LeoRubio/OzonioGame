@@ -49,6 +49,9 @@ class OGPlanet : SKSpriteNode {
         
         let factoryNode = OGCarbonFactory(factoryPosition: positionFactory)
         self.addChild(factoryNode)
+        
+        let factoryNitrousNode = OGNitrousFactory(factoryPosition: positionFactory)
+        self.addChild(factoryNitrousNode)
     }
     
     func update(){
@@ -65,6 +68,18 @@ class OGPlanet : SKSpriteNode {
             
         }
         
+        self.enumerateChildNodesWithName("NITROUSFACTORY") {
+            node, stop in
+            
+            // CHAMA O UPDATE DE TODOS OS FILHOS NITROUS FACTORY
+            var factoryAux : OGNitrousFactory?
+            factoryAux = node as? OGNitrousFactory
+            factoryAux?.update()
+            
+            //stop.memory = true
+            
+        }
+        
     }
     
     func createObjects(){
@@ -74,14 +89,14 @@ class OGPlanet : SKSpriteNode {
         createOzoneLayer("ozonio-02")
         createOzoneLayer("ozonio-03")
         
-        createFactorys("BlackSquare", positionFactor: CGPointMake(randomNum(), randomNum()))
-        createFactorys("BlackSquare", positionFactor: CGPointMake(randomNum(), randomNum()))
-        createFactorys("BlackSquare", positionFactor: CGPointMake(randomNum(), randomNum()))
-        createFactorys("BlackSquare", positionFactor: CGPointMake(randomNum(), randomNum()))
-        createFactorys("BlackSquare", positionFactor: CGPointMake(randomNum(), randomNum()))
-        createFactorys("BlackSquare", positionFactor: CGPointMake(randomNum(), randomNum()))
-        createFactorys("BlackSquare", positionFactor: CGPointMake(randomNum(), randomNum()))
-        createFactorys("BlackSquare", positionFactor: CGPointMake(randomNum(), randomNum()))
+        createFactory("BlackSquare", positionFactory: CGPointMake(randomNum(), randomNum()))
+        createFactory("BlackSquare", positionFactory: CGPointMake(randomNum(), randomNum()))
+        createFactory("BlackSquare", positionFactory: CGPointMake(randomNum(), randomNum()))
+        createFactory("BlackSquare", positionFactory: CGPointMake(randomNum(), randomNum()))
+        createFactory("BlackSquare", positionFactory: CGPointMake(randomNum(), randomNum()))
+        createFactory("BlackSquare", positionFactory: CGPointMake(randomNum(), randomNum()))
+        createFactory("BlackSquare", positionFactory: CGPointMake(randomNum(), randomNum()))
+        createFactory("BlackSquare", positionFactory: CGPointMake(randomNum(), randomNum()))
         
         
     }

@@ -16,7 +16,7 @@ class OGSun : SKSpriteNode {
         var sunFire : SKEmitterNode?
         
         super.init(texture: texture, color: UIColor.clearColor(), size: texture.size())
-        name = "SUN"
+        self.name = "SUN"
  
         self.size.height /= 3
         self.size.width /= 3
