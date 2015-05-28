@@ -23,7 +23,9 @@ class OGPlanet : SKSpriteNode {
         self.size.width *= 1.5
         self.size.height *= 1.5
         
+
         createObjects()
+
         
     }
 
@@ -43,20 +45,20 @@ class OGPlanet : SKSpriteNode {
     }
     
     
-    func createFactorys(imageName: String, positionFactor: CGPoint){
+    func createFactory(imageName: String, positionFactory: CGPoint){
         
-        let factoryNode = OGFactory(texture: texture!, position: positionFactor)
+        let factoryNode = OGCarbonFactory(factoryPosition: positionFactory)
         self.addChild(factoryNode)
     }
     
     func update(){
         
-        self.enumerateChildNodesWithName("FACTORY") {
+        self.enumerateChildNodesWithName("CARBONFACTORY") {
             node, stop in
             
-            // CHAMA O UPDATE DE TODOS OS FILHOS FACTORY
-            var factoryAux : OGFactory?
-            factoryAux = node as? OGFactory
+            // CHAMA O UPDATE DE TODOS OS FILHOS CARBON FACTORY
+            var factoryAux : OGCarbonFactory?
+            factoryAux = node as? OGCarbonFactory
             factoryAux?.update()
             
             //stop.memory = true
