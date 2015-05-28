@@ -9,7 +9,7 @@
 import UIKit
 import SpriteKit
 
-class OGSun: SKSpriteNode {
+class OGSun : SKSpriteNode {
     
     init () {
         let texture = SKTexture (imageNamed: "sol")
