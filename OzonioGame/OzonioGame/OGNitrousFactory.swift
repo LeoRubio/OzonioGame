@@ -23,14 +23,14 @@ class OGNitrousFactory: OGFactory {
         self.size.width *= 1.5
         
         //Action de criação de moleculas
-        runAction(SKAction.repeatActionForever(SKAction.sequence([SKAction.runBlock({self.spawnMolecule()}), SKAction.waitForDuration(4.0)])))
+        runAction(SKAction.repeatActionForever(SKAction.sequence([SKAction.runBlock({self.spawnMolecule()}), SKAction.waitForDuration(8.0)])))
     }
 
     override func spawnMolecule(){
         
         let molecule = OGNitrous()
-        molecule.position = CGPoint(x: 0.0, y: 200.0)
-        addChild(molecule)
+        molecule.position = CGPoint(x: 0.0, y: 0.0)
+        super.addChild(molecule)
         
     }
     
