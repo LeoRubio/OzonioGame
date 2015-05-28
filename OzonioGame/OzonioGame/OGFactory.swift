@@ -12,6 +12,7 @@ import SpriteKit
 
 
 class OGFactory : OGHideRequired {
+    
     init(imageNamed imageName:String){
         
         let color = UIColor.clearColor()
