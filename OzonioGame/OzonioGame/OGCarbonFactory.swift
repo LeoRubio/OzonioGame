@@ -21,14 +21,14 @@ class OGCarbonFactory: OGFactory {
         self.position.y = position.y
         
         //Action de criação de moleculas
-        runAction(SKAction.repeatActionForever(SKAction.sequence([SKAction.runBlock({self.spawnMolecule()}), SKAction.waitForDuration(1.0)])))
+        runAction(SKAction.repeatActionForever(SKAction.sequence([SKAction.runBlock({self.spawnMolecule()}), SKAction.waitForDuration(2.0)])))
     }
     
     override func spawnMolecule(){
         
         let molecule = OGCarbon()
-        molecule.position = CGPoint(x: 0.0, y: 200.0)
-        addChild(molecule)
+        molecule.position = CGPoint(x: 0.0, y: 0.0)
+        super.addChild(molecule)
         
     }
     
