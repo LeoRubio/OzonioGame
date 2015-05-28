@@ -9,12 +9,12 @@
 import UIKit
 import SpriteKit
 
-class OGOzoneLayer: SKSpriteNode {
+class OGOzoneLayer : SKSpriteNode {
    
     init( texture: SKTexture ){
         
         super.init(texture: texture, color: UIColor.clearColor(), size: texture.size())
-        name = "OZONE_LAYERS"
+        name = "OZONELAYER"
         self.size.width *= 1.5
         self.size.height *= 1.5
     }
