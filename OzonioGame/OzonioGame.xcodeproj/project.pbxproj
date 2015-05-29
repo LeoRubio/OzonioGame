@@ -12,6 +12,8 @@
 		549B57401B1798EB00766AF7 /* OGNitrous.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549B573F1B1798EB00766AF7 /* OGNitrous.swift */; };
 		549B57431B179D9300766AF7 /* OGCarbonFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549B57421B179D9300766AF7 /* OGCarbonFactory.swift */; };
 		549B57461B17ACEE00766AF7 /* OGNitrousFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549B57451B17ACEE00766AF7 /* OGNitrousFactory.swift */; };
+		549B57491B17EDE700766AF7 /* OGNitric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549B57481B17EDE700766AF7 /* OGNitric.swift */; };
+		549B574B1B17EEFA00766AF7 /* OGNitricFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549B574A1B17EEFA00766AF7 /* OGNitricFactory.swift */; };
 		A073E8FF1B179D4100286508 /* OGLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A073E8FE1B179D4100286508 /* OGLabel.swift */; };
 		E242CC401B150848000E5A1C /* OGFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242CC3F1B150847000E5A1C /* OGFactory.swift */; };
 		E242CC421B15085C000E5A1C /* OGMolecule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242CC411B15085C000E5A1C /* OGMolecule.swift */; };
@@ -46,6 +48,8 @@
 		549B573F1B1798EB00766AF7 /* OGNitrous.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGNitrous.swift; sourceTree = "<group>"; };
 		549B57421B179D9300766AF7 /* OGCarbonFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGCarbonFactory.swift; sourceTree = "<group>"; };
 		549B57451B17ACEE00766AF7 /* OGNitrousFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGNitrousFactory.swift; sourceTree = "<group>"; };
+		549B57481B17EDE700766AF7 /* OGNitric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGNitric.swift; sourceTree = "<group>"; };
+		549B574A1B17EEFA00766AF7 /* OGNitricFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGNitricFactory.swift; sourceTree = "<group>"; };
 		A073E8FE1B179D4100286508 /* OGLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OGLabel.swift; path = ../OGLabel.swift; sourceTree = "<group>"; };
 		E242CC3F1B150847000E5A1C /* OGFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGFactory.swift; sourceTree = "<group>"; };
 		E242CC411B15085C000E5A1C /* OGMolecule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGMolecule.swift; sourceTree = "<group>"; };
@@ -92,6 +96,7 @@
 				E242CC411B15085C000E5A1C /* OGMolecule.swift */,
 				549B573B1B178F8E00766AF7 /* OGCarbon.swift */,
 				549B573F1B1798EB00766AF7 /* OGNitrous.swift */,
+				549B57481B17EDE700766AF7 /* OGNitric.swift */,
 			);
 			name = Molecule;
 			sourceTree = "<group>";
@@ -102,6 +107,7 @@
 				E242CC3F1B150847000E5A1C /* OGFactory.swift */,
 				549B57421B179D9300766AF7 /* OGCarbonFactory.swift */,
 				549B57451B17ACEE00766AF7 /* OGNitrousFactory.swift */,
+				549B574A1B17EEFA00766AF7 /* OGNitricFactory.swift */,
 			);
 			name = Factory;
 			sourceTree = "<group>";
@@ -307,12 +313,14 @@
 				E29194F21B13A459005BB643 /* OGOzoneLayer.swift in Sources */,
 				E242CC421B15085C000E5A1C /* OGMolecule.swift in Sources */,
 				E28883141B0E4E4900FE0C8C /* GameScene.swift in Sources */,
+				549B57491B17EDE700766AF7 /* OGNitric.swift in Sources */,
 				549B57461B17ACEE00766AF7 /* OGNitrousFactory.swift in Sources */,
 				A073E8FF1B179D4100286508 /* OGLabel.swift in Sources */,
 				549B573C1B178F8E00766AF7 /* OGCarbon.swift in Sources */,
 				E28883161B0E4E4900FE0C8C /* GameViewController.swift in Sources */,
 				549B573E1B1796AE00766AF7 /* OGHideRequired.swift in Sources */,
 				E28883101B0E4E4900FE0C8C /* AppDelegate.swift in Sources */,
+				549B574B1B17EEFA00766AF7 /* OGNitricFactory.swift in Sources */,
 				E26209581B1397110033BC70 /* OGPlanet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
