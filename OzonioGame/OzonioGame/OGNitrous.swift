@@ -15,12 +15,12 @@ class OGNitrous: OGMolecule {
         
         super.init(imageNamed: "BlackCircle")
         
-        self.name = "NITROUS"
+        self.name = "NITROUSMOLECULE"
         
         self.size.width *= 1
         self.size.height *= 1
         
-        self.physicsBody = SKPhysicsBody (circleOfRadius: self.size.width)
+        self.physicsBody = SKPhysicsBody (circleOfRadius: self.size.width / 1.2)
         
     }
     

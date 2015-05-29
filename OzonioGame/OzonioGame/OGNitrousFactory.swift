@@ -23,7 +23,18 @@ class OGNitrousFactory: OGFactory {
         self.size.width *= 1.5
         
         //Action de criação de moleculas
-        runAction(SKAction.repeatActionForever(SKAction.sequence([SKAction.runBlock({self.spawnMolecule()}), SKAction.waitForDuration(8.0)])))
+        //Action de criação de moleculas
+        runAction(SKAction.repeatActionForever(SKAction.sequence([
+            
+            SKAction.waitForDuration(1.0),
+            
+            SKAction.runBlock({
+                self.spawnMolecule()
+            }),
+            
+            SKAction.waitForDuration(8.0)
+            
+            ])))
     }
 
     override func spawnMolecule(){
@@ -35,7 +46,7 @@ class OGNitrousFactory: OGFactory {
     }
     
     override func update() {
-        self.enumerateChildNodesWithName("NITROUS") {
+        self.enumerateChildNodesWithName("NITROUSMOLECULE") {
             node, stop in
             
             // CHAMA O UPDATE DE TODOS OS FILHOS MOLECULA
