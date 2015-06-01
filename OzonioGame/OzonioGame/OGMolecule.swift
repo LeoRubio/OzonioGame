@@ -13,15 +13,17 @@ import SpriteKit
 
 class OGMolecule : OGHideRequired {
     
+    var lifeMax: Int
     
     init(imageNamed imageName:String){
-    
+        
+        
         let color = UIColor.clearColor()
         let texture = SKTexture(imageNamed: imageName)
         let size = texture.size()
-        
+        self.lifeMax = 1
         super.init(texture: texture, color: UIColor.clearColor(), size: texture.size())
-
+        
         
     }
     
@@ -29,6 +31,18 @@ class OGMolecule : OGHideRequired {
 
         fatalError("MUST OVERRIDE THIS FUNCTION")
 
+    }
+    
+    func removeLife(){
+        
+        self.lifeMax--
+        
+        println(self.lifeMax)
+        if self.lifeMax <= 0{
+
+            self.removeFromParent()
+        }
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
