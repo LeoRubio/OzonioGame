@@ -23,6 +23,7 @@ class GameViewController: UIViewController {
         skView.showsFPS = true
         skView.showsPhysics = true
         skView.showsNodeCount = true
+        
         // 2. Create and configure our game scene
         scene = GameScene(size: skView.bounds.size)
         scene.scaleMode = .AspectFill

@@ -52,6 +52,9 @@ class OGPlanet : SKSpriteNode {
         
         let factoryNitrousNode = OGNitrousFactory(factoryPosition: positionFactory)
         self.addChild(factoryNitrousNode)
+        
+        let factoryNitricNode = OGNitricFactory(factoryPosition: positionFactory)
+        self.addChild(factoryNitricNode)
     }
     
     func update(){
@@ -74,6 +77,18 @@ class OGPlanet : SKSpriteNode {
             // CHAMA O UPDATE DE TODOS OS FILHOS NITROUS FACTORY
             var factoryAux : OGNitrousFactory?
             factoryAux = node as? OGNitrousFactory
+            factoryAux?.update()
+            
+            //stop.memory = true
+            
+        }
+        
+        self.enumerateChildNodesWithName("NITRICFACTORY") {
+            node, stop in
+            
+            // CHAMA O UPDATE DE TODOS OS FILHOS NITRIC FACTORY
+            var factoryAux : OGNitricFactory?
+            factoryAux = node as? OGNitricFactory
             factoryAux?.update()
             
             //stop.memory = true
