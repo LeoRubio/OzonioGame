@@ -10,17 +10,22 @@ import UIKit
 import SpriteKit
 
 class OGNitrous: OGMolecule {
-   
+    
+    
     init(){
         
         super.init(imageNamed: "BlackCircle")
         
-        self.name = "NITROUS"
+        self.lifeMax = 3
         
-        self.size.width *= 1
-        self.size.height *= 1
+        self.name = "NITROUSMOLECULE"
         
-        self.physicsBody = SKPhysicsBody (circleOfRadius: self.size.width)
+        self.size.width *= 1.2
+        self.size.height *= 1.2
+        self.physicsBody = SKPhysicsBody (circleOfRadius: self.size.width / 1.5)
+        self.physicsBody?.dynamic = true
+        
+        
         
     }
     
@@ -28,11 +33,12 @@ class OGNitrous: OGMolecule {
         var childXPosition = self.position.x + self.parent!.position.x
         var childYPosition = self.position.y + self.parent!.position.y
         //self.physicsBody!.applyImpulse(CGVectorMake(1.0, 1.0))
-        self.physicsBody!.applyForce(CGVectorMake(4.0, 10.0))
+        self.physicsBody!.applyForce(CGVectorMake(2.0, 10.0))
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
     
 }
