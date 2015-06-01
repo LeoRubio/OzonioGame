@@ -27,7 +27,9 @@ class GameScene: SKScene {
         super.init(size: size)
         
         //gravity
-        physicsWorld.gravity = CGVectorMake(0.0, -0.1)
+        physicsWorld.gravity = CGVectorMake(0.0, -0.3)
+        
+        userInteractionEnabled = true
         
         // adding the background
         backgroundNode = OGBackground()
@@ -65,5 +67,41 @@ class GameScene: SKScene {
         super.update(currentTime)
         planetNode!.update()
         
+    }
+    
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        
+        
+        for touch: AnyObject in touches {
+            
+            let location = (touch as! UITouch).locationInNode(self)
+            
+            var nodeTouched = self.nodeAtPoint(location)
+            
+            var carbonMolecule = OGCarbon()
+            var nitrousMolecule = OGNitrous()
+            var nitricMolecule = OGNitric()
+            
+            
+            if let touch = nodeTouched.name {
+                
+                if touch == "CARBONMOLECULE" {
+                    carbonMolecule = nodeTouched as! OGCarbon
+                    carbonMolecule.removeLife()
+                
+                } else if touch == "NITROUSMOLECULE" {
+                    
+                    nitrousMolecule = nodeTouched as! OGNitrous
+                    nitrousMolecule.removeLife()
+                
+                } else if touch == "NITRICMOLECULE" {
+                    
+                    nitricMolecule = nodeTouched as! OGNitric
+                    nitricMolecule.removeLife()
+                    
+                }
+            }
+        }
+       
     }
 }

@@ -50,7 +50,7 @@
 		549B57451B17ACEE00766AF7 /* OGNitrousFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGNitrousFactory.swift; sourceTree = "<group>"; };
 		549B57481B17EDE700766AF7 /* OGNitric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGNitric.swift; sourceTree = "<group>"; };
 		549B574A1B17EEFA00766AF7 /* OGNitricFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGNitricFactory.swift; sourceTree = "<group>"; };
-		A073E8FE1B179D4100286508 /* OGLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OGLabel.swift; path = ../OGLabel.swift; sourceTree = "<group>"; };
+		A073E8FE1B179D4100286508 /* OGLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGLabel.swift; sourceTree = "<group>"; };
 		E242CC3F1B150847000E5A1C /* OGFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGFactory.swift; sourceTree = "<group>"; };
 		E242CC411B15085C000E5A1C /* OGMolecule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGMolecule.swift; sourceTree = "<group>"; };
 		E26209571B1397110033BC70 /* OGPlanet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGPlanet.swift; sourceTree = "<group>"; };

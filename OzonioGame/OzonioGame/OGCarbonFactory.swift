@@ -50,7 +50,6 @@ class OGCarbonFactory: OGFactory {
             var moleculeAux : OGCarbon?
             moleculeAux = node as? OGCarbon
             moleculeAux?.update()
-            
             //stop.memory = true
             
         }
