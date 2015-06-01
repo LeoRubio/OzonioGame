@@ -16,7 +16,7 @@ class OGNitrous: OGMolecule {
         
         super.init(imageNamed: "BlackCircle")
         
-        self.lifeMax = 3
+        self.lifeMax = 2
         
         self.name = "NITROUSMOLECULE"
         
@@ -24,7 +24,7 @@ class OGNitrous: OGMolecule {
         self.size.height *= 1.2
         self.physicsBody = SKPhysicsBody (circleOfRadius: self.size.width / 1.5)
         self.physicsBody?.dynamic = true
-        
+        self.physicsBody!.mass = 0.2
         
         
     }
@@ -33,7 +33,7 @@ class OGNitrous: OGMolecule {
         var childXPosition = self.position.x + self.parent!.position.x
         var childYPosition = self.position.y + self.parent!.position.y
         //self.physicsBody!.applyImpulse(CGVectorMake(1.0, 1.0))
-        self.physicsBody!.applyForce(CGVectorMake(2.0, 10.0))
+        self.physicsBody!.applyForce(CGVectorMake(1.0, 12.0))
     }
     
     required init?(coder aDecoder: NSCoder) {
