@@ -24,6 +24,7 @@ class OGCarbon : OGMolecule {
         self.size.height *= 0.8
         self.physicsBody = SKPhysicsBody (circleOfRadius: self.size.width / 1.5)
         self.physicsBody?.dynamic = true
+        self.physicsBody!.mass = 0.2
         
 
     }
@@ -34,7 +35,7 @@ class OGCarbon : OGMolecule {
         var childXPosition = self.position.x + self.parent!.position.x
         var childYPosition = self.position.y + self.parent!.position.y
         //self.physicsBody!.applyImpulse(CGVectorMake(1.0, 1.0))
-        self.physicsBody!.applyForce(CGVectorMake(0.2, 6.0))
+        self.physicsBody!.applyForce(CGVectorMake(1.0, 12.0))
     }
     
     required init?(coder aDecoder: NSCoder) {

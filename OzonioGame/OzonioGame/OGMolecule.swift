@@ -21,8 +21,12 @@ class OGMolecule : OGHideRequired {
         let color = UIColor.clearColor()
         let texture = SKTexture(imageNamed: imageName)
         let size = texture.size()
+        
         self.lifeMax = 1
+        
         super.init(texture: texture, color: UIColor.clearColor(), size: texture.size())
+        
+        self.zPosition += 1
         
         
     }
