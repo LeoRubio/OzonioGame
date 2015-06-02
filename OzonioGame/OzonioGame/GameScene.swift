@@ -68,8 +68,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         
         //açao de girar Terra e Camadas
-//        let rotate = SKAction.rotateByAngle(1, duration: 60)
-//        planetNode!.runAction(SKAction.repeatActionForever(rotate))
+        //        let rotate = SKAction.rotateByAngle(1, duration: 60)
+        //        planetNode!.runAction(SKAction.repeatActionForever(rotate))
         
     }
     
@@ -98,44 +98,45 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 if touch == "CARBONMOLECULE" {
                     carbonMolecule = nodeTouched as! OGCarbon
                     carbonMolecule.removeLife()
-                
+                    
                 } else if touch == "NITROUSMOLECULE" {
                     
                     nitrousMolecule = nodeTouched as! OGNitrous
                     nitrousMolecule.removeLife()
-                
+                    
+                    
                 } else if touch == "NITRICMOLECULE" {
                     
                     nitricMolecule = nodeTouched as! OGNitric
                     nitricMolecule.removeLife()
                     
                 }
-            }
-        }
-       
-    }
-    
-    
-    func didBeginContact(contact: SKPhysicsContact) {
-        
-        
-        
-        if  contact.bodyB!.node != nil && contact.bodyA.node != nil{
-            
-            var nodeA = contact.bodyA!.node!
-            var nodeB = contact.bodyB!.node!
-            if nodeB.name == "CARBONMOLECULE" || nodeB.name == "NITROUSMOLECULE" || nodeB.name == "NITRICMOLECULE" {
-                nodeB.removeFromParent()
+                else if touch == "PLAYPAUSE"{
+                    foregroundNode?.playNode!.switchState()
+                }
             }
             
+        }
+    }
+    
+        func didBeginContact(contact: SKPhysicsContact) {
             
-            var ozoneDamage = SKAction.colorizeWithColor(UIColor.redColor(), colorBlendFactor: 1.0, duration: 1)
-            contact.bodyA!.node!.runAction(ozoneDamage)
+            if  contact.bodyB!.node != nil && contact.bodyA.node != nil{
+                
+                var nodeA = contact.bodyA!.node!
+                var nodeB = contact.bodyB!.node!
+                if nodeB.name == "CARBONMOLECULE" || nodeB.name == "NITROUSMOLECULE" || nodeB.name == "NITRICMOLECULE" {
+                    nodeB.removeFromParent()
+                }
+                
+                
+                var ozoneDamage = SKAction.colorizeWithColor(UIColor.redColor(), colorBlendFactor: 1.0, duration: 1)
+                contact.bodyA!.node!.runAction(ozoneDamage)
+                
+            }
+            
             
         }
         
-    
-    }
-
-
+        
 }

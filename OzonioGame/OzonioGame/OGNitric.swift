@@ -20,15 +20,26 @@ class OGNitric: OGMolecule {
         
         self.name = "NITRICMOLECULE"
         
-        self.size.width *= 1.8
-        self.size.height *= 1.8
-        self.physicsBody = SKPhysicsBody (circleOfRadius: self.size.width / 1.5)
-        self.physicsBody?.dynamic = true
-        self.physicsBody?.mass = 0.01
-        self.physicsBody?.usesPreciseCollisionDetection = true
+        self.size.width *= 1.9
+        self.size.height *= 1.9
+
         
-        self.physicsBody!.categoryBitMask = CollisionCategoryMolecules
-        self.physicsBody!.collisionBitMask = 0
+
+        
+    }
+    
+    override func mitosis(){
+        
+        var auxX:CGFloat = 0.0
+        
+        for(var i = 0; i < 2; i++){
+            let divideMolecule = OGNitrous()
+            
+            auxX = CGFloat(i*40)
+            
+            divideMolecule.position = CGPointMake(self.position.x + auxX, self.position.y)
+            self.parent!.addChild(divideMolecule)
+        }
         
     }
     
@@ -36,7 +47,9 @@ class OGNitric: OGMolecule {
         var childXPosition = self.position.x + self.parent!.position.x
         var childYPosition = self.position.y + self.parent!.position.y
         //self.physicsBody!.applyImpulse(CGVectorMake(1.0, 1.0))
-        self.physicsBody!.applyForce(CGVectorMake(0.0, 0.3))
+
+        self.physicsBody!.applyForce(CGVectorMake(0.0, 0.2))
+
     }
     
     

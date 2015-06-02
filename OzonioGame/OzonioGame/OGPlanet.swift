@@ -90,6 +90,7 @@ class OGPlanet : SKSpriteNode {
         self.addChild(factoryNitricNode)
     }
     
+    //Chama o update de todos os filhos de Planeta
     func update(){
         
         self.enumerateChildNodesWithName("CARBONFACTORY") {
@@ -156,10 +157,10 @@ class OGPlanet : SKSpriteNode {
         createFactory("BlackSquare", positionFactory: CGPointMake(randomNum(), randomNum()))
         createFactory("BlackSquare", positionFactory: CGPointMake(randomNum(), randomNum()))
         createFactory("BlackSquare", positionFactory: CGPointMake(randomNum(), randomNum()))
-        createFactory("BlackSquare", positionFactory: CGPointMake(randomNum(), randomNum()))
-        createFactory("BlackSquare", positionFactory: CGPointMake(randomNum(), randomNum()))
-        createFactory("BlackSquare", positionFactory: CGPointMake(randomNum(), randomNum()))
-        createFactory("BlackSquare", positionFactory: CGPointMake(randomNum(), randomNum()))
+//        createFactory("BlackSquare", positionFactory: CGPointMake(randomNum(), randomNum()))
+//        createFactory("BlackSquare", positionFactory: CGPointMake(randomNum(), randomNum()))
+//        createFactory("BlackSquare", positionFactory: CGPointMake(randomNum(), randomNum()))
+//        createFactory("BlackSquare", positionFactory: CGPointMake(randomNum(), randomNum()))
         
     }
     
@@ -179,9 +180,9 @@ class OGPlanet : SKSpriteNode {
     
     
     func randomNum() -> CGFloat{
-        var random = CGFloat(arc4random_uniform(520))
-        if random > 260 {
-            random = (random - 260) * -1
+        var random = CGFloat(arc4random_uniform(400))
+        if random > 200 {
+            random = (random - 200) * -1
         }
         return random
     }
