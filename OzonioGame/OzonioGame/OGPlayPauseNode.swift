@@ -9,14 +9,31 @@
 import UIKit
 import SpriteKit
 
-class OGPauseNode : SKSpriteNode {
+class OGPlayPauseNode : SKSpriteNode {
     
-    init( texture: SKTexture ){
+    var state:Bool
+    
+    init(){
+        
+        self.state = false
+        
+        let texture = SKTexture(imageNamed: "pause")
         
         super.init(texture: texture, color: UIColor.clearColor(), size: texture.size())
-        self.name = "pause"
+        self.name = "PLAYPAUSE"
+        
     }
     
+    func switchState(){
+        if state{
+            self.texture = SKTexture(imageNamed: "pause")
+        }
+        else{
+            self.texture = SKTexture(imageNamed: "play")
+        }
+        
+        state = !state
+    }
     
     func update(){
         

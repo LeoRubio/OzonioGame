@@ -43,20 +43,6 @@ class OGCarbonFactory: OGFactory {
         
     }
     
-    override func update() {
-        self.enumerateChildNodesWithName("CARBONMOLECULE") {
-            node, stop in
-            
-            // CHAMA O UPDATE DE TODOS OS FILHOS MOLECULA
-            var moleculeAux : OGCarbon?
-            moleculeAux = node as? OGCarbon
-            moleculeAux?.update()
-            //stop.memory = true
-            
-        }
-        
-    }
-    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

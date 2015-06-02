@@ -47,20 +47,7 @@ override func spawnMolecule(){
     }
 }
 
-override func update() {
-    self.enumerateChildNodesWithName("NITROUSMOLECULE") {
-        node, stop in
-        
-        // CHAMA O UPDATE DE TODOS OS FILHOS MOLECULA
-        var moleculeAux : OGNitrous?
-        moleculeAux = node as? OGNitrous
-        moleculeAux?.update()
-        
-        //stop.memory = true
-        
-    }
-    
-}
+
 
 required init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
