@@ -14,17 +14,17 @@ class OGOzoneLayer : SKSpriteNode {
     init( texture: SKTexture ){
         
         super.init(texture: texture, color: UIColor.clearColor(), size: texture.size())
-        name = "OZONE"
+//        name = "OZONE"
         self.size.width *= 1.5
         self.size.height *= 1.5
         
-        self.physicsBody = SKPhysicsBody(texture: texture, alphaThreshold: 0.0, size: self.size)
-        self.physicsBody?.affectedByGravity = false
-        self.physicsBody?.dynamic = false
-        
-        self.physicsBody!.categoryBitMask = CollisionCategoryOzoneLayer
-        self.physicsBody!.contactTestBitMask = CollisionCategoryMolecules
-        self.physicsBody!.collisionBitMask = 0
+//        self.physicsBody = SKPhysicsBody(texture: texture, alphaThreshold: 0.0, size: self.size)
+//        self.physicsBody?.affectedByGravity = false
+//        self.physicsBody?.dynamic = false
+//        
+//        self.physicsBody!.categoryBitMask = CollisionCategoryOzoneLayer
+//        self.physicsBody!.contactTestBitMask = CollisionCategoryMolecules
+//        self.physicsBody!.collisionBitMask = 0
         
     }
     
