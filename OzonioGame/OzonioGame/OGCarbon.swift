@@ -20,17 +20,9 @@ class OGCarbon : OGMolecule {
         self.lifeMax = 1
         
         self.name = "CARBONMOLECULE"
-        self.size.width *= 1.2
-        self.size.height *= 1.2
-        self.physicsBody = SKPhysicsBody (circleOfRadius: self.size.width / 1.2)
-        self.physicsBody?.dynamic = true
+        self.size.width *= 1.3
+        self.size.height *= 1.3
 
-        self.physicsBody?.mass = 0.01
-        self.physicsBody?.usesPreciseCollisionDetection = true
-
-        
-        self.physicsBody!.categoryBitMask = CollisionCategoryMolecules
-        self.physicsBody!.collisionBitMask = 0
 
     }
     

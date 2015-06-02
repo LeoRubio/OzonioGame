@@ -26,6 +26,16 @@ class OGMolecule : OGHideRequired {
         
         super.init(texture: texture, color: UIColor.clearColor(), size: texture.size())
         self.name = "MOLECULE"
+        
+
+        self.physicsBody = SKPhysicsBody (circleOfRadius: self.size.width / 3.0)
+        self.physicsBody?.dynamic = true
+        
+        self.physicsBody?.mass = 0.01
+        self.physicsBody?.usesPreciseCollisionDetection = true
+        
+        self.physicsBody!.categoryBitMask = CollisionCategoryMolecules
+        self.physicsBody!.collisionBitMask = 0
 
         self.zPosition += 1
         

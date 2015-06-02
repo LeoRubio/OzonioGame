@@ -20,16 +20,10 @@ class OGNitric: OGMolecule {
         
         self.name = "NITRICMOLECULE"
         
-        self.size.width *= 1.5
-        self.size.height *= 1.5
-        self.physicsBody = SKPhysicsBody (circleOfRadius: self.size.width / 1.2)
-        self.physicsBody?.dynamic = true
+        self.size.width *= 1.9
+        self.size.height *= 1.9
 
-        self.physicsBody?.mass = 0.01
-        self.physicsBody?.usesPreciseCollisionDetection = true
         
-        self.physicsBody!.categoryBitMask = CollisionCategoryMolecules
-        self.physicsBody!.collisionBitMask = 0
 
         
     }
