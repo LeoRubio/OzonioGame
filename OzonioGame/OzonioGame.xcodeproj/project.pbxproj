@@ -18,8 +18,7 @@
 		E23B93DA1B1D5CD2001390EC /* OGAtmosphere.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23B93D91B1D5CD2001390EC /* OGAtmosphere.swift */; };
 		E23B93DC1B1D62CB001390EC /* OGForeground.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23B93DB1B1D62CB001390EC /* OGForeground.swift */; };
 		E23B93DE1B1D65B1001390EC /* OGScoreNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23B93DD1B1D65B1001390EC /* OGScoreNode.swift */; };
-		E23B93E21B1D7024001390EC /* OGPlayNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23B93E11B1D7024001390EC /* OGPlayNode.swift */; };
-		E23B93E41B1D72E7001390EC /* OGPauseNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23B93E31B1D72E7001390EC /* OGPauseNode.swift */; };
+		E23B93E41B1D72E7001390EC /* OGPlayPauseNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23B93E31B1D72E7001390EC /* OGPlayPauseNode.swift */; };
 		E23B93E61B1D755A001390EC /* OGYear.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23B93E51B1D755A001390EC /* OGYear.swift */; };
 		E242CC401B150848000E5A1C /* OGFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242CC3F1B150847000E5A1C /* OGFactory.swift */; };
 		E242CC421B15085C000E5A1C /* OGMolecule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242CC411B15085C000E5A1C /* OGMolecule.swift */; };
@@ -60,8 +59,7 @@
 		E23B93D91B1D5CD2001390EC /* OGAtmosphere.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGAtmosphere.swift; sourceTree = "<group>"; };
 		E23B93DB1B1D62CB001390EC /* OGForeground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGForeground.swift; sourceTree = "<group>"; };
 		E23B93DD1B1D65B1001390EC /* OGScoreNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGScoreNode.swift; sourceTree = "<group>"; };
-		E23B93E11B1D7024001390EC /* OGPlayNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGPlayNode.swift; sourceTree = "<group>"; };
-		E23B93E31B1D72E7001390EC /* OGPauseNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGPauseNode.swift; sourceTree = "<group>"; };
+		E23B93E31B1D72E7001390EC /* OGPlayPauseNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGPlayPauseNode.swift; sourceTree = "<group>"; };
 		E23B93E51B1D755A001390EC /* OGYear.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGYear.swift; sourceTree = "<group>"; };
 		E242CC3F1B150847000E5A1C /* OGFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGFactory.swift; sourceTree = "<group>"; };
 		E242CC411B15085C000E5A1C /* OGMolecule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGMolecule.swift; sourceTree = "<group>"; };
@@ -128,8 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				E23B93DB1B1D62CB001390EC /* OGForeground.swift */,
-				E23B93E31B1D72E7001390EC /* OGPauseNode.swift */,
-				E23B93E11B1D7024001390EC /* OGPlayNode.swift */,
+				E23B93E31B1D72E7001390EC /* OGPlayPauseNode.swift */,
 				E23B93DD1B1D65B1001390EC /* OGScoreNode.swift */,
 				E23B93E51B1D755A001390EC /* OGYear.swift */,
 			);
@@ -207,8 +204,8 @@
 				549B573D1B1796AE00766AF7 /* OGHideRequired.swift */,
 				E29194F51B13BDCF005BB643 /* OGBackground.swift */,
 				E29194F31B13A9F2005BB643 /* OGSun.swift */,
-				E23B93DF1B1D6CEB001390EC /* Foreground */,
 				A073E8FE1B179D4100286508 /* OGLabel.swift */,
+				E23B93DF1B1D6CEB001390EC /* Foreground */,
 				E23B93E01B1D6F23001390EC /* Planet */,
 				549B57471B17AD5200766AF7 /* Factory */,
 				549B57411B1799AC00766AF7 /* Molecule */,
@@ -348,14 +345,13 @@
 				E29194F41B13A9F2005BB643 /* OGSun.swift in Sources */,
 				E29194F21B13A459005BB643 /* OGOzoneLayer.swift in Sources */,
 				E242CC421B15085C000E5A1C /* OGMolecule.swift in Sources */,
-				E23B93E41B1D72E7001390EC /* OGPauseNode.swift in Sources */,
+				E23B93E41B1D72E7001390EC /* OGPlayPauseNode.swift in Sources */,
 				E28883141B0E4E4900FE0C8C /* GameScene.swift in Sources */,
 				549B57491B17EDE700766AF7 /* OGNitric.swift in Sources */,
 				549B57461B17ACEE00766AF7 /* OGNitrousFactory.swift in Sources */,
 				A073E8FF1B179D4100286508 /* OGLabel.swift in Sources */,
 				E23B93DE1B1D65B1001390EC /* OGScoreNode.swift in Sources */,
 				549B573C1B178F8E00766AF7 /* OGCarbon.swift in Sources */,
-				E23B93E21B1D7024001390EC /* OGPlayNode.swift in Sources */,
 				E28883161B0E4E4900FE0C8C /* GameViewController.swift in Sources */,
 				549B573E1B1796AE00766AF7 /* OGHideRequired.swift in Sources */,
 				E23B93DC1B1D62CB001390EC /* OGForeground.swift in Sources */,

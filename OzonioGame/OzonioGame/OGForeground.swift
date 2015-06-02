@@ -11,6 +11,8 @@ import SpriteKit
 
 class OGForeground : SKNode {
     
+    var playNode : OGPlayPauseNode?
+    
     override init(){
         
         super.init()
@@ -25,6 +27,14 @@ class OGForeground : SKNode {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
+    func createObjects(){
+        
+        createYearNode("ano")
+        createScoreNode("score")
+        createPlayNode()
+        
+    }
     
     
     func createScoreNode(imageName: String){
@@ -44,36 +54,18 @@ class OGForeground : SKNode {
     
     
     
-    func createPlayNode(imageName: String){
+    func createPlayNode(){
         
-        let playNode : OGPlayNode?
-        
-        let texture = SKTexture(imageNamed: imageName)
-        
-        playNode = OGPlayNode(texture: texture)
-        playNode!.position = CGPoint (x: 720, y: 970)
+        playNode = OGPlayPauseNode()
+        playNode!.position = CGPoint (x: 720, y: 900)
         playNode!.size.height = 2 * playNode!.size.height
         playNode!.size.width = 2 * playNode!.size.width
-        self.addChild(playNode!)
+        addChild(self.playNode!)
         
         
     }
     
     
-    func createPauseNode(imageName: String){
-        
-        let pauseNode : OGPauseNode?
-        
-        let texture = SKTexture(imageNamed: imageName)
-        
-        pauseNode = OGPauseNode(texture: texture)
-        pauseNode!.position = CGPoint (x: 720, y: 900)
-        pauseNode!.size.height = 2 * pauseNode!.size.height
-        pauseNode!.size.width = 2 * pauseNode!.size.width
-        self.addChild(pauseNode!)
-        
-        
-    }
     
     
     func createYearNode(imageName: String){
@@ -93,14 +85,7 @@ class OGForeground : SKNode {
     
     
     
-    func createObjects(){
-        
-        createYearNode("ano")
-        createScoreNode("score")
-        createPlayNode("play")
-        createPauseNode("pause")
-        
-    }
+
     
     
 }

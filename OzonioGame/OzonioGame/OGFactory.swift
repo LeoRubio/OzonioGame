@@ -36,7 +36,45 @@ class OGFactory : OGHideRequired {
     
     func update(){
         
-        fatalError("MUST OVERRIDE THIS FUNCTION")
+        self.enumerateChildNodesWithName("CARBONMOLECULE") {
+            node, stop in
+            
+            // CHAMA O UPDATE DE TODOS OS FILHOS MOLECULA
+            var moleculeAux : OGCarbon?
+            moleculeAux = node as? OGCarbon
+            moleculeAux?.update()
+            
+            //stop.memory = true
+            
+        }
+        
+        self.enumerateChildNodesWithName("NITROUSMOLECULE") {
+            node, stop in
+            
+            // CHAMA O UPDATE DE TODOS OS FILHOS MOLECULA NITROUS
+            var moleculeAux : OGNitrous?
+            moleculeAux = node as? OGNitrous
+            moleculeAux?.update()
+            
+            //stop.memory = true
+            
+        }
+        
+        self.enumerateChildNodesWithName("NITRICMOLECULE") {
+            node, stop in
+            
+            // CHAMA O UPDATE DE TODOS OS FILHOS MOLECULA NITRIC
+            var moleculeAux : OGNitric?
+            moleculeAux = node as? OGNitric
+            moleculeAux?.update()
+            
+            //stop.memory = true
+            
+        }
+        
+        
+        
+        //fatalError("MUST OVERRIDE THIS FUNCTION")
         
     }
     

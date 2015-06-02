@@ -47,20 +47,6 @@ class OGNitricFactory: OGFactory {
         
     }
     
-    override func update() {
-        self.enumerateChildNodesWithName("NITRICMOLECULE") {
-            node, stop in
-            
-            // CHAMA O UPDATE DE TODOS OS FILHOS MOLECULA
-            var moleculeAux : OGNitric?
-            moleculeAux = node as? OGNitric
-            moleculeAux?.update()
-            
-            //stop.memory = true
-            
-        }
-        
-    }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
