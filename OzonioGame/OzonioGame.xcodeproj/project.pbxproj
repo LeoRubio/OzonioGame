@@ -20,6 +20,7 @@
 		E23B93DE1B1D65B1001390EC /* OGScoreNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23B93DD1B1D65B1001390EC /* OGScoreNode.swift */; };
 		E23B93E41B1D72E7001390EC /* OGPlayPauseNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23B93E31B1D72E7001390EC /* OGPlayPauseNode.swift */; };
 		E23B93E61B1D755A001390EC /* OGYear.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23B93E51B1D755A001390EC /* OGYear.swift */; };
+		E23B93E81B1E3162001390EC /* OGOzonePart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23B93E71B1E3162001390EC /* OGOzonePart.swift */; };
 		E242CC401B150848000E5A1C /* OGFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242CC3F1B150847000E5A1C /* OGFactory.swift */; };
 		E242CC421B15085C000E5A1C /* OGMolecule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242CC411B15085C000E5A1C /* OGMolecule.swift */; };
 		E26209581B1397110033BC70 /* OGPlanet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26209571B1397110033BC70 /* OGPlanet.swift */; };
@@ -61,6 +62,7 @@
 		E23B93DD1B1D65B1001390EC /* OGScoreNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGScoreNode.swift; sourceTree = "<group>"; };
 		E23B93E31B1D72E7001390EC /* OGPlayPauseNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGPlayPauseNode.swift; sourceTree = "<group>"; };
 		E23B93E51B1D755A001390EC /* OGYear.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGYear.swift; sourceTree = "<group>"; };
+		E23B93E71B1E3162001390EC /* OGOzonePart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGOzonePart.swift; sourceTree = "<group>"; };
 		E242CC3F1B150847000E5A1C /* OGFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGFactory.swift; sourceTree = "<group>"; };
 		E242CC411B15085C000E5A1C /* OGMolecule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGMolecule.swift; sourceTree = "<group>"; };
 		E26209571B1397110033BC70 /* OGPlanet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGPlanet.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				E26209571B1397110033BC70 /* OGPlanet.swift */,
 				E23B93D91B1D5CD2001390EC /* OGAtmosphere.swift */,
 				E29194F11B13A459005BB643 /* OGOzoneLayer.swift */,
+				E23B93E71B1E3162001390EC /* OGOzonePart.swift */,
 			);
 			name = Planet;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				E23B93E41B1D72E7001390EC /* OGPlayPauseNode.swift in Sources */,
 				E28883141B0E4E4900FE0C8C /* GameScene.swift in Sources */,
 				549B57491B17EDE700766AF7 /* OGNitric.swift in Sources */,
+				E23B93E81B1E3162001390EC /* OGOzonePart.swift in Sources */,
 				549B57461B17ACEE00766AF7 /* OGNitrousFactory.swift in Sources */,
 				A073E8FF1B179D4100286508 /* OGLabel.swift in Sources */,
 				E23B93DE1B1D65B1001390EC /* OGScoreNode.swift in Sources */,
