@@ -49,6 +49,17 @@ class OGPlanet : SKSpriteNode {
     }
     
     
+//    func createOzonePart (imageName: String){
+//        
+//        let ozonePartNode : OGOzonePart?
+//        
+//        let texture = SKTexture(imageNamed: imageName)
+//        
+//        ozonePartNode = OGOzonePart(texture: texture)
+//        ozonePartNode!.position = CGPoint (x: 0.0, y: 780.0)
+//        ozonePartNode!.zRotation = -0.1
+//        self.addChild(ozonePartNode!)
+//    }
     
 
     
@@ -125,6 +136,22 @@ class OGPlanet : SKSpriteNode {
         createOzoneLayer("ozonio")
         createAtmosphere("atmosfera")
         
+        //var xPosition : CGFloat = 0.0 ; var yPosition : CGFloat = 780.0 ; var rotation : CGFloat = -0.1
+//        createOzoneParts("ozonePart", positionPart: CGPoint(x: xPosition, y: yPosition), rotationPart: -0.1)
+//        createOzoneParts("ozonePart", positionPart: CGPoint(x: 157.0, y: 763.0), rotationPart: -0.3)
+//        createOzoneParts("ozonePart", positionPart: CGPoint(x: 307.0, y: 716.0), rotationPart: -0.5)
+//        createOzoneParts("ozonePart", positionPart: CGPoint(x: 307.0, y: 716.0), rotationPart: -0.5)
+//        
+        
+        for i in 0..<32 {
+            
+            var xPosition = sin(M_PI*(2.0 * Double(i)/32.0)) * 780
+            var yPosition = cos(M_PI*(2.0 * Double(i)/32.0)) * 780
+            var rotation:CGFloat = CGFloat(-M_PI*(2.0 * Double(i)/32.0 + 1/32.0))
+            createOzoneParts("ozonePart", positionPart: CGPoint(x: xPosition, y: yPosition), rotationPart: rotation)
+            //xPosition += 157  ; yPosition -= 17  ; rotation -= 0.2
+        }
+        
         createFactory("BlackSquare", positionFactory: CGPointMake(randomNum(), randomNum()))
         createFactory("BlackSquare", positionFactory: CGPointMake(randomNum(), randomNum()))
         createFactory("BlackSquare", positionFactory: CGPointMake(randomNum(), randomNum()))
@@ -135,6 +162,20 @@ class OGPlanet : SKSpriteNode {
         createFactory("BlackSquare", positionFactory: CGPointMake(randomNum(), randomNum()))
         
     }
+    
+    
+    
+    func createOzoneParts (imageName: String, positionPart : CGPoint, rotationPart : CGFloat){
+        
+        let ozonePartNode : OGOzonePart?
+        let texture = SKTexture(imageNamed: imageName)
+        ozonePartNode = OGOzonePart(texture: texture)
+        ozonePartNode!.position = positionPart
+        ozonePartNode!.zRotation = rotationPart
+        self.addChild(ozonePartNode!)
+        
+    }
+    
     
     
     func randomNum() -> CGFloat{
