@@ -14,18 +14,26 @@ class OGNitrous: OGMolecule {
     
     init(){
         
-        super.init(imageNamed: "BlackCircle")
+        super.init(imageNamed: "nitrous")
         
         self.lifeMax = 2
         
         self.name = "NITROUSMOLECULE"
         
-        self.size.width *= 1.2
-        self.size.height *= 1.2
+        self.size.width *= 1.5
+        self.size.height *= 1.5
         self.physicsBody = SKPhysicsBody (circleOfRadius: self.size.width / 1.5)
         self.physicsBody?.dynamic = true
+<<<<<<< HEAD
         self.physicsBody!.mass = 0.2
         
+=======
+        self.physicsBody?.mass = 0.01
+        self.physicsBody?.usesPreciseCollisionDetection = true
+        
+        self.physicsBody!.categoryBitMask = CollisionCategoryMolecules
+        self.physicsBody!.collisionBitMask = 0
+>>>>>>> leoooo-branch
         
     }
     
@@ -33,7 +41,11 @@ class OGNitrous: OGMolecule {
         var childXPosition = self.position.x + self.parent!.position.x
         var childYPosition = self.position.y + self.parent!.position.y
         //self.physicsBody!.applyImpulse(CGVectorMake(1.0, 1.0))
+<<<<<<< HEAD
         self.physicsBody!.applyForce(CGVectorMake(1.0, 12.0))
+=======
+        self.physicsBody!.applyForce(CGVectorMake(0.0, 0.3))
+>>>>>>> leoooo-branch
     }
     
     required init?(coder aDecoder: NSCoder) {
