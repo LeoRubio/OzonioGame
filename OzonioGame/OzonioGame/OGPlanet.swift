@@ -20,8 +20,11 @@ class OGPlanet : SKSpriteNode {
         let texture = SKTexture(imageNamed: "terra")
         super.init(texture: texture, color: UIColor.clearColor(), size: texture.size())
         name = "PLANET"
-        self.size.width *= 1.5
-        self.size.height *= 1.5
+        self.size.width *= 1.3
+        self.size.height *= 1.3
+        //açao de girar Terra e Camadas
+        let rotate = SKAction.rotateByAngle(1, duration: 60)
+        self.runAction(SKAction.repeatActionForever(rotate))
         
 
         createObjects()
@@ -33,6 +36,7 @@ class OGPlanet : SKSpriteNode {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
     func createOzoneLayer (imageName: String){
         
         let ozoneNode : OGOzoneLayer?
@@ -43,6 +47,24 @@ class OGPlanet : SKSpriteNode {
         ozoneNode!.position = CGPoint (x: 0.0, y: 0.0)
         self.addChild(ozoneNode!)
     }
+    
+    
+    
+
+    
+    func createAtmosphere (imageName: String){
+        
+        let atmosphereNode : OGAtmosphere?
+        
+        let texture = SKTexture(imageNamed: imageName)
+        
+        atmosphereNode = OGAtmosphere(texture: texture)
+        atmosphereNode!.position = CGPoint (x: 0.0, y: 0.0)
+        self.addChild(atmosphereNode!)
+    }
+    
+    
+    
     
     
     func createFactory(imageName: String, positionFactory: CGPoint){
@@ -101,9 +123,8 @@ class OGPlanet : SKSpriteNode {
     func createObjects(){
         
         
-        createOzoneLayer("ozonio-01")
-        createOzoneLayer("ozonio-02")
-        createOzoneLayer("ozonio-03")
+        createOzoneLayer("ozonio")
+        createAtmosphere("atmosfera")
         
         createFactory("BlackSquare", positionFactory: CGPointMake(randomNum(), randomNum()))
         createFactory("BlackSquare", positionFactory: CGPointMake(randomNum(), randomNum()))
@@ -113,7 +134,6 @@ class OGPlanet : SKSpriteNode {
 //        createFactory("BlackSquare", positionFactory: CGPointMake(randomNum(), randomNum()))
 //        createFactory("BlackSquare", positionFactory: CGPointMake(randomNum(), randomNum()))
 //        createFactory("BlackSquare", positionFactory: CGPointMake(randomNum(), randomNum()))
-        
         
     }
     

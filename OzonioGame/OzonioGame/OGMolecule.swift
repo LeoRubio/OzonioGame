@@ -25,6 +25,7 @@ class OGMolecule : OGHideRequired {
         self.lifeMax = 1
         
         super.init(texture: texture, color: UIColor.clearColor(), size: texture.size())
+        self.name = "MOLECULE"
         
         self.zPosition += 1
         
