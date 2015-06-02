@@ -15,16 +15,20 @@ class OGCarbon : OGMolecule {
     
     init(){
 
-        super.init(imageNamed: "BlackCircle")
+        super.init(imageNamed: "carbon")
         
         self.lifeMax = 1
         
         self.name = "CARBONMOLECULE"
-        self.size.width *= 0.8
-        self.size.height *= 0.8
+        self.size.width *= 1.2
+        self.size.height *= 1.2
         self.physicsBody = SKPhysicsBody (circleOfRadius: self.size.width / 1.5)
         self.physicsBody?.dynamic = true
+        self.physicsBody?.mass = 0.01
+        self.physicsBody?.usesPreciseCollisionDetection = true
         
+        self.physicsBody!.categoryBitMask = CollisionCategoryMolecules
+        self.physicsBody!.collisionBitMask = 0
 
     }
     
@@ -34,7 +38,7 @@ class OGCarbon : OGMolecule {
         var childXPosition = self.position.x + self.parent!.position.x
         var childYPosition = self.position.y + self.parent!.position.y
         //self.physicsBody!.applyImpulse(CGVectorMake(1.0, 1.0))
-        self.physicsBody!.applyForce(CGVectorMake(0.2, 6.0))
+        self.physicsBody!.applyForce(CGVectorMake(0.0, 0.3))
     }
     
     required init?(coder aDecoder: NSCoder) {
