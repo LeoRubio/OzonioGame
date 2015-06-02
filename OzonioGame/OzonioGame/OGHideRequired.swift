@@ -11,7 +11,7 @@ import SpriteKit
 
 
 /*
-Classe para facilitar a criação de subclasses!
-*/
+ *   Classe para facilitar a criação de subclasses!
+ */
 
 class OGHideRequired : SKSpriteNode {}

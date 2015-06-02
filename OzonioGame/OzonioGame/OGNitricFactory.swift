@@ -10,7 +10,7 @@ import UIKit
 import SpriteKit
 
 class OGNitricFactory: OGFactory {
-   
+    
     init(factoryPosition position: CGPoint){
         
         super.init(imageNamed: "BlackSquare")
@@ -27,22 +27,23 @@ class OGNitricFactory: OGFactory {
         //Action de criação de moleculas
         runAction(SKAction.repeatActionForever(SKAction.sequence([
             
-            SKAction.waitForDuration(0.5),
+            SKAction.waitForDuration(19.0),
             
             SKAction.runBlock({
                 self.spawnMolecule()
+                
             }),
             
-            SKAction.waitForDuration(16.0)
             
             ])))
     }
     
     override func spawnMolecule(){
-        
-        let molecule = OGNitric()
-        molecule.position = CGPoint(x: 0.0, y: 0.0)
-        super.addChild(molecule)
+        if self.position.y < self.scene!.size.height{
+            let molecule = OGNitric()
+            molecule.position = CGPoint(x: 0.0, y: 0.0)
+            super.addChild(molecule)
+        }
         
     }
     
@@ -64,6 +65,6 @@ class OGNitricFactory: OGFactory {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     
 }

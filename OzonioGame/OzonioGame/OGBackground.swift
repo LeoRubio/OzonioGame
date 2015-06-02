@@ -19,6 +19,7 @@ class OGBackground : SKSpriteNode {
         self.size.width *= 1.5
         self.size.height *= 1.5
         self.anchorPoint = CGPoint(x: 0.5, y: 0.0)
+        self.zPosition = -3
         
     }
 
