@@ -15,7 +15,7 @@ class OGPlayPauseNode : SKSpriteNode {
     
     init(){
         
-        self.state = false
+        self.state = true
         
         let texture = SKTexture(imageNamed: "pause")
         
@@ -25,7 +25,7 @@ class OGPlayPauseNode : SKSpriteNode {
     }
     
     func switchState(){
-        if state{
+        if !state{
             self.texture = SKTexture(imageNamed: "pause")
         }
         else{

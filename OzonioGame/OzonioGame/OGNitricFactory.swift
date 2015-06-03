@@ -13,7 +13,7 @@ class OGNitricFactory: OGFactory {
     
     init(factoryPosition position: CGPoint){
         
-        super.init(imageNamed: "BlackSquare")
+        super.init(imageNamed: "fabrica")
         
         self.name = "NITRICFACTORY"
         

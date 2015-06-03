@@ -17,6 +17,7 @@ class OGOzoneLayer : SKSpriteNode {
 //        name = "OZONE"
         self.size.width *= 1.5
         self.size.height *= 1.5
+        self.hidden = true
         
 //        self.physicsBody = SKPhysicsBody(texture: texture, alphaThreshold: 0.0, size: self.size)
 //        self.physicsBody?.affectedByGravity = false
