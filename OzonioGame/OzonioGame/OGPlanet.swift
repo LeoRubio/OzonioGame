@@ -48,19 +48,6 @@ class OGPlanet : SKSpriteNode {
         self.addChild(ozoneNode!)
     }
     
-    
-//    func createOzonePart (imageName: String){
-//        
-//        let ozonePartNode : OGOzonePart?
-//        
-//        let texture = SKTexture(imageNamed: imageName)
-//        
-//        ozonePartNode = OGOzonePart(texture: texture)
-//        ozonePartNode!.position = CGPoint (x: 0.0, y: 780.0)
-//        ozonePartNode!.zRotation = -0.1
-//        self.addChild(ozonePartNode!)
-//    }
-    
 
     
     func createAtmosphere (imageName: String){
@@ -78,17 +65,25 @@ class OGPlanet : SKSpriteNode {
     
     
     
-    func createFactory(imageName: String, positionFactory: CGPoint){
+    func createFactory(positionFactory: CGPoint){
         
         let factoryNode = OGCarbonFactory(factoryPosition: positionFactory)
         self.addChild(factoryNode)
         
+    }
+    
+    func createOil (positionFactory: CGPoint){
+    
         let factoryNitrousNode = OGNitrousFactory(factoryPosition: positionFactory)
         self.addChild(factoryNitrousNode)
-        
+    
+    }
+    
+    func createBoat (positionFactory: CGPoint){
         let factoryNitricNode = OGNitricFactory(factoryPosition: positionFactory)
         self.addChild(factoryNitricNode)
     }
+    
     
     //Chama o update de todos os filhos de Planeta
     func update(){
@@ -137,12 +132,6 @@ class OGPlanet : SKSpriteNode {
         createOzoneLayer("ozonio")
         createAtmosphere("atmosfera")
         
-        //var xPosition : CGFloat = 0.0 ; var yPosition : CGFloat = 780.0 ; var rotation : CGFloat = -0.1
-//        createOzoneParts("ozonePart", positionPart: CGPoint(x: xPosition, y: yPosition), rotationPart: -0.1)
-//        createOzoneParts("ozonePart", positionPart: CGPoint(x: 157.0, y: 763.0), rotationPart: -0.3)
-//        createOzoneParts("ozonePart", positionPart: CGPoint(x: 307.0, y: 716.0), rotationPart: -0.5)
-//        createOzoneParts("ozonePart", positionPart: CGPoint(x: 307.0, y: 716.0), rotationPart: -0.5)
-//        
         
         for i in 0..<32 {
             
@@ -152,15 +141,23 @@ class OGPlanet : SKSpriteNode {
             createOzoneParts("ozonePart", positionPart: CGPoint(x: xPosition, y: yPosition), rotationPart: rotation)
             //xPosition += 157  ; yPosition -= 17  ; rotation -= 0.2
         }
+    
+//    ********************************
+        // POSICIONAR FABRICAS
+            // CRIAR AVIAO CHILD
         
-        createFactory("BlackSquare", positionFactory: CGPointMake(randomNum(), randomNum()))
-        createFactory("BlackSquare", positionFactory: CGPointMake(randomNum(), randomNum()))
-        createFactory("BlackSquare", positionFactory: CGPointMake(randomNum(), randomNum()))
-        createFactory("BlackSquare", positionFactory: CGPointMake(randomNum(), randomNum()))
-//        createFactory("BlackSquare", positionFactory: CGPointMake(randomNum(), randomNum()))
-//        createFactory("BlackSquare", positionFactory: CGPointMake(randomNum(), randomNum()))
-//        createFactory("BlackSquare", positionFactory: CGPointMake(randomNum(), randomNum()))
-//        createFactory("BlackSquare", positionFactory: CGPointMake(randomNum(), randomNum()))
+        createFactory(CGPointMake(randomNum(), randomNum()))
+        createBoat(CGPointMake(randomNum(), randomNum()))
+        createOil(CGPointMake(randomNum(), randomNum()))
+        createFactory(CGPointMake(randomNum(), randomNum()))
+        createFactory(CGPointMake(randomNum(), randomNum()))
+        createBoat(CGPointMake(randomNum(), randomNum()))
+        createOil(CGPointMake(randomNum(), randomNum()))
+        createFactory(CGPointMake(randomNum(), randomNum()))
+        
+        
+        //    ********************************
+
         
     }
     

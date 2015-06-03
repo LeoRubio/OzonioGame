@@ -58,8 +58,6 @@ class OGMolecule : OGHideRequired {
         
         self.lifeMax--
         
-        
-        println(self.lifeMax)
         if self.lifeMax <= 0{
             
             self.mitosis()

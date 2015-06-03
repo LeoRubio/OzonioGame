@@ -12,7 +12,7 @@ import SpriteKit
 class OGNitrousFactory: OGFactory {
     init(factoryPosition position: CGPoint){
         
-        super.init(imageNamed: "BlackSquare")
+        super.init(imageNamed: "petroleo")
         
         self.name = "NITROUSFACTORY"
         
