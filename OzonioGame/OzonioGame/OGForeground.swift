@@ -44,9 +44,9 @@ class OGForeground : SKNode {
         let texture = SKTexture(imageNamed: imageName)
             
         scoreNode = OGScoreNode(texture: texture)
-        scoreNode!.position = CGPoint (x: 100.0, y: 950.0)
-        scoreNode!.size.height = 2 * scoreNode!.size.height
-        scoreNode!.size.width = 1.5 * scoreNode!.size.width
+        scoreNode!.position = CGPoint (x: 100.0, y: 937.0)
+        scoreNode!.size.height =  scoreNode!.size.height
+        scoreNode!.size.width = 1.2 * scoreNode!.size.width
         self.addChild(scoreNode!)
         
         
@@ -83,6 +83,21 @@ class OGForeground : SKNode {
         
     }
     
+//    func createLabel(imageName: String){
+//        
+//        let yearSpawner : OGYearLabelSpawner
+//        
+//        let texture = SKTexture(imageNamed: imageName)
+//        
+//        yearSpawner = OGYearLabelSpawner(texture: texture)
+//        yearSpawner.position = CGPoint (x: 720, y: 900)
+//        yearSpawner.size.height = 2 * yearSpawner.size.height
+//        yearSpawner.size.width = 2 * yearSpawner.size.width
+//        self.addChild(yearSpawner)
+//        
+//    }
+//
+//    
     
     
 
