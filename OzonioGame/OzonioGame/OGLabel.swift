@@ -20,9 +20,13 @@ class OGLabel: SKLabelNode {
         let scoreTextNode = SKLabelNode(fontNamed: "Copperplate")
         
         scoreTextNode.text = "\(nome) : \(score)"
+        
+        
+     
+        
         scoreTextNode.fontSize = 20
         scoreTextNode.fontColor = SKColor.whiteColor()
-        scoreTextNode.horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.Left
+        scoreTextNode.horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.Center
         
         
         addChild(scoreTextNode)
