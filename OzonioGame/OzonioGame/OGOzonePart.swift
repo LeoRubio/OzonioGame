@@ -9,10 +9,17 @@
 import UIKit
 import SpriteKit
 
+
+
 class OGOzonePart : SKSpriteNode {
     
+    
+    var layerLife : Int
+    
     init( texture: SKTexture ){
-        
+
+        self.layerLife = 5
+
         super.init(texture: texture, color: UIColor.clearColor(), size: texture.size())
         name = "OZONE"
         self.size.width *= 1.5
@@ -31,6 +38,33 @@ class OGOzonePart : SKSpriteNode {
     
     func update(){
         
+    }
+    
+    func layerDamage(){
+        
+        
+        self.layerLife--
+        
+        if self.layerLife <= 0{
+            self.removeFromParent()
+            layerCount--
+            playAudio("coracao.wav")
+        }
+            
+        else if self.layerLife < 3{
+            self.color = SKColor.redColor()
+        }
+            
+        else if self.layerLife < 5{
+            self.color = SKColor.yellowColor()
+        }
+        
+        self.colorBlendFactor = 0.7
+    }
+    
+    func playAudio(name: String){
+        let playSoundAction = SKAction.playSoundFileNamed(name, waitForCompletion: false)
+        runAction(playSoundAction)
     }
     
     required init?(coder aDecoder: NSCoder) {

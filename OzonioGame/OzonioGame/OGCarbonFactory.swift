@@ -13,7 +13,7 @@ class OGCarbonFactory: OGFactory {
     
     init(factoryPosition position: CGPoint){
         
-        super.init(imageNamed: "BlackSquare")
+        super.init(imageNamed: "navio")
         
         self.name = "CARBONFACTORY"
         
