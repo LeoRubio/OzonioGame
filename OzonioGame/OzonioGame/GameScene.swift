@@ -15,6 +15,9 @@ var planetNode : OGPlanet?
 var sunNode : OGSun?
 var scoreTextNode: OGLabel?
 
+var layerCount : Int = 32
+
+
 let CollisionCategoryMolecules : UInt32 = 0x1 << 1
 let CollisionCategoryOzoneLayer : UInt32 = 0x1 << 2
 
@@ -26,9 +29,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         super.init(coder: aDecoder)
     }
     
+
+    
     override init(size: CGSize) {
         
+        
+        
         super.init(size: size)
+        
+        playSound("yoda.wav")
         
         //gravity
         physicsWorld.gravity = CGVectorMake(0.0, -0.1)
@@ -61,6 +70,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         scoreTextNode!.position = CGPointMake(100, 935)
         addChild(scoreTextNode!)
         
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> master
 //        // adding years counting
 //        scoreTextNode = OGLabel()
 //        scoreTextNode!.position = CGPointMake(size.width/2, size.height - 130)
@@ -71,6 +85,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 //        let rotate = SKAction.rotateByAngle(1, duration: 60)
 //        planetNode!.runAction(SKAction.repeatActionForever(rotate))
         
+>>>>>>> PedroBranch
     }
     
     override func update(currentTime: NSTimeInterval) {
@@ -98,44 +113,68 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 if touch == "CARBONMOLECULE" {
                     carbonMolecule = nodeTouched as! OGCarbon
                     carbonMolecule.removeLife()
-                
+                    playSound("Plop.wav")
+                    
                 } else if touch == "NITROUSMOLECULE" {
                     
                     nitrousMolecule = nodeTouched as! OGNitrous
                     nitrousMolecule.removeLife()
-                
+                    playSound("Plop.wav")
+                    
+                    
                 } else if touch == "NITRICMOLECULE" {
                     
                     nitricMolecule = nodeTouched as! OGNitric
                     nitricMolecule.removeLife()
+                    playSound("Plop.wav")
                     
                 }
-            }
-        }
-       
-    }
-    
-    
-    func didBeginContact(contact: SKPhysicsContact) {
-        
-        
-        
-        if  contact.bodyB!.node != nil && contact.bodyA.node != nil{
-            
-            var nodeA = contact.bodyA!.node!
-            var nodeB = contact.bodyB!.node!
-            if nodeB.name == "CARBONMOLECULE" || nodeB.name == "NITROUSMOLECULE" || nodeB.name == "NITRICMOLECULE" {
-                nodeB.removeFromParent()
+                else if touch == "PLAYPAUSE"{
+                    foregroundNode?.playNode!.switchState()
+                }
             }
             
+        }
+    }
+    
+        func didBeginContact(contact: SKPhysicsContact) {
             
-            var ozoneDamage = SKAction.colorizeWithColor(UIColor.redColor(), colorBlendFactor: 1.0, duration: 1)
-            contact.bodyA!.node!.runAction(ozoneDamage)
+            if  contact.bodyB!.node != nil && contact.bodyA.node != nil{
+                
+                var nodeA = contact.bodyA!.node!
+                var nodeB = contact.bodyB!.node!
+                
+                if nodeB.name == "CARBONMOLECULE" || nodeB.name == "NITROUSMOLECULE" || nodeB.name == "NITRICMOLECULE" {
+                    playSound("impact.wav")
+                    nodeB.removeFromParent()
+                }
+                
+                var damage : OGOzonePart
+                damage = nodeA as! OGOzonePart
+                damage.layerDamage()
+                if layerCount <= 30 {
+                    let doorsTransition = SKTransition.doorwayWithDuration(3.0)
+                    let gameOverScene = EndScene(size: size)
+                    self.scene?.view?.presentScene(gameOverScene, transition: doorsTransition)
+                    playSound("gameOver.wav")
+                    playSound("strange.wav")
+                    playSound("gameOver2.wav")
+                    
+                }
+                
+            }
+            
             
         }
-        
     
+    func playSound (nome: String){
+        let playSoundAction = SKAction.playSoundFileNamed(nome, waitForCompletion: false)
+        runAction(playSoundAction)
     }
-
-
+    
+//    func playSoundGameOver (){
+//        let playSoundAction = SKAction.playSoundFileNamed("gameOver.wav", waitForCompletion: false)
+//        runAction(playSoundAction)
+//    }
+    
 }

@@ -13,7 +13,7 @@ class OGCarbonFactory: OGFactory {
     
     init(factoryPosition position: CGPoint){
         
-        super.init(imageNamed: "BlackSquare")
+        super.init(imageNamed: "navio")
         
         self.name = "CARBONFACTORY"
         
@@ -39,20 +39,6 @@ class OGCarbonFactory: OGFactory {
             let molecule = OGCarbon()
             molecule.position = CGPoint(x: 0.0, y: 0.0)
             super.addChild(molecule)
-        }
-        
-    }
-    
-    override func update() {
-        self.enumerateChildNodesWithName("CARBONMOLECULE") {
-            node, stop in
-            
-            // CHAMA O UPDATE DE TODOS OS FILHOS MOLECULA
-            var moleculeAux : OGCarbon?
-            moleculeAux = node as? OGCarbon
-            moleculeAux?.update()
-            //stop.memory = true
-            
         }
         
     }

@@ -10,7 +10,6 @@ import UIKit
 import SpriteKit
 
 
-
 class OGMolecule : OGHideRequired {
     
     var lifeMax: Int
@@ -22,33 +21,59 @@ class OGMolecule : OGHideRequired {
         let texture = SKTexture(imageNamed: imageName)
         let size = texture.size()
         
+        
         self.lifeMax = 1
         
         super.init(texture: texture, color: UIColor.clearColor(), size: texture.size())
         self.name = "MOLECULE"
         
+
+        self.physicsBody = SKPhysicsBody (circleOfRadius: self.size.width / 3.0)
+        self.physicsBody?.dynamic = true
+        
+        self.physicsBody?.mass = 0.01
+        self.physicsBody?.usesPreciseCollisionDetection = true
+        
+        self.physicsBody!.categoryBitMask = CollisionCategoryMolecules
+        self.physicsBody!.collisionBitMask = 0
+
         self.zPosition += 1
         
         
     }
     
     func update(){
-
+        
         fatalError("MUST OVERRIDE THIS FUNCTION")
-
+        
+    }
+    
+    func mitosis(){
+        
+        fatalError("MUST OVERRIDE THIS FUNCTION")
+        
     }
     
     func removeLife(){
         
         self.lifeMax--
         
-        println(self.lifeMax)
         if self.lifeMax <= 0{
-
+            
+            self.mitosis()
             self.removeFromParent()
         }
+        else if self.lifeMax <= 1{
+            self.color = SKColor.redColor()
+        }
+        else if self.lifeMax == 2{
+            self.color = SKColor.yellowColor()
+        }
+        
+        self.colorBlendFactor = 0.7
         
     }
+
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

@@ -20,8 +20,17 @@
 		E23B93DA1B1D5CD2001390EC /* OGAtmosphere.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23B93D91B1D5CD2001390EC /* OGAtmosphere.swift */; };
 		E23B93DC1B1D62CB001390EC /* OGForeground.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23B93DB1B1D62CB001390EC /* OGForeground.swift */; };
 		E23B93DE1B1D65B1001390EC /* OGScoreNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23B93DD1B1D65B1001390EC /* OGScoreNode.swift */; };
+<<<<<<< HEAD
+		E23B93E41B1D72E7001390EC /* OGPlayPauseNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23B93E31B1D72E7001390EC /* OGPlayPauseNode.swift */; };
+		E23B93E61B1D755A001390EC /* OGYear.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23B93E51B1D755A001390EC /* OGYear.swift */; };
+		E23B93E81B1E3162001390EC /* OGOzonePart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23B93E71B1E3162001390EC /* OGOzonePart.swift */; };
+=======
 		E23B93E21B1D7024001390EC /* OGPlayNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23B93E11B1D7024001390EC /* OGPlayNode.swift */; };
 		E23B93E41B1D72E7001390EC /* OGPauseNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23B93E31B1D72E7001390EC /* OGPauseNode.swift */; };
+<<<<<<< HEAD
+=======
+>>>>>>> PedroBranch
+>>>>>>> master
 		E242CC401B150848000E5A1C /* OGFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242CC3F1B150847000E5A1C /* OGFactory.swift */; };
 		E242CC421B15085C000E5A1C /* OGMolecule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242CC411B15085C000E5A1C /* OGMolecule.swift */; };
 		E26209581B1397110033BC70 /* OGPlanet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26209571B1397110033BC70 /* OGPlanet.swift */; };
@@ -37,6 +46,19 @@
 		E29194F61B13BDCF005BB643 /* OGBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29194F51B13BDCF005BB643 /* OGBackground.swift */; };
 		E2C7FE1A1B0FB169004E6A7E /* fireSun.sks in Resources */ = {isa = PBXBuildFile; fileRef = E2C7FE181B0FB169004E6A7E /* fireSun.sks */; };
 		E2C7FE1B1B0FB169004E6A7E /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = E2C7FE191B0FB169004E6A7E /* spark.png */; };
+		E2D599231B1E9714001D33C5 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D599221B1E9714001D33C5 /* MenuScene.swift */; };
+		E2D599261B1EBFF1001D33C5 /* EndScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D599251B1EBFF1001D33C5 /* EndScene.swift */; };
+		E2D599291B1EF172001D33C5 /* Plop.wav in Resources */ = {isa = PBXBuildFile; fileRef = E2D599281B1EF172001D33C5 /* Plop.wav */; };
+		E2D5992B1B1EF2ED001D33C5 /* gameOver.wav in Resources */ = {isa = PBXBuildFile; fileRef = E2D5992A1B1EF2ED001D33C5 /* gameOver.wav */; };
+		E2D5992D1B1EF35F001D33C5 /* begin.wav in Resources */ = {isa = PBXBuildFile; fileRef = E2D5992C1B1EF35F001D33C5 /* begin.wav */; };
+		E2D5992F1B1F00C4001D33C5 /* intro.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E2D5992E1B1F00C4001D33C5 /* intro.mp3 */; };
+		E2D599311B1F0289001D33C5 /* buttons.wav in Resources */ = {isa = PBXBuildFile; fileRef = E2D599301B1F0289001D33C5 /* buttons.wav */; };
+		E2D599351B1F04B8001D33C5 /* strange.wav in Resources */ = {isa = PBXBuildFile; fileRef = E2D599341B1F04B8001D33C5 /* strange.wav */; };
+		E2D599371B1F0528001D33C5 /* pngs.wav in Resources */ = {isa = PBXBuildFile; fileRef = E2D599361B1F0528001D33C5 /* pngs.wav */; };
+		E2D599391B1F05DF001D33C5 /* impact.wav in Resources */ = {isa = PBXBuildFile; fileRef = E2D599381B1F05DF001D33C5 /* impact.wav */; };
+		E2D5993B1B1F068C001D33C5 /* coracao.wav in Resources */ = {isa = PBXBuildFile; fileRef = E2D5993A1B1F068C001D33C5 /* coracao.wav */; };
+		E2D5993D1B1F075E001D33C5 /* gameOver2.wav in Resources */ = {isa = PBXBuildFile; fileRef = E2D5993C1B1F075E001D33C5 /* gameOver2.wav */; };
+		E2D5993F1B1F0795001D33C5 /* yoda.wav in Resources */ = {isa = PBXBuildFile; fileRef = E2D5993E1B1F0795001D33C5 /* yoda.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,8 +85,17 @@
 		E23B93D91B1D5CD2001390EC /* OGAtmosphere.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGAtmosphere.swift; sourceTree = "<group>"; };
 		E23B93DB1B1D62CB001390EC /* OGForeground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGForeground.swift; sourceTree = "<group>"; };
 		E23B93DD1B1D65B1001390EC /* OGScoreNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGScoreNode.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
+		E23B93E31B1D72E7001390EC /* OGPlayPauseNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGPlayPauseNode.swift; sourceTree = "<group>"; };
+		E23B93E51B1D755A001390EC /* OGYear.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGYear.swift; sourceTree = "<group>"; };
+		E23B93E71B1E3162001390EC /* OGOzonePart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGOzonePart.swift; sourceTree = "<group>"; };
+=======
 		E23B93E11B1D7024001390EC /* OGPlayNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGPlayNode.swift; sourceTree = "<group>"; };
 		E23B93E31B1D72E7001390EC /* OGPauseNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGPauseNode.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
+=======
+>>>>>>> PedroBranch
+>>>>>>> master
 		E242CC3F1B150847000E5A1C /* OGFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGFactory.swift; sourceTree = "<group>"; };
 		E242CC411B15085C000E5A1C /* OGMolecule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGMolecule.swift; sourceTree = "<group>"; };
 		E26209571B1397110033BC70 /* OGPlanet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGPlanet.swift; sourceTree = "<group>"; };
@@ -84,6 +115,19 @@
 		E29194F51B13BDCF005BB643 /* OGBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGBackground.swift; sourceTree = "<group>"; };
 		E2C7FE181B0FB169004E6A7E /* fireSun.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = fireSun.sks; sourceTree = "<group>"; };
 		E2C7FE191B0FB169004E6A7E /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		E2D599221B1E9714001D33C5 /* MenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
+		E2D599251B1EBFF1001D33C5 /* EndScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndScene.swift; sourceTree = "<group>"; };
+		E2D599281B1EF172001D33C5 /* Plop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Plop.wav; sourceTree = "<group>"; };
+		E2D5992A1B1EF2ED001D33C5 /* gameOver.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = gameOver.wav; sourceTree = "<group>"; };
+		E2D5992C1B1EF35F001D33C5 /* begin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = begin.wav; sourceTree = "<group>"; };
+		E2D5992E1B1F00C4001D33C5 /* intro.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = intro.mp3; sourceTree = "<group>"; };
+		E2D599301B1F0289001D33C5 /* buttons.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = buttons.wav; sourceTree = "<group>"; };
+		E2D599341B1F04B8001D33C5 /* strange.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = strange.wav; sourceTree = "<group>"; };
+		E2D599361B1F0528001D33C5 /* pngs.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = pngs.wav; sourceTree = "<group>"; };
+		E2D599381B1F05DF001D33C5 /* impact.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = impact.wav; sourceTree = "<group>"; };
+		E2D5993A1B1F068C001D33C5 /* coracao.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = coracao.wav; sourceTree = "<group>"; };
+		E2D5993C1B1F075E001D33C5 /* gameOver2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = gameOver2.wav; sourceTree = "<group>"; };
+		E2D5993E1B1F0795001D33C5 /* yoda.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = yoda.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,8 +177,7 @@
 				A0114EEC1B1E32E500F75365 /* OGYear.swift */,
 				A0114EF41B1F691F00F75365 /* OGYearLabel.swift */,
 				E23B93DB1B1D62CB001390EC /* OGForeground.swift */,
-				E23B93E31B1D72E7001390EC /* OGPauseNode.swift */,
-				E23B93E11B1D7024001390EC /* OGPlayNode.swift */,
+				E23B93E31B1D72E7001390EC /* OGPlayPauseNode.swift */,
 				E23B93DD1B1D65B1001390EC /* OGScoreNode.swift */,
 			);
 			name = Foreground;
@@ -146,6 +189,7 @@
 				E26209571B1397110033BC70 /* OGPlanet.swift */,
 				E23B93D91B1D5CD2001390EC /* OGAtmosphere.swift */,
 				E29194F11B13A459005BB643 /* OGOzoneLayer.swift */,
+				E23B93E71B1E3162001390EC /* OGOzonePart.swift */,
 			);
 			name = Planet;
 			sourceTree = "<group>";
@@ -171,6 +215,7 @@
 		E288830C1B0E4E4900FE0C8C /* OzonioGame */ = {
 			isa = PBXGroup;
 			children = (
+				E2D599271B1EF151001D33C5 /* Audio */,
 				E29194F81B13C1FA005BB643 /* GameControl */,
 				E29194F71B13C1C0005BB643 /* OGClasses */,
 				E29194F91B13C220005BB643 /* Particulas */,
@@ -211,6 +256,13 @@
 				549B573D1B1796AE00766AF7 /* OGHideRequired.swift */,
 				E29194F51B13BDCF005BB643 /* OGBackground.swift */,
 				E29194F31B13A9F2005BB643 /* OGSun.swift */,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+				A073E8FE1B179D4100286508 /* OGLabel.swift */,
+=======
+>>>>>>> PedroBranch
+>>>>>>> master
 				E23B93DF1B1D6CEB001390EC /* Foreground */,
 				E23B93E01B1D6F23001390EC /* Planet */,
 				549B57471B17AD5200766AF7 /* Factory */,
@@ -225,8 +277,7 @@
 				E28883171B0E4E4900FE0C8C /* Main.storyboard */,
 				E288831C1B0E4E4900FE0C8C /* LaunchScreen.xib */,
 				E288830F1B0E4E4900FE0C8C /* AppDelegate.swift */,
-				E28883151B0E4E4900FE0C8C /* GameViewController.swift */,
-				E28883131B0E4E4900FE0C8C /* GameScene.swift */,
+				E2D599241B1EACA0001D33C5 /* Scenes */,
 			);
 			name = GameControl;
 			sourceTree = "<group>";
@@ -238,6 +289,35 @@
 				E2C7FE191B0FB169004E6A7E /* spark.png */,
 			);
 			name = Particulas;
+			sourceTree = "<group>";
+		};
+		E2D599241B1EACA0001D33C5 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				E28883151B0E4E4900FE0C8C /* GameViewController.swift */,
+				E2D599221B1E9714001D33C5 /* MenuScene.swift */,
+				E28883131B0E4E4900FE0C8C /* GameScene.swift */,
+				E2D599251B1EBFF1001D33C5 /* EndScene.swift */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		E2D599271B1EF151001D33C5 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				E2D5992E1B1F00C4001D33C5 /* intro.mp3 */,
+				E2D599281B1EF172001D33C5 /* Plop.wav */,
+				E2D5992A1B1EF2ED001D33C5 /* gameOver.wav */,
+				E2D5992C1B1EF35F001D33C5 /* begin.wav */,
+				E2D599301B1F0289001D33C5 /* buttons.wav */,
+				E2D599341B1F04B8001D33C5 /* strange.wav */,
+				E2D599361B1F0528001D33C5 /* pngs.wav */,
+				E2D599381B1F05DF001D33C5 /* impact.wav */,
+				E2D5993A1B1F068C001D33C5 /* coracao.wav */,
+				E2D5993C1B1F075E001D33C5 /* gameOver2.wav */,
+				E2D5993E1B1F0795001D33C5 /* yoda.wav */,
+			);
+			name = Audio;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,11 +400,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2D5993D1B1F075E001D33C5 /* gameOver2.wav in Resources */,
+				E2D5993F1B1F0795001D33C5 /* yoda.wav in Resources */,
+				E2D599371B1F0528001D33C5 /* pngs.wav in Resources */,
+				E2D599391B1F05DF001D33C5 /* impact.wav in Resources */,
+				E2D599311B1F0289001D33C5 /* buttons.wav in Resources */,
+				E2D599351B1F04B8001D33C5 /* strange.wav in Resources */,
 				E2C7FE1B1B0FB169004E6A7E /* spark.png in Resources */,
+				E2D5992D1B1EF35F001D33C5 /* begin.wav in Resources */,
+				E2D599291B1EF172001D33C5 /* Plop.wav in Resources */,
+				E2D5993B1B1F068C001D33C5 /* coracao.wav in Resources */,
 				E288831E1B0E4E4900FE0C8C /* LaunchScreen.xib in Resources */,
+				E2D5992B1B1EF2ED001D33C5 /* gameOver.wav in Resources */,
 				E288831B1B0E4E4900FE0C8C /* Images.xcassets in Resources */,
 				E2C7FE1A1B0FB169004E6A7E /* fireSun.sks in Resources */,
 				E28883191B0E4E4900FE0C8C /* Main.storyboard in Resources */,
+				E2D5992F1B1F00C4001D33C5 /* intro.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,19 +442,21 @@
 				E29194F41B13A9F2005BB643 /* OGSun.swift in Sources */,
 				E29194F21B13A459005BB643 /* OGOzoneLayer.swift in Sources */,
 				E242CC421B15085C000E5A1C /* OGMolecule.swift in Sources */,
-				E23B93E41B1D72E7001390EC /* OGPauseNode.swift in Sources */,
+				E2D599261B1EBFF1001D33C5 /* EndScene.swift in Sources */,
+				E23B93E41B1D72E7001390EC /* OGPlayPauseNode.swift in Sources */,
 				E28883141B0E4E4900FE0C8C /* GameScene.swift in Sources */,
 				549B57491B17EDE700766AF7 /* OGNitric.swift in Sources */,
+				E23B93E81B1E3162001390EC /* OGOzonePart.swift in Sources */,
 				549B57461B17ACEE00766AF7 /* OGNitrousFactory.swift in Sources */,
 				A073E8FF1B179D4100286508 /* OGLabel.swift in Sources */,
 				E23B93DE1B1D65B1001390EC /* OGScoreNode.swift in Sources */,
 				549B573C1B178F8E00766AF7 /* OGCarbon.swift in Sources */,
-				E23B93E21B1D7024001390EC /* OGPlayNode.swift in Sources */,
 				E28883161B0E4E4900FE0C8C /* GameViewController.swift in Sources */,
 				549B573E1B1796AE00766AF7 /* OGHideRequired.swift in Sources */,
 				A0114EF51B1F691F00F75365 /* OGYearLabel.swift in Sources */,
 				E23B93DC1B1D62CB001390EC /* OGForeground.swift in Sources */,
 				E28883101B0E4E4900FE0C8C /* AppDelegate.swift in Sources */,
+				E2D599231B1E9714001D33C5 /* MenuScene.swift in Sources */,
 				549B574B1B17EEFA00766AF7 /* OGNitricFactory.swift in Sources */,
 				E26209581B1397110033BC70 /* OGPlanet.swift in Sources */,
 			);

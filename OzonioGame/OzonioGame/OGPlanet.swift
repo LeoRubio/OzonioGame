@@ -48,8 +48,6 @@ class OGPlanet : SKSpriteNode {
         self.addChild(ozoneNode!)
     }
     
-    
-    
 
     
     func createAtmosphere (imageName: String){
@@ -67,17 +65,25 @@ class OGPlanet : SKSpriteNode {
     
     
     
-    func createFactory(imageName: String, positionFactory: CGPoint){
+    func createFactory(positionFactory: CGPoint){
         
         let factoryNode = OGCarbonFactory(factoryPosition: positionFactory)
         self.addChild(factoryNode)
         
+    }
+    
+    func createOil (positionFactory: CGPoint){
+    
         let factoryNitrousNode = OGNitrousFactory(factoryPosition: positionFactory)
         self.addChild(factoryNitrousNode)
-        
+    
+    }
+    
+    func createBoat (positionFactory: CGPoint){
         let factoryNitricNode = OGNitricFactory(factoryPosition: positionFactory)
         self.addChild(factoryNitricNode)
     }
+    
     
     //Chama o update de todos os filhos de Planeta
     func update(){
@@ -126,16 +132,48 @@ class OGPlanet : SKSpriteNode {
         createOzoneLayer("ozonio")
         createAtmosphere("atmosfera")
         
-        createFactory("BlackSquare", positionFactory: CGPointMake(randomNum(), randomNum()))
-        createFactory("BlackSquare", positionFactory: CGPointMake(randomNum(), randomNum()))
-        createFactory("BlackSquare", positionFactory: CGPointMake(randomNum(), randomNum()))
-        createFactory("BlackSquare", positionFactory: CGPointMake(randomNum(), randomNum()))
-//        createFactory("BlackSquare", positionFactory: CGPointMake(randomNum(), randomNum()))
-//        createFactory("BlackSquare", positionFactory: CGPointMake(randomNum(), randomNum()))
-//        createFactory("BlackSquare", positionFactory: CGPointMake(randomNum(), randomNum()))
-//        createFactory("BlackSquare", positionFactory: CGPointMake(randomNum(), randomNum()))
+        
+        for i in 0..<32 {
+            
+            var xPosition = sin(M_PI*(2.0 * Double(i)/32.0)) * 780
+            var yPosition = cos(M_PI*(2.0 * Double(i)/32.0)) * 780
+            var rotation:CGFloat = CGFloat(-M_PI*(2.0 * Double(i)/32.0 + 1/32.0))
+            createOzoneParts("ozonePart", positionPart: CGPoint(x: xPosition, y: yPosition), rotationPart: rotation)
+            //xPosition += 157  ; yPosition -= 17  ; rotation -= 0.2
+        }
+    
+//    ********************************
+        // POSICIONAR FABRICAS
+            // CRIAR AVIAO CHILD
+        
+        createFactory(CGPointMake(randomNum(), randomNum()))
+        createBoat(CGPointMake(randomNum(), randomNum()))
+        createOil(CGPointMake(randomNum(), randomNum()))
+        createFactory(CGPointMake(randomNum(), randomNum()))
+        createFactory(CGPointMake(randomNum(), randomNum()))
+        createBoat(CGPointMake(randomNum(), randomNum()))
+        createOil(CGPointMake(randomNum(), randomNum()))
+        createFactory(CGPointMake(randomNum(), randomNum()))
+        
+        
+        //    ********************************
+
         
     }
+    
+    
+    
+    func createOzoneParts (imageName: String, positionPart : CGPoint, rotationPart : CGFloat){
+        
+        let ozonePartNode : OGOzonePart?
+        let texture = SKTexture(imageNamed: imageName)
+        ozonePartNode = OGOzonePart(texture: texture)
+        ozonePartNode!.position = positionPart
+        ozonePartNode!.zRotation = rotationPart
+        self.addChild(ozonePartNode!)
+        
+    }
+    
     
     
     func randomNum() -> CGFloat{
