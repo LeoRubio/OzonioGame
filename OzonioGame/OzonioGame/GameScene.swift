@@ -156,9 +156,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         runAction(playSoundAction)
     }
     
-//    func playSoundGameOver (){
-//        let playSoundAction = SKAction.playSoundFileNamed("gameOver.wav", waitForCompletion: false)
-//        runAction(playSoundAction)
-//    }
+
     
 }

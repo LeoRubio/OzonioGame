@@ -154,7 +154,10 @@ class OGPlanet : SKSpriteNode {
         createBoat(CGPointMake(randomNum(), randomNum()))
         createOil(CGPointMake(randomNum(), randomNum()))
         createFactory(CGPointMake(randomNum(), randomNum()))
-        
+        createFactory(CGPointMake(randomNum(), randomNum()))
+        createBoat(CGPointMake(randomNum(), randomNum()))
+        createOil(CGPointMake(randomNum(), randomNum()))
+
         
         //    ********************************
 

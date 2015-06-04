@@ -13,6 +13,7 @@ import SpriteKit
 class OGMolecule : OGHideRequired {
     
     var lifeMax: Int
+    var destroyScore: Int
     
     init(imageNamed imageName:String){
         
@@ -23,6 +24,7 @@ class OGMolecule : OGHideRequired {
         
         
         self.lifeMax = 1
+        self.destroyScore = 10
         
         super.init(texture: texture, color: UIColor.clearColor(), size: texture.size())
         self.name = "MOLECULE"
@@ -54,12 +56,16 @@ class OGMolecule : OGHideRequired {
         
     }
     
+    func giveScore() -> Int{
+        return self.destroyScore
+    }
+    
     func removeLife(){
         
         self.lifeMax--
         
         if self.lifeMax <= 0{
-            
+
             self.mitosis()
             self.removeFromParent()
         }

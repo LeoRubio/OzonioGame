@@ -18,6 +18,8 @@ class OGNitrous: OGMolecule {
         
         self.lifeMax = 2
         
+        self.destroyScore = 150
+        
         self.name = "NITROUSMOLECULE"
         
         self.size.width *= 1.6

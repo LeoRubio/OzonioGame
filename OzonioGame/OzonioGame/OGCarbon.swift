@@ -19,6 +19,8 @@ class OGCarbon : OGMolecule {
         
         self.lifeMax = 1
         
+        self.destroyScore = 10
+        
         self.name = "CARBONMOLECULE"
 
         self.size.width *= 1.2
