@@ -12,6 +12,7 @@ import SpriteKit
 class OGForeground : SKNode {
     
     var playNode : OGPlayPauseNode?
+    var scoreNode : OGScoreNode?
     
     override init(){
         
@@ -39,7 +40,7 @@ class OGForeground : SKNode {
     
     func createScoreNode(imageName: String){
 
-        let scoreNode : OGScoreNode?
+       
             
         let texture = SKTexture(imageNamed: imageName)
             
@@ -51,7 +52,6 @@ class OGForeground : SKNode {
         
         
     }
-    
     
     
     func createPlayNode(){
