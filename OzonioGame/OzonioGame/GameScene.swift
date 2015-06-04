@@ -70,19 +70,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         scoreTextNode!.position = CGPointMake(100, 935)
         addChild(scoreTextNode!)
         
-<<<<<<< HEAD
-=======
-//        // adding years counting
-//        scoreTextNode = OGLabel()
-//        scoreTextNode!.position = CGPointMake(size.width/2, size.height - 130)
-//        addChild(scoreTextNode!)
-//        
-        
-        //açao de girar Terra e Camadas
-//        let rotate = SKAction.rotateByAngle(1, duration: 60)
-//        planetNode!.runAction(SKAction.repeatActionForever(rotate))
-        
->>>>>>> PedroBranch
     }
     
     override func update(currentTime: NSTimeInterval) {
