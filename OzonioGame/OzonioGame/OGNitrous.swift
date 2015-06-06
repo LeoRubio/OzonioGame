@@ -18,9 +18,10 @@ class OGNitrous: OGMolecule {
         
         self.lifeMax = 2
         
+        self.destroyScore = 150
+        
         self.name = "NITROUSMOLECULE"
         
-<<<<<<< HEAD
         self.size.width *= 1.6
         self.size.height *= 1.6
 
@@ -40,7 +41,6 @@ class OGNitrous: OGMolecule {
             divideMolecule.position = CGPointMake(self.position.x + auxX, self.position.y)
             self.parent!.addChild(divideMolecule)
         }
-=======
         self.size.width *= 1.5
         self.size.height *= 1.5
         self.physicsBody = SKPhysicsBody (circleOfRadius: self.size.width / 1.5)
@@ -52,8 +52,11 @@ class OGNitrous: OGMolecule {
         self.physicsBody!.categoryBitMask = CollisionCategoryMolecules
         self.physicsBody!.collisionBitMask = 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> PedroBranch
+>>>>>>> master
+=======
 >>>>>>> master
 
         

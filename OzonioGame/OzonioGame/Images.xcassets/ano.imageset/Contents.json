@@ -3,7 +3,17 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "ozone-defender-ano (1).png"
+      "filename" : "ano.png"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x",
+      "filename" : "ano@2x.png"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x",
+      "filename" : "ano@3x.png"
     }
   ],
   "info" : {

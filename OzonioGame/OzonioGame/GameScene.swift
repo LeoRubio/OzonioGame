@@ -71,6 +71,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         addChild(scoreTextNode!)
         
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -86,6 +87,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 //        planetNode!.runAction(SKAction.repeatActionForever(rotate))
         
 >>>>>>> PedroBranch
+=======
+>>>>>>> master
     }
     
     override func update(currentTime: NSTimeInterval) {
@@ -172,9 +175,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         runAction(playSoundAction)
     }
     
-//    func playSoundGameOver (){
-//        let playSoundAction = SKAction.playSoundFileNamed("gameOver.wav", waitForCompletion: false)
-//        runAction(playSoundAction)
-//    }
+
     
 }

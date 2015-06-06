@@ -18,9 +18,10 @@ class OGNitric: OGMolecule {
         
         self.lifeMax = 3
         
+        self.destroyScore = 300
+        
         self.name = "NITRICMOLECULE"
         
-<<<<<<< HEAD
         self.size.width *= 1.9
         self.size.height *= 1.9
 
@@ -41,7 +42,6 @@ class OGNitric: OGMolecule {
             divideMolecule.position = CGPointMake(self.position.x + auxX, self.position.y)
             self.parent!.addChild(divideMolecule)
         }
-=======
         self.size.width *= 1.5
         self.size.height *= 1.5
         self.physicsBody = SKPhysicsBody (circleOfRadius: self.size.width / 1.5)
@@ -53,8 +53,11 @@ class OGNitric: OGMolecule {
         self.physicsBody!.categoryBitMask = CollisionCategoryMolecules
         self.physicsBody!.collisionBitMask = 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> PedroBranch
+>>>>>>> master
+=======
 >>>>>>> master
         
     }
@@ -65,6 +68,7 @@ class OGNitric: OGMolecule {
         //self.physicsBody!.applyImpulse(CGVectorMake(1.0, 1.0))
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         self.physicsBody!.applyForce(CGVectorMake(0.0, 0.3))
 =======
 <<<<<<< HEAD
@@ -73,6 +77,10 @@ class OGNitric: OGMolecule {
 =======
         self.physicsBody!.applyForce(CGVectorMake(0.0, 0.3))
 >>>>>>> PedroBranch
+>>>>>>> master
+=======
+        self.physicsBody!.applyForce(CGVectorMake(0.0, 0.2))
+
 >>>>>>> master
     }
     
