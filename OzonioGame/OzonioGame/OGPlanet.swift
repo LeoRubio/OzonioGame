@@ -64,25 +64,50 @@ class OGPlanet : SKSpriteNode {
     
     
     
-    
     func createFactory(positionFactory: CGPoint){
         
         let factoryNode = OGCarbonFactory(factoryPosition: positionFactory)
         self.addChild(factoryNode)
         
+        var smokeParticle : SKEmitterNode?
+        let smokePath = NSBundle.mainBundle().pathForResource("smoke", ofType: "sks")
+        smokeParticle = NSKeyedUnarchiver.unarchiveObjectWithFile(smokePath!) as? SKEmitterNode
+        smokeParticle?.position = factoryNode.position
+        self.addChild(smokeParticle!)
+        
     }
+    
+    
+    
     
     func createOil (positionFactory: CGPoint){
     
         let factoryNitrousNode = OGNitrousFactory(factoryPosition: positionFactory)
         self.addChild(factoryNitrousNode)
+        
+        var smokeParticle : SKEmitterNode?
+        let smokePath = NSBundle.mainBundle().pathForResource("smoke", ofType: "sks")
+        smokeParticle = NSKeyedUnarchiver.unarchiveObjectWithFile(smokePath!) as? SKEmitterNode
+        smokeParticle?.position = factoryNitrousNode.position
+        self.addChild(smokeParticle!)
     
     }
+    
+    
+    
     
     func createBoat (positionFactory: CGPoint){
         let factoryNitricNode = OGNitricFactory(factoryPosition: positionFactory)
         self.addChild(factoryNitricNode)
+        
+        var smokeParticle : SKEmitterNode?
+        let smokePath = NSBundle.mainBundle().pathForResource("smoke", ofType: "sks")
+        smokeParticle = NSKeyedUnarchiver.unarchiveObjectWithFile(smokePath!) as? SKEmitterNode
+        smokeParticle?.position = factoryNitricNode.position
+        self.addChild(smokeParticle!)
     }
+    
+    
     
     
     //Chama o update de todos os filhos de Planeta
@@ -96,7 +121,6 @@ class OGPlanet : SKSpriteNode {
             factoryAux = node as? OGCarbonFactory
             factoryAux?.update()
             
-            //stop.memory = true
             
         }
         
@@ -108,7 +132,6 @@ class OGPlanet : SKSpriteNode {
             factoryAux = node as? OGNitrousFactory
             factoryAux?.update()
             
-            //stop.memory = true
             
         }
         
@@ -120,7 +143,6 @@ class OGPlanet : SKSpriteNode {
             factoryAux = node as? OGNitricFactory
             factoryAux?.update()
             
-            //stop.memory = true
             
         }
         
@@ -139,7 +161,7 @@ class OGPlanet : SKSpriteNode {
             var yPosition = cos(M_PI*(2.0 * Double(i)/32.0)) * 780
             var rotation:CGFloat = CGFloat(-M_PI*(2.0 * Double(i)/32.0 + 1/32.0))
             createOzoneParts("ozonePart", positionPart: CGPoint(x: xPosition, y: yPosition), rotationPart: rotation)
-            //xPosition += 157  ; yPosition -= 17  ; rotation -= 0.2
+            
         }
     
 //    ********************************
@@ -154,7 +176,10 @@ class OGPlanet : SKSpriteNode {
         createBoat(CGPointMake(randomNum(), randomNum()))
         createOil(CGPointMake(randomNum(), randomNum()))
         createFactory(CGPointMake(randomNum(), randomNum()))
-        
+        createFactory(CGPointMake(randomNum(), randomNum()))
+        createBoat(CGPointMake(randomNum(), randomNum()))
+        createOil(CGPointMake(randomNum(), randomNum()))
+
         
         //    ********************************
 

@@ -18,10 +18,12 @@ class OGNitric: OGMolecule {
         
         self.lifeMax = 3
         
+        self.destroyScore = 300
+        
         self.name = "NITRICMOLECULE"
         
-        self.size.width *= 1.9
-        self.size.height *= 1.9
+        self.size.width *= 2.5
+        self.size.height *= 2.5
 
         
 
@@ -32,14 +34,25 @@ class OGNitric: OGMolecule {
         
         var auxX:CGFloat = 0.0
         
-        for(var i = 0; i < 2; i++){
+        for(var i = -1; i < 2; i+=2){
+            
             let divideMolecule = OGNitrous()
             
-            auxX = CGFloat(i*40)
+            auxX = CGFloat(i*70)
             
             divideMolecule.position = CGPointMake(self.position.x + auxX, self.position.y)
             self.parent!.addChild(divideMolecule)
         }
+        self.size.width *= 1.5
+        self.size.height *= 1.5
+        self.physicsBody = SKPhysicsBody (circleOfRadius: self.size.width / 1.5)
+        self.physicsBody?.dynamic = true
+
+        self.physicsBody?.mass = 0.01
+        self.physicsBody?.usesPreciseCollisionDetection = true
+        
+        self.physicsBody!.categoryBitMask = CollisionCategoryMolecules
+        self.physicsBody!.collisionBitMask = 0
         
     }
     
@@ -48,7 +61,7 @@ class OGNitric: OGMolecule {
         var childYPosition = self.position.y + self.parent!.position.y
         //self.physicsBody!.applyImpulse(CGVectorMake(1.0, 1.0))
 
-        self.physicsBody!.applyForce(CGVectorMake(0.0, 0.2))
+        self.physicsBody!.applyForce(CGVectorMake(0.0, 1.0))
 
     }
     

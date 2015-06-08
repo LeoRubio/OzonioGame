@@ -10,19 +10,23 @@ import UIKit
 import SpriteKit
 
 class OGLabel: SKLabelNode {
-    
+    var score = 0
     init(nome: String) {
         super.init()
         
         //Cria a label do score
         
-        var score = 0
+        
         let scoreTextNode = SKLabelNode(fontNamed: "Copperplate")
         
         scoreTextNode.text = "\(nome) : \(score)"
+        
+        
+     
+        
         scoreTextNode.fontSize = 20
         scoreTextNode.fontColor = SKColor.whiteColor()
-        scoreTextNode.horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.Left
+        scoreTextNode.horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.Center
         
         
         addChild(scoreTextNode)

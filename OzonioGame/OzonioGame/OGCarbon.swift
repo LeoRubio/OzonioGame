@@ -19,10 +19,21 @@ class OGCarbon : OGMolecule {
         
         self.lifeMax = 1
         
+        self.destroyScore = 10
+        
         self.name = "CARBONMOLECULE"
-        self.size.width *= 1.3
-        self.size.height *= 1.3
 
+        self.size.width *= 1.8
+        self.size.height *= 1.8
+
+        self.physicsBody = SKPhysicsBody (circleOfRadius: self.size.width / 1.5)
+        self.physicsBody?.dynamic = true
+
+        self.physicsBody?.mass = 0.01
+        self.physicsBody?.usesPreciseCollisionDetection = true
+        
+        self.physicsBody!.categoryBitMask = CollisionCategoryMolecules
+        self.physicsBody!.collisionBitMask = 0
 
     }
     
@@ -36,7 +47,8 @@ class OGCarbon : OGMolecule {
         var childYPosition = self.position.y + self.parent!.position.y
         //self.physicsBody!.applyImpulse(CGVectorMake(1.0, 1.0))
 
-        self.physicsBody!.applyForce(CGVectorMake(0.0, 0.4))
+
+        self.physicsBody!.applyForce(CGVectorMake(0.0, 0.6))
 
     }
     
