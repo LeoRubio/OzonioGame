@@ -62,6 +62,11 @@ class OGOzonePart : SKSpriteNode {
         self.colorBlendFactor = 0.7
     }
     
+    
+
+    
+    
+    
     func playAudio(name: String){
         let playSoundAction = SKAction.playSoundFileNamed(name, waitForCompletion: false)
         runAction(playSoundAction)

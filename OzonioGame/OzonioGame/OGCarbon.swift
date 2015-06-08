@@ -22,8 +22,8 @@ class OGCarbon : OGMolecule {
         self.destroyScore = 10
         
         self.name = "CARBONMOLECULE"
-        self.size.width *= 1.3
-        self.size.height *= 1.3
+        self.size.width *= 1.8
+        self.size.height *= 1.8
 
 
     }
@@ -38,7 +38,7 @@ class OGCarbon : OGMolecule {
         var childYPosition = self.position.y + self.parent!.position.y
         //self.physicsBody!.applyImpulse(CGVectorMake(1.0, 1.0))
 
-        self.physicsBody!.applyForce(CGVectorMake(0.0, 0.4))
+        self.physicsBody!.applyForce(CGVectorMake(0.0, 0.6))
 
     }
     
