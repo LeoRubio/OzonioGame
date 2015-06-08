@@ -10,6 +10,7 @@ import UIKit
 import SpriteKit
 
 
+
 var nodeMenu : SKSpriteNode?
 var optionNode : SKSpriteNode?
 

@@ -23,8 +23,9 @@ class OGCarbon : OGMolecule {
         
         self.name = "CARBONMOLECULE"
 
-        self.size.width *= 1.2
-        self.size.height *= 1.2
+        self.size.width *= 1.8
+        self.size.height *= 1.8
+
         self.physicsBody = SKPhysicsBody (circleOfRadius: self.size.width / 1.5)
         self.physicsBody?.dynamic = true
 
@@ -55,11 +56,16 @@ class OGCarbon : OGMolecule {
 =======
 >>>>>>> master
 
+<<<<<<< HEAD
         self.physicsBody!.applyForce(CGVectorMake(0.0, 0.3))
 <<<<<<< HEAD
 >>>>>>> PedroBranch
 >>>>>>> master
 =======
+>>>>>>> master
+=======
+        self.physicsBody!.applyForce(CGVectorMake(0.0, 0.6))
+
 >>>>>>> master
     }
     

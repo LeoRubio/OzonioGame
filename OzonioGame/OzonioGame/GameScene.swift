@@ -117,12 +117,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     carbonMolecule = nodeTouched as! OGCarbon
                     carbonMolecule.removeLife()
                     playSound("Plop.wav")
+                    moleculeParticle(location)
                     
                 } else if touch == "NITROUSMOLECULE" {
                     
                     nitrousMolecule = nodeTouched as! OGNitrous
                     nitrousMolecule.removeLife()
                     playSound("Plop.wav")
+                    moleculeParticle(location)
                     
                     
                 } else if touch == "NITRICMOLECULE" {
@@ -130,6 +132,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     nitricMolecule = nodeTouched as! OGNitric
                     nitricMolecule.removeLife()
                     playSound("Plop.wav")
+                    moleculeParticle(location)
                     
                 }
                 else if touch == "PLAYPAUSE"{
@@ -149,6 +152,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 
                 if nodeB.name == "CARBONMOLECULE" || nodeB.name == "NITROUSMOLECULE" || nodeB.name == "NITRICMOLECULE" {
                     playSound("impact.wav")
+                    ozoneImpactParticle(   nodeA)
                     nodeB.removeFromParent()
                 }
                 
@@ -156,19 +160,52 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 damage = nodeA as! OGOzonePart
                 damage.layerDamage()
                 if layerCount <= 30 {
-                    let doorsTransition = SKTransition.doorwayWithDuration(3.0)
-                    let gameOverScene = EndScene(size: size)
-                    self.scene?.view?.presentScene(gameOverScene, transition: doorsTransition)
                     playSound("gameOver.wav")
                     playSound("strange.wav")
                     playSound("gameOver2.wav")
-                    
+                    endParticleEffect()
+//                    let doorsTransition = SKTransition.doorwayWithDuration(3.0)
+//                    let gameOverScene = EndScene(size: size)
+//                    self.scene?.view?.presentScene(gameOverScene, transition: doorsTransition)
                 }
                 
             }
             
             
         }
+    
+    func moleculeParticle (touchPoint : CGPoint){
+        
+        var moleculeExplodeParticle : SKEmitterNode?
+        let explodePath = NSBundle.mainBundle().pathForResource("explodeMolecule7", ofType: "sks")
+        moleculeExplodeParticle = NSKeyedUnarchiver.unarchiveObjectWithFile(explodePath!) as? SKEmitterNode
+        moleculeExplodeParticle?.position = touchPoint
+        self.addChild(moleculeExplodeParticle!)
+        
+    }
+    
+    
+    func ozoneImpactParticle(ozonePart : SKNode){
+        
+        var ozoneImpactParticle : SKEmitterNode?
+        let ozoneImpactPath = NSBundle.mainBundle().pathForResource("ozoneImpact", ofType: "sks")
+        ozoneImpactParticle = NSKeyedUnarchiver.unarchiveObjectWithFile(ozoneImpactPath!) as? SKEmitterNode
+        ozonePart.addChild(ozoneImpactParticle!)
+        
+        
+    }
+    
+    
+    func endParticleEffect(){
+        
+        var endParticle : SKEmitterNode?
+        let endPartPath = NSBundle.mainBundle().pathForResource("finalEffect", ofType: "sks")
+        endParticle = NSKeyedUnarchiver.unarchiveObjectWithFile(endPartPath!) as? SKEmitterNode
+        self.addChild(endParticle!)
+        
+        
+    }
+    
     
     func playSound (nome: String){
         let playSoundAction = SKAction.playSoundFileNamed(nome, waitForCompletion: false)
