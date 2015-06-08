@@ -22,14 +22,10 @@ class OGCarbon : OGMolecule {
         self.destroyScore = 10
         
         self.name = "CARBONMOLECULE"
-<<<<<<< HEAD
-=======
+
         self.size.width *= 1.8
         self.size.height *= 1.8
->>>>>>> leoooo-branch
 
-        self.size.width *= 1.2
-        self.size.height *= 1.2
         self.physicsBody = SKPhysicsBody (circleOfRadius: self.size.width / 1.5)
         self.physicsBody?.dynamic = true
 
@@ -51,12 +47,9 @@ class OGCarbon : OGMolecule {
         var childYPosition = self.position.y + self.parent!.position.y
         //self.physicsBody!.applyImpulse(CGVectorMake(1.0, 1.0))
 
-<<<<<<< HEAD
-=======
-        self.physicsBody!.applyForce(CGVectorMake(0.0, 0.6))
->>>>>>> leoooo-branch
 
-        self.physicsBody!.applyForce(CGVectorMake(0.0, 0.3))
+        self.physicsBody!.applyForce(CGVectorMake(0.0, 0.6))
+
     }
     
     required init?(coder aDecoder: NSCoder) {
