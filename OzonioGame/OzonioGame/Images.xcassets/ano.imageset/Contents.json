@@ -3,6 +3,7 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
+<<<<<<< HEAD
       "filename" : "ano.png"
     },
     {
@@ -14,6 +15,17 @@
       "idiom" : "universal",
       "scale" : "3x",
       "filename" : "ano@3x.png"
+=======
+      "filename" : "ozone-defender-ano.png"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+>>>>>>> leoooo-branch
     }
   ],
   "info" : {
