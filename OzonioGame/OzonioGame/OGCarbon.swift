@@ -19,7 +19,7 @@ class OGCarbon : OGMolecule {
         
         self.lifeMax = 1
         
-        self.destroyScore = 10
+        self.scoreGiven = 10
         
         self.name = "CARBONMOLECULE"
 

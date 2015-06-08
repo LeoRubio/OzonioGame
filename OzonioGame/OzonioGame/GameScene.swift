@@ -13,7 +13,6 @@ var backgroundNode : OGBackground?
 var foregroundNode : OGForeground?
 var planetNode : OGPlanet?
 var sunNode : OGSun?
-var scoreTextNode: OGLabel?
 
 var layerCount : Int = 32
 
@@ -65,10 +64,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         sunNode!.position = CGPoint (x: size.width/2, y: size.height)
         addChild(sunNode!)
         
-        // adding score
-        scoreTextNode = OGLabel(nome: "SCORE")
-        scoreTextNode!.position = CGPointMake(100, 935)
-        addChild(scoreTextNode!)
         
     }
     
@@ -96,14 +91,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 
                 if touch == "CARBONMOLECULE" {
                     carbonMolecule = nodeTouched as! OGCarbon
-                    carbonMolecule.removeLife()
+                    foregroundNode?.labelScore!.updateScore(gameScore: carbonMolecule.removeLife())
                     playSound("Plop.wav")
                     moleculeParticle(location)
                     
                 } else if touch == "NITROUSMOLECULE" {
                     
                     nitrousMolecule = nodeTouched as! OGNitrous
-                    nitrousMolecule.removeLife()
+                    foregroundNode?.labelScore!.updateScore(gameScore: nitrousMolecule.removeLife())
                     playSound("Plop.wav")
                     moleculeParticle(location)
                     
@@ -111,7 +106,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 } else if touch == "NITRICMOLECULE" {
                     
                     nitricMolecule = nodeTouched as! OGNitric
-                    nitricMolecule.removeLife()
+                    foregroundNode?.labelScore!.updateScore(gameScore: nitricMolecule.removeLife())
                     playSound("Plop.wav")
                     moleculeParticle(location)
                     

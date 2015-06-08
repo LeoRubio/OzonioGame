@@ -13,6 +13,7 @@ class OGForeground : SKNode {
     
     var playNode : OGPlayPauseNode?
     var scoreNode : OGScoreNode?
+    var labelScore : OGLabel?
     
     override init(){
         
@@ -40,16 +41,18 @@ class OGForeground : SKNode {
     
     func createScoreNode(imageName: String){
 
-       
-            
         let texture = SKTexture(imageNamed: imageName)
-            
+        
+        
         scoreNode = OGScoreNode(texture: texture)
         scoreNode!.position = CGPoint (x: 100.0, y: 937.0)
         scoreNode!.size.height =  scoreNode!.size.height
         scoreNode!.size.width = 1.2 * scoreNode!.size.width
         self.addChild(scoreNode!)
         
+        labelScore = OGLabel(name: "Score")
+        labelScore!.position = scoreNode!.position
+        self.addChild(labelScore!)
         
     }
     
