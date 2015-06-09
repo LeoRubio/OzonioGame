@@ -60,7 +60,6 @@ class OGNitric: OGMolecule {
     override func update() {
         var childXPosition = self.position.x + self.parent!.position.x
         var childYPosition = self.position.y + self.parent!.position.y
-        //self.physicsBody!.applyImpulse(CGVectorMake(1.0, 1.0))
 
         self.physicsBody!.applyForce(CGVectorMake(0.0, 1.0))
 
