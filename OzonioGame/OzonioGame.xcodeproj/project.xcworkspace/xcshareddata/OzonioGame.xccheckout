@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>B897EEF4-417A-4541-853A-AEBCF8F3FDBF</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>OzonioGame</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>C2F184A83220EDE16499A653042717309114ADAD</key>
 		<string>https://github.com/LeoRubio/OzonioGame.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>OzonioGame/OzonioGame.xcodeproj/project.xcworkspace</string>
+	<string>OzonioGame/OzonioGame.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>C2F184A83220EDE16499A653042717309114ADAD</key>

@@ -43,6 +43,16 @@ class OGNitric: OGMolecule {
             divideMolecule.position = CGPointMake(self.position.x + auxX, self.position.y)
             self.parent!.addChild(divideMolecule)
         }
+        self.size.width *= 1.5
+        self.size.height *= 1.5
+        self.physicsBody = SKPhysicsBody (circleOfRadius: self.size.width / 1.5)
+        self.physicsBody?.dynamic = true
+
+        self.physicsBody?.mass = 0.01
+        self.physicsBody?.usesPreciseCollisionDetection = true
+        
+        self.physicsBody!.categoryBitMask = CollisionCategoryMolecules
+        self.physicsBody!.collisionBitMask = 0
         
     }
     
