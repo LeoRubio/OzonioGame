@@ -44,7 +44,6 @@ class OGFactory : OGHideRequired {
             moleculeAux = node as? OGCarbon
             moleculeAux?.update()
             
-            //stop.memory = true
             
         }
         
@@ -56,7 +55,6 @@ class OGFactory : OGHideRequired {
             moleculeAux = node as? OGNitrous
             moleculeAux?.update()
             
-            //stop.memory = true
             
         }
         
@@ -68,13 +66,9 @@ class OGFactory : OGHideRequired {
             moleculeAux = node as? OGNitric
             moleculeAux?.update()
             
-            //stop.memory = true
             
         }
         
-        
-        
-        //fatalError("MUST OVERRIDE THIS FUNCTION")
         
     }
     
