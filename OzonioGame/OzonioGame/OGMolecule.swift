@@ -13,7 +13,7 @@ import SpriteKit
 class OGMolecule : OGHideRequired {
     
     var lifeMax: Int
-    var destroyScore: Int
+    var scoreGiven: Int
     
     init(imageNamed imageName:String){
         
@@ -24,7 +24,7 @@ class OGMolecule : OGHideRequired {
         
         
         self.lifeMax = 1
-        self.destroyScore = 10
+        self.scoreGiven = 10
         
         super.init(texture: texture, color: UIColor.clearColor(), size: texture.size())
         self.name = "MOLECULE"
@@ -57,10 +57,10 @@ class OGMolecule : OGHideRequired {
     }
     
     func giveScore() -> Int{
-        return self.destroyScore
+        return self.scoreGiven
     }
     
-    func removeLife(){
+    func removeLife() -> Int{
         
         self.lifeMax--
         
@@ -68,6 +68,7 @@ class OGMolecule : OGHideRequired {
 
             self.mitosis()
             self.removeFromParent()
+            return self.giveScore()
         }
         else if self.lifeMax <= 1{
             self.color = SKColor.redColor()
@@ -78,6 +79,7 @@ class OGMolecule : OGHideRequired {
         
         self.colorBlendFactor = 0.7
         
+        return 0
     }
 
     
