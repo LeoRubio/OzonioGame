@@ -12,23 +12,22 @@ import SpriteKit
 
 var endNode : SKSpriteNode?
 
-
 class EndScene: SKScene {
     
     var labelContinue = SKLabelNode(fontNamed: "Arial-BoldMT")
     var labelQuit = SKLabelNode(fontNamed: "Arial-BoldMT")
-    
+    var labelGameOverText = SKLabelNode(fontNamed: "Arial-BoldMT")
     
     required init? (coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
     
-    
-    override init(size: CGSize) {
+    init(size: CGSize, year: Int, score: Int) {
         
         
         super.init(size: size)
+        
         endNode = SKSpriteNode(imageNamed: "gameOver")
         endNode?.name = "retry"
         endNode?.position = CGPoint(x: size.width/2, y: size.height/2)
@@ -36,12 +35,20 @@ class EndScene: SKScene {
         endNode?.size.height *= 1.5
         self.addChild(endNode!)
         
+        //TO DO -->
+        labelGameOverText.position = CGPoint(x: self.size.width/2, y: self.size.height/2)
+        labelGameOverText.color = SKColor.redColor()
+        labelGameOverText.fontSize = 30
+        labelGameOverText.horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.Center
+        labelGameOverText.text = "In the year \(2015) you have eliminated \(3000) particles of pollution but the ozone layer did not survive. Also, the greenhouse effect overheated the Earth, eliminating all forms of life."
+        self.addChild(labelGameOverText)
+        
         optionNode = SKSpriteNode(imageNamed: "option")
         optionNode?.name = "option"
         optionNode?.position = CGPoint(x: size.width/2, y: 50)
         optionNode?.size.width *= 2.2
         optionNode?.size.height *= 2.2
-        self.addChild(optionNode!)
+        //self.addChild(optionNode!)
         
         playAudio("strange.wav")
     }
@@ -52,10 +59,7 @@ class EndScene: SKScene {
         
         for touch: AnyObject in touches {
             
-            
-            
             let location = (touch as! UITouch).locationInNode(self)
-            
             var nodeTouched = self.nodeAtPoint(location)
             
             if let touch = nodeTouched.name {
