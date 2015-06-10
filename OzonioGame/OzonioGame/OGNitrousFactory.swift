@@ -26,7 +26,7 @@ class OGNitrousFactory: OGFactory {
         //Action de criação de moleculas
         runAction(SKAction.repeatActionForever(SKAction.sequence([
             
-            SKAction.waitForDuration(9.0),
+            SKAction.waitForDuration(5.0, withRange: 9.0),
             
             SKAction.runBlock({
                 

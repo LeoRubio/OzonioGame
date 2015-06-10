@@ -11,32 +11,37 @@ import SpriteKit
 
 class OGLabel: SKLabelNode {
     
-    var labelScore = 0
+    var labelValue = 0
     var labelName = ""
-    let scoreTextNode = SKLabelNode(fontNamed: "Copperplate")
+    let scoreTextNode = SKLabelNode(fontNamed: "Avenir Medium")
     
-    init(name: String) {
+    
+    init(text: String, initialValue: Int) {
         
         super.init()
         
-        //Cria a label do score
+        //Cria a label
+        labelName = text
+        labelValue = initialValue
+        scoreTextNode.text = "\(labelName): \(labelValue)"
         
-        
-        labelName = name
-        scoreTextNode.text = "\(labelName) : \(labelScore)"
-        
-        scoreTextNode.fontSize = 20
+        scoreTextNode.fontSize = 22
         scoreTextNode.fontColor = SKColor.whiteColor()
-        scoreTextNode.horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.Center
+        scoreTextNode.verticalAlignmentMode = SKLabelVerticalAlignmentMode.Center
+        scoreTextNode.horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.Left
         
         addChild(scoreTextNode)
 
         
     }
     
+    func getValue() -> Int{
+        return labelValue
+    }
+    
     func updateScore(#gameScore:Int){
-        labelScore += gameScore
-        scoreTextNode.text = "\(labelName) : \(labelScore)"
+        labelValue += gameScore
+        scoreTextNode.text = "\(labelName): \(labelValue)"
     }
     
     required init?(coder aDecoder: NSCoder) {

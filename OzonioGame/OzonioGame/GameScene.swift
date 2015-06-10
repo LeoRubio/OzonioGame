@@ -50,7 +50,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         
         //adding foreGround
-        foregroundNode = OGForeground()
+        foregroundNode = OGForeground(size: self.size)
         addChild(foregroundNode!)
         
         
@@ -143,7 +143,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 let wait = SKAction.waitForDuration(3);
                 self.runAction(wait, completion: { () -> Void in
                     let doorsTransition = SKTransition.doorwayWithDuration(3)
-                    let gameOverScene = EndScene(size: self.size)
+                    let gameOverScene = EndScene(size: self.size, year: foregroundNode!.labelScore!.getValue(), score: foregroundNode!.labelScore!.getValue())
                     self.scene?.view?.presentScene(gameOverScene, transition: doorsTransition)
                 })
             }
