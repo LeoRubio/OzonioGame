@@ -26,7 +26,7 @@ class OGCarbon : OGMolecule {
         self.size.width *= 1.8
         self.size.height *= 1.8
 
-        self.physicsBody = SKPhysicsBody (circleOfRadius: self.size.width / 1.5)
+        self.physicsBody = SKPhysicsBody (circleOfRadius: self.size.width / 5.0)
         self.physicsBody?.dynamic = true
 
         self.physicsBody?.mass = 0.01

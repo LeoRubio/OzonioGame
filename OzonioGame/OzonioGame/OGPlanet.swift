@@ -23,7 +23,7 @@ class OGPlanet : SKSpriteNode {
         self.size.width *= 1.3
         self.size.height *= 1.3
         //açao de girar Terra e Camadas
-        let rotate = SKAction.rotateByAngle(1, duration: 60)
+        let rotate = SKAction.rotateByAngle(10, duration: 60)
         self.runAction(SKAction.repeatActionForever(rotate))
         
 
@@ -62,51 +62,37 @@ class OGPlanet : SKSpriteNode {
     }
     
     
-    
-    
-    func createFactory(positionFactory: CGPoint){
+    func createFactory(factoryPosition: CGPoint, factoryType: String){
         
-        let factoryNode = OGCarbonFactory(factoryPosition: positionFactory)
-        self.addChild(factoryNode)
+        var factoryNode : OGFactory?
         
-        var smokeParticle : SKEmitterNode?
-        let smokePath = NSBundle.mainBundle().pathForResource("smoke", ofType: "sks")
-        smokeParticle = NSKeyedUnarchiver.unarchiveObjectWithFile(smokePath!) as? SKEmitterNode
-        smokeParticle?.position = factoryNode.position
-        self.addChild(smokeParticle!)
-        
-    }
-    
-    
-    
-    
-    func createOil (positionFactory: CGPoint){
-    
-        let factoryNitrousNode = OGNitrousFactory(factoryPosition: positionFactory)
-        self.addChild(factoryNitrousNode)
+        if factoryType == "Carbon"{
+            //FÁBRICA BARCO
+            factoryNode = OGCarbonFactory(factoryPosition: factoryPosition)
+        }
+        else if factoryType == "Nitrous"{
+            //FÁBRICA PETROLEO
+            factoryNode = OGNitrousFactory(factoryPosition: factoryPosition)
+        }
+        else if factoryType == "Nitric"{
+            //FABRICA TERRESTRE
+            factoryNode = OGNitricFactory(factoryPosition: factoryPosition)
+        }
+
+        self.addChild(factoryNode!)
         
         var smokeParticle : SKEmitterNode?
         let smokePath = NSBundle.mainBundle().pathForResource("smoke", ofType: "sks")
         smokeParticle = NSKeyedUnarchiver.unarchiveObjectWithFile(smokePath!) as? SKEmitterNode
-        smokeParticle?.position = factoryNitrousNode.position
-        self.addChild(smokeParticle!)
-    
-    }
-    
-    
-    
-    
-    func createBoat (positionFactory: CGPoint){
-        let factoryNitricNode = OGNitricFactory(factoryPosition: positionFactory)
-        self.addChild(factoryNitricNode)
+        smokeParticle?.position = factoryNode!.position
         
-        var smokeParticle : SKEmitterNode?
-        let smokePath = NSBundle.mainBundle().pathForResource("smoke", ofType: "sks")
-        smokeParticle = NSKeyedUnarchiver.unarchiveObjectWithFile(smokePath!) as? SKEmitterNode
-        smokeParticle?.position = factoryNitricNode.position
+        let rotate = SKAction.rotateByAngle(-10, duration: 60)
+        smokeParticle!.runAction(SKAction.repeatActionForever(rotate))
+        
         self.addChild(smokeParticle!)
     }
     
+
     
     
     
@@ -155,6 +141,8 @@ class OGPlanet : SKSpriteNode {
         createAtmosphere("atmosfera")
         
         
+        //Cria as camadas de ozonio com suas angulações
+        
         for i in 0..<32 {
             
             var xPosition = sin(M_PI*(2.0 * Double(i)/32.0)) * 780
@@ -164,21 +152,21 @@ class OGPlanet : SKSpriteNode {
             
         }
     
-//    ********************************
-        // POSICIONAR FABRICAS
+        //   ********************************
+            // POSICIONAR FABRICAS
             // CRIAR AVIAO CHILD
         
-        createFactory(CGPointMake(randomNum(), randomNum()))
-        createBoat(CGPointMake(randomNum(), randomNum()))
-        createOil(CGPointMake(randomNum(), randomNum()))
-        createFactory(CGPointMake(randomNum(), randomNum()))
-        createFactory(CGPointMake(randomNum(), randomNum()))
-        createBoat(CGPointMake(randomNum(), randomNum()))
-        createOil(CGPointMake(randomNum(), randomNum()))
-        createFactory(CGPointMake(randomNum(), randomNum()))
-        createFactory(CGPointMake(randomNum(), randomNum()))
-        createBoat(CGPointMake(randomNum(), randomNum()))
-        createOil(CGPointMake(randomNum(), randomNum()))
+        createFactory(CGPointMake(randomNum(), randomNum()), factoryType: "Carbon")
+        createFactory(CGPointMake(randomNum(), randomNum()), factoryType: "Nitrous")
+        createFactory(CGPointMake(randomNum(), randomNum()), factoryType: "Nitric")
+
+        createFactory(CGPointMake(randomNum(), randomNum()), factoryType: "Carbon")
+        createFactory(CGPointMake(randomNum(), randomNum()), factoryType: "Nitrous")
+        createFactory(CGPointMake(randomNum(), randomNum()), factoryType: "Nitric")
+        
+        createFactory(CGPointMake(randomNum(), randomNum()), factoryType: "Carbon")
+        createFactory(CGPointMake(randomNum(), randomNum()), factoryType: "Nitrous")
+        createFactory(CGPointMake(randomNum(), randomNum()), factoryType: "Nitric")
 
         
         //    ********************************

@@ -21,6 +21,8 @@ class OGFactory : OGHideRequired {
         
         super.init(texture: texture, color: UIColor.clearColor(), size: texture.size())
         
+        let rotate = SKAction.rotateByAngle(-10, duration: 60)
+        self.runAction(SKAction.repeatActionForever(rotate))
         
     }
 
