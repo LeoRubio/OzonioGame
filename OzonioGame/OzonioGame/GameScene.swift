@@ -69,8 +69,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     override func update(currentTime: NSTimeInterval) {
         super.update(currentTime)
+        
+        
         planetNode!.update()
-        foregroundNode!.labelYears?.updateYears()
     }
     
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
