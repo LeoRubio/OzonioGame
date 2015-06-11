@@ -70,8 +70,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     override func update(currentTime: NSTimeInterval) {
         super.update(currentTime)
         
+        if !self.paused {
+            planetNode!.update()
+        }
         
-        planetNode!.update()
     }
     
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
@@ -112,7 +114,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     moleculeParticle(location)
                     
                 }
-                else if touch == "PLAYPAUSE"{
+                else if touch == "PLAYPAUSE" {
+                    self.paused = !self.paused
                     foregroundNode?.playNode!.switchState()
                 }
             }
@@ -136,16 +139,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             var damage : OGOzonePart
             damage = nodeA as! OGOzonePart
             damage.layerDamage()
-            if layerCount <= 30 {
+            if layerCount <= 31 {
                 playSound("gameOver.wav")
                 playSound("strange.wav")
                 playSound("gameOver2.wav")
                 endParticleEffect()
-                let wait = SKAction.waitForDuration(3);
+                let wait = SKAction.waitForDuration(2.5)
                 self.runAction(wait, completion: { () -> Void in
-                    let doorsTransition = SKTransition.doorwayWithDuration(3)
+                    let endTransition = SKTransition.crossFadeWithDuration(1.5)
                     let gameOverScene = EndScene(size: self.size, year: foregroundNode!.labelYears!.getValue(), score: foregroundNode!.labelScore!.getValue())
-                    self.scene?.view?.presentScene(gameOverScene, transition: doorsTransition)
+                    self.scene?.view?.presentScene(gameOverScene, transition: endTransition)
                 })
             }
             
@@ -194,7 +197,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let playSoundAction = SKAction.playSoundFileNamed(nome, waitForCompletion: false)
         runAction(playSoundAction)
     }
-    
+
     
     
 }

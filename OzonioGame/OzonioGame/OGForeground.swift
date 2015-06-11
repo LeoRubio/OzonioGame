@@ -24,10 +24,10 @@ class OGForeground : SKNode {
         self.zPosition = -2
         createObjects()
         
-        //Action de criação de moleculas
+        //Atualiza o ano a cada X segundos
         runAction(SKAction.repeatActionForever(SKAction.sequence([
             
-            SKAction.waitForDuration(1.33),
+            SKAction.waitForDuration(1.5),
             
             SKAction.runBlock({
                 labelYears?.updateYears()
@@ -35,8 +35,6 @@ class OGForeground : SKNode {
             
             
             ])))
-        
-        
         
         
     }
