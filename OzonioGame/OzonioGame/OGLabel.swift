@@ -13,7 +13,7 @@ class OGLabel: SKLabelNode {
     
     var labelValue = 0
     var labelName = ""
-    let scoreTextNode = SKLabelNode(fontNamed: "Avenir Medium")
+    let labelTextNode = SKLabelNode(fontNamed: "Avenir Medium")
     
     
     init(text: String, initialValue: Int) {
@@ -23,14 +23,14 @@ class OGLabel: SKLabelNode {
         //Cria a label
         labelName = text
         labelValue = initialValue
-        scoreTextNode.text = "\(labelName): \(labelValue)"
+        labelTextNode.text = "\(labelName): \(labelValue)"
         
-        scoreTextNode.fontSize = 22
-        scoreTextNode.fontColor = SKColor.whiteColor()
-        scoreTextNode.verticalAlignmentMode = SKLabelVerticalAlignmentMode.Center
-        scoreTextNode.horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.Left
+        labelTextNode.fontSize = 22
+        labelTextNode.fontColor = SKColor.whiteColor()
+        labelTextNode.verticalAlignmentMode = SKLabelVerticalAlignmentMode.Center
+        labelTextNode.horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.Left
         
-        addChild(scoreTextNode)
+        addChild(labelTextNode)
 
         
     }
@@ -41,7 +41,12 @@ class OGLabel: SKLabelNode {
     
     func updateScore(#gameScore:Int){
         labelValue += gameScore
-        scoreTextNode.text = "\(labelName): \(labelValue)"
+        labelTextNode.text = "\(labelName): \(labelValue)"
+    }
+    
+    func updateYears() {
+        labelValue++
+        labelTextNode.text = "\(labelName): \(labelValue)"
     }
     
     required init?(coder aDecoder: NSCoder) {

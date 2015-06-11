@@ -23,7 +23,7 @@ class OGPlanet : SKSpriteNode {
         self.size.width *= 1.3
         self.size.height *= 1.3
         //açao de girar Terra e Camadas
-        let rotate = SKAction.rotateByAngle(1, duration: 60)
+        let rotate = SKAction.rotateByAngle(10, duration: 60)
         self.runAction(SKAction.repeatActionForever(rotate))
         
 
@@ -86,7 +86,7 @@ class OGPlanet : SKSpriteNode {
         smokeParticle = NSKeyedUnarchiver.unarchiveObjectWithFile(smokePath!) as? SKEmitterNode
         smokeParticle?.position = factoryNode!.position
         
-        let rotate = SKAction.rotateByAngle(-1, duration: 60)
+        let rotate = SKAction.rotateByAngle(-10, duration: 60)
         smokeParticle!.runAction(SKAction.repeatActionForever(rotate))
         
         self.addChild(smokeParticle!)

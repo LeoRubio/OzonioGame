@@ -69,8 +69,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     override func update(currentTime: NSTimeInterval) {
         super.update(currentTime)
-        planetNode!.update()
         
+        
+        planetNode!.update()
     }
     
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
@@ -128,7 +129,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             if nodeB.name == "CARBONMOLECULE" || nodeB.name == "NITROUSMOLECULE" || nodeB.name == "NITRICMOLECULE" {
                 playSound("impact.wav")
-                ozoneImpactParticle(   nodeA)
+                ozoneImpactParticle(nodeA)
                 nodeB.removeFromParent()
             }
             
@@ -143,7 +144,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 let wait = SKAction.waitForDuration(3);
                 self.runAction(wait, completion: { () -> Void in
                     let doorsTransition = SKTransition.doorwayWithDuration(3)
-                    let gameOverScene = EndScene(size: self.size, year: foregroundNode!.labelScore!.getValue(), score: foregroundNode!.labelScore!.getValue())
+                    let gameOverScene = EndScene(size: self.size, year: foregroundNode!.labelYears!.getValue(), score: foregroundNode!.labelScore!.getValue())
                     self.scene?.view?.presentScene(gameOverScene, transition: doorsTransition)
                 })
             }

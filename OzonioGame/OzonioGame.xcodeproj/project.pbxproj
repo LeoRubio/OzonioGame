@@ -14,7 +14,6 @@
 		549B57461B17ACEE00766AF7 /* OGNitrousFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549B57451B17ACEE00766AF7 /* OGNitrousFactory.swift */; };
 		549B57491B17EDE700766AF7 /* OGNitric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549B57481B17EDE700766AF7 /* OGNitric.swift */; };
 		549B574B1B17EEFA00766AF7 /* OGNitricFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549B574A1B17EEFA00766AF7 /* OGNitricFactory.swift */; };
-		A0114EF51B1F691F00F75365 /* OGYearLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0114EF41B1F691F00F75365 /* OGYearLabel.swift */; };
 		A073E8FF1B179D4100286508 /* OGLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A073E8FE1B179D4100286508 /* OGLabel.swift */; };
 		E23B93DA1B1D5CD2001390EC /* OGAtmosphere.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23B93D91B1D5CD2001390EC /* OGAtmosphere.swift */; };
 		E23B93DC1B1D62CB001390EC /* OGForeground.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23B93DB1B1D62CB001390EC /* OGForeground.swift */; };
@@ -74,7 +73,6 @@
 		549B57451B17ACEE00766AF7 /* OGNitrousFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGNitrousFactory.swift; sourceTree = "<group>"; };
 		549B57481B17EDE700766AF7 /* OGNitric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGNitric.swift; sourceTree = "<group>"; };
 		549B574A1B17EEFA00766AF7 /* OGNitricFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGNitricFactory.swift; sourceTree = "<group>"; };
-		A0114EF41B1F691F00F75365 /* OGYearLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGYearLabel.swift; sourceTree = "<group>"; };
 		A073E8FE1B179D4100286508 /* OGLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGLabel.swift; sourceTree = "<group>"; };
 		E23B93D91B1D5CD2001390EC /* OGAtmosphere.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGAtmosphere.swift; sourceTree = "<group>"; };
 		E23B93DB1B1D62CB001390EC /* OGForeground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGForeground.swift; sourceTree = "<group>"; };
@@ -165,7 +163,6 @@
 			isa = PBXGroup;
 			children = (
 				A073E8FE1B179D4100286508 /* OGLabel.swift */,
-				A0114EF41B1F691F00F75365 /* OGYearLabel.swift */,
 				E292BE4F1B1F76D5003175E8 /* OGYearStrip.swift */,
 				E23B93DB1B1D62CB001390EC /* OGForeground.swift */,
 				E23B93E31B1D72E7001390EC /* OGPlayPauseNode.swift */,
@@ -446,7 +443,6 @@
 				549B573C1B178F8E00766AF7 /* OGCarbon.swift in Sources */,
 				E28883161B0E4E4900FE0C8C /* GameViewController.swift in Sources */,
 				549B573E1B1796AE00766AF7 /* OGHideRequired.swift in Sources */,
-				A0114EF51B1F691F00F75365 /* OGYearLabel.swift in Sources */,
 				E23B93DC1B1D62CB001390EC /* OGForeground.swift in Sources */,
 				E28883101B0E4E4900FE0C8C /* AppDelegate.swift in Sources */,
 				E2D599231B1E9714001D33C5 /* MenuScene.swift in Sources */,

@@ -24,6 +24,20 @@ class OGForeground : SKNode {
         self.zPosition = -2
         createObjects()
         
+        //Action de criação de moleculas
+        runAction(SKAction.repeatActionForever(SKAction.sequence([
+            
+            SKAction.waitForDuration(1.33),
+            
+            SKAction.runBlock({
+                labelYears?.updateYears()
+            }),
+            
+            
+            ])))
+        
+        
+        
         
     }
     
@@ -55,6 +69,7 @@ class OGForeground : SKNode {
         
     }
     
+
     
     func createPlayNode(){
         
