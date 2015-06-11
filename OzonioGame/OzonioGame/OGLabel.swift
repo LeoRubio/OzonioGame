@@ -14,6 +14,7 @@ class OGLabel: SKLabelNode {
     var labelValue = 0
     var labelName = ""
     let scoreTextNode = SKLabelNode(fontNamed: "Avenir Medium")
+    let yearTextNode = SKLabelNode(fontNamed: "Avenir Medium")
     
     
     init(text: String, initialValue: Int) {
@@ -42,6 +43,11 @@ class OGLabel: SKLabelNode {
     func updateScore(#gameScore:Int){
         labelValue += gameScore
         scoreTextNode.text = "\(labelName): \(labelValue)"
+    }
+    
+    func updateYears() {
+        labelValue++
+        yearTextNode.text = "\(labelName): \(labelValue)"
     }
     
     required init?(coder aDecoder: NSCoder) {

@@ -11,12 +11,16 @@ import SpriteKit
 
 
 var endNode : SKSpriteNode?
+var rectColor = SKSpriteNode(imageNamed: "colorRect")
+var rectColor2 = SKSpriteNode(imageNamed: "colorRect")
 
 class EndScene: SKScene {
     
     var labelContinue = SKLabelNode(fontNamed: "Arial-BoldMT")
     var labelQuit = SKLabelNode(fontNamed: "Arial-BoldMT")
     var labelGameOverText = SKLabelNode(fontNamed: "Arial-BoldMT")
+    var labelGameOverScore = SKLabelNode(fontNamed: "Arial-BoldMT")
+    
     
     required init? (coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -35,20 +39,44 @@ class EndScene: SKScene {
         endNode?.size.height *= 1.5
         self.addChild(endNode!)
         
-        //TO DO -->
-        labelGameOverText.position = CGPoint(x: self.size.width/2, y: self.size.height/2)
-        labelGameOverText.color = SKColor.redColor()
+        //TO DO --> Limite de caracteres em SKLabelNode por volta de 44 -> OK
+        //labelGameOverText.text = "In the year \(2015) you have eliminated \(3000) particles of pollution but the ozone layer did not survive. Also, the greenhouse effect overheated the Earth, eliminating all forms of life."
+        
+        //Label1 = YEAR
+        rectColor.position = CGPoint(x: self.size.width/4 + 62, y: self.size.height/2 + 15)
+        rectColor.size.height *= 1.5
+        rectColor.size.width *= 1.5
+        self.addChild(rectColor)
+        labelGameOverText.fontColor = SKColor.redColor()
+        labelGameOverText.text = "\(foregroundNode!.labelYears!.getValue())"
+        labelGameOverText.position = CGPoint(x: self.size.width/4 + 60, y: self.size.height/2 + 3)
         labelGameOverText.fontSize = 30
         labelGameOverText.horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.Center
-        labelGameOverText.text = "In the year \(2015) you have eliminated \(3000) particles of pollution but the ozone layer did not survive. Also, the greenhouse effect overheated the Earth, eliminating all forms of life."
         self.addChild(labelGameOverText)
         
-        optionNode = SKSpriteNode(imageNamed: "option")
-        optionNode?.name = "option"
-        optionNode?.position = CGPoint(x: size.width/2, y: 50)
-        optionNode?.size.width *= 2.2
-        optionNode?.size.height *= 2.2
-        //self.addChild(optionNode!)
+        
+        
+        //Label2 = SCORE Particles of polution
+        rectColor2.position = CGPoint(x: self.size.width/2 + 218, y: self.size.height/2 + 15)
+        rectColor2.size.height *= 1.5
+        rectColor2.size.width *= 1.5
+        self.addChild(rectColor2)
+        
+        labelGameOverScore.fontColor = SKColor.redColor()
+        labelGameOverScore.text = "\(foregroundNode!.labelScore!.getValue())"
+        labelGameOverScore.position = CGPoint(x: self.size.width/2 + 215, y: self.size.height/2 + 2)
+        labelGameOverScore.fontSize = 30
+        labelGameOverScore.horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.Center
+        self.addChild(labelGameOverScore)
+        
+        
+        
+//        optionNode = SKSpriteNode(imageNamed: "option")
+//        optionNode?.name = "option"
+//        optionNode?.position = CGPoint(x: size.width/2, y: 50)
+//        optionNode?.size.width *= 2.2
+//        optionNode?.size.height *= 2.2
+//        self.addChild(optionNode!)
         
         playAudio("strange.wav")
     }
