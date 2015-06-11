@@ -136,7 +136,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             var damage : OGOzonePart
             damage = nodeA as! OGOzonePart
             damage.layerDamage()
-            if layerCount <= 30 {
+            if layerCount <= 31 {
                 playSound("gameOver.wav")
                 playSound("strange.wav")
                 playSound("gameOver2.wav")

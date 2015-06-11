@@ -9,16 +9,18 @@
 import UIKit
 import SpriteKit
 
-class OGOzoneLayer : SKSpriteNode {
+class OGOzoneLayerGlow : SKSpriteNode {
    
     init( texture: SKTexture ){
         
         super.init(texture: texture, color: UIColor.clearColor(), size: texture.size())
 //        name = "OZONE"
-        self.size.width *= 1.5
-        self.size.height *= 1.5
-        self.hidden = true
+        self.size.width *= 1.6
+        self.size.height *= 1.6
         
+        self.color = SKColor.redColor()
+        self.colorBlendFactor = 1.0
+        self.zPosition = 1
     }
     
     
