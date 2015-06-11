@@ -23,7 +23,7 @@ class OGCarbonFactory: OGFactory {
         //Action de criação de moleculas
         runAction(SKAction.repeatActionForever(SKAction.sequence([
             
-            SKAction.waitForDuration(5.0),
+            SKAction.waitForDuration(3.0, withRange: 5.0),
             
             SKAction.runBlock({
                 self.spawnMolecule()

@@ -1,17 +1,16 @@
 
 
 
-
 import UIKit
 
 import SpriteKit
 
 
 
-class OGYear : SKSpriteNode {
+class OGYearStrip : SKSpriteNode {
     
-    init( texture: SKTexture ){
-        
+    init(){
+        let texture = SKTexture (imageNamed: "ano")
         super.init(texture: nil, color: UIColor.clearColor(), size: texture.size())
         self.name = "ano"
         cria()

@@ -46,7 +46,7 @@ class MenuScene: SKScene {
         optionNode?.position = CGPoint(x: size.width/2, y: 50)
         optionNode?.size.width *= 2.2
         optionNode?.size.height *= 2.2
-        self.addChild(optionNode!)
+        //self.addChild(optionNode!)
         
         playAudioBegin("intro.mp3")
     }
