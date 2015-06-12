@@ -25,7 +25,7 @@ class OGNitric: OGMolecule {
         self.size.width *= 2.5
         self.size.height *= 2.5
  
-        self.physicsBody = SKPhysicsBody (circleOfRadius: self.size.width / 1.5)
+        self.physicsBody = SKPhysicsBody (circleOfRadius: self.size.width / 3.0)
         self.physicsBody?.dynamic = true
         
         self.physicsBody?.mass = 0.01

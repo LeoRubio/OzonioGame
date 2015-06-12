@@ -76,52 +76,62 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
     }
     
+    
+    
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         
         
         for touch: AnyObject in touches {
             
-            let location = (touch as! UITouch).locationInNode(self)
+            let location:CGPoint = (touch as! UITouch).locationInNode(self)
             
-            var nodeTouched = self.nodeAtPoint(location)
+            //var nodeTouched = self.nodeAtPoint(location)
             
-            var carbonMolecule = OGCarbon()
-            var nitrousMolecule = OGNitrous()
-            var nitricMolecule = OGNitric()
+            for anyNode: AnyObject in self.nodesAtPoint(location) {
             
-            
-            if let touch = nodeTouched.name {
+                let nodeTouched:SKNode = anyNode as! SKNode
                 
-                if touch == "CARBONMOLECULE" {
-                    carbonMolecule = nodeTouched as! OGCarbon
-                    foregroundNode?.labelScore!.updateScore(gameScore: carbonMolecule.removeLife())
-                    playSound("Plop.wav")
-                    moleculeParticle(location)
+                var carbonMolecule = OGCarbon()
+                var nitrousMolecule = OGNitrous()
+                var nitricMolecule = OGNitric()
+                
+                
+                if let touch = nodeTouched.name {
                     
-                } else if touch == "NITROUSMOLECULE" {
-                    
-                    nitrousMolecule = nodeTouched as! OGNitrous
-                    foregroundNode?.labelScore!.updateScore(gameScore: nitrousMolecule.removeLife())
-                    playSound("Plop.wav")
-                    moleculeParticle(location)
-                    
-                    
-                } else if touch == "NITRICMOLECULE" {
-                    
-                    nitricMolecule = nodeTouched as! OGNitric
-                    foregroundNode?.labelScore!.updateScore(gameScore: nitricMolecule.removeLife())
-                    playSound("Plop.wav")
-                    moleculeParticle(location)
-                    
-                }
-                else if touch == "PLAYPAUSE" {
-                    self.paused = !self.paused
-                    foregroundNode?.playNode!.switchState()
+                    if touch == "CARBONMOLECULE" {
+                        carbonMolecule = nodeTouched as! OGCarbon
+                        foregroundNode?.labelScore!.updateScore(gameScore: carbonMolecule.removeLife())
+                        playSound("Plop.wav")
+                        moleculeParticle(location)
+                        
+                    } else if touch == "NITROUSMOLECULE" {
+                        
+                        nitrousMolecule = nodeTouched as! OGNitrous
+                        foregroundNode?.labelScore!.updateScore(gameScore: nitrousMolecule.removeLife())
+                        playSound("Plop.wav")
+                        moleculeParticle(location)
+                        
+                        
+                    } else if touch == "NITRICMOLECULE" {
+                        
+                        nitricMolecule = nodeTouched as! OGNitric
+                        foregroundNode?.labelScore!.updateScore(gameScore: nitricMolecule.removeLife())
+                        playSound("Plop.wav")
+                        moleculeParticle(location)
+                        
+                    }
+                    else if touch == "PLAYPAUSE" {
+                        self.paused = !self.paused
+                        foregroundNode?.playNode!.switchState()
+                    }
                 }
             }
-            
         }
     }
+    
+    
+    
+    
     
     func didBeginContact(contact: SKPhysicsContact) {
         
@@ -139,6 +149,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             var damage : OGOzonePart
             damage = nodeA as! OGOzonePart
             damage.layerDamage()
+            
             if layerCount <= 31 {
                 playSound("gameOver.wav")
                 playSound("strange.wav")
@@ -147,15 +158,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 let wait = SKAction.waitForDuration(2.5)
                 self.runAction(wait, completion: { () -> Void in
                     let endTransition = SKTransition.crossFadeWithDuration(1.5)
-                    let gameOverScene = EndScene(size: self.size, year: foregroundNode!.labelYears!.getValue(), score: foregroundNode!.labelScore!.getValue())
+                    let gameOverScene = EndScene(size: self.size, year: foregroundNode!.labelScore!.getValue(), score: foregroundNode!.labelScore!.getValue())
                     self.scene?.view?.presentScene(gameOverScene, transition: endTransition)
                 })
             }
             
         }
         
-        
     }
+    
+    
+    
     
     func moleculeParticle (touchPoint : CGPoint){
         
@@ -168,15 +181,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     
+    
     func ozoneImpactParticle(ozonePart : SKNode){
         
         var ozoneImpactParticle : SKEmitterNode?
         let ozoneImpactPath = NSBundle.mainBundle().pathForResource("ozoneImpact", ofType: "sks")
         ozoneImpactParticle = NSKeyedUnarchiver.unarchiveObjectWithFile(ozoneImpactPath!) as? SKEmitterNode
         ozonePart.addChild(ozoneImpactParticle!)
-        
-        
     }
+    
+    
     
     
     func endParticleEffect(){
@@ -188,7 +202,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         endParticle?.position.y = self.frame.height/2
         
         self.addChild(endParticle!)
-        
         
     }
     
