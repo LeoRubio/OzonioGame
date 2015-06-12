@@ -16,7 +16,7 @@ class OGOzone: OGMolecule {
         
         super.init(imageNamed: "option")
         
-        self.lifeMax = 2
+        self.lifeMax = 1
         
         self.scoreGiven = -500
         

@@ -40,11 +40,18 @@ class OGOzonePart : SKSpriteNode {
         
     }
     
+    func layerHeal(){
+        self.layerLife = 5
+        updateLayerStatus()
+        
+    }
+    
     func layerDamage(){
-        
-        
         self.layerLife--
-        
+        updateLayerStatus()
+    }
+    
+    func updateLayerStatus(){
         if self.layerLife <= 0{
             self.removeFromParent()
             layerCount--
@@ -54,15 +61,15 @@ class OGOzonePart : SKSpriteNode {
         else if self.layerLife == 1{
             self.color = SKColor.redColor()
         }
-            
         else if self.layerLife < 5{
             self.color = SKColor.yellowColor()
         }
-        
         self.colorBlendFactor = 0.7
+        
+        if self.layerLife >= 5{
+            self.colorBlendFactor = 0.0
+        }
     }
-    
-    
 
     
     func playAudio(name: String){

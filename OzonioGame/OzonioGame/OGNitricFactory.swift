@@ -24,7 +24,6 @@ class OGNitricFactory: OGFactory {
         self.size.width *= 1
         
         //Action de criação de moleculas
-        //Action de criação de moleculas
         runAction(SKAction.repeatActionForever(SKAction.sequence([
             
             SKAction.waitForDuration(9.0, withRange: 14.0),

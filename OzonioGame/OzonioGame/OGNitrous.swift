@@ -50,7 +50,7 @@ class OGNitrous: OGMolecule {
             }
             auxX = CGFloat(i*90)
             
-            divideMolecule.position = CGPointMake(self.position.x + auxX, self.position.y + auxX)
+            divideMolecule.position = CGPointMake(self.position.x + auxX, self.position.y)
             self.parent!.addChild(divideMolecule)
         }
         

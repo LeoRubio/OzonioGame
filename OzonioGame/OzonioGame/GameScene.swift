@@ -143,6 +143,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             var nodeB = contact.bodyB!.node!
             
             if nodeB.name == "CARBONMOLECULE" || nodeB.name == "NITROUSMOLECULE" || nodeB.name == "NITRICMOLECULE" {
+               // O que acontece quando a molecula de dano acerta a camada
+                
                 playSound("impact.wav")
                 ozoneImpactParticle(nodeA)
                 nodeB.removeFromParent()
@@ -151,7 +153,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 damage = nodeA as! OGOzonePart
                 damage.layerDamage()
             }
+            else if nodeB.name == "OZONEMOLECULE" {
+                // O que acontece quando a molecula de cura acerta a camada
+                
+                playSound("impact.wav")
+                ozoneImpactParticle(nodeA)
+                nodeB.removeFromParent()
             
+                var heal : OGOzonePart
+                heal = nodeA as! OGOzonePart
+                heal.layerHeal()
+            }
             
             if layerCount <= 31 {
                 playSound("gameOver.wav")

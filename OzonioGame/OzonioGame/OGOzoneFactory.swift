@@ -25,7 +25,7 @@ class OGOzoneFactory: OGFactory {
         //Action de criação de moleculas
         runAction(SKAction.repeatActionForever(SKAction.sequence([
             
-            SKAction.waitForDuration(9.0, withRange: 12.0),
+            SKAction.waitForDuration(11.0, withRange: 13.0),
             
             SKAction.runBlock({
                 
