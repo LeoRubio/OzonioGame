@@ -42,6 +42,10 @@ class OGValueLabel : SKLabelNode {
         return labelValue
     }
     
+    func updateText(){
+        labelText = "\(labelName): \(labelValue)"
+    }
+    
     func updateScore(#gameScore:Int){
         
         labelValue += gameScore
@@ -51,11 +55,14 @@ class OGValueLabel : SKLabelNode {
             labelValue = 0
         }
         
+        updateText()
         labelTextNode.text = labelText
     }
     
     func updateYears() {
         labelValue++
+        
+        updateText()
         labelTextNode.text = labelText
     }
     
