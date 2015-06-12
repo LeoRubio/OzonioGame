@@ -21,6 +21,8 @@ class OGFactory : OGHideRequired {
         
         super.init(texture: texture, color: UIColor.clearColor(), size: texture.size())
         
+        let rotate = SKAction.rotateByAngle(-10, duration: 60)
+        self.runAction(SKAction.repeatActionForever(rotate))
         
     }
 
@@ -44,7 +46,6 @@ class OGFactory : OGHideRequired {
             moleculeAux = node as? OGCarbon
             moleculeAux?.update()
             
-            //stop.memory = true
             
         }
         
@@ -56,7 +57,6 @@ class OGFactory : OGHideRequired {
             moleculeAux = node as? OGNitrous
             moleculeAux?.update()
             
-            //stop.memory = true
             
         }
         
@@ -68,13 +68,9 @@ class OGFactory : OGHideRequired {
             moleculeAux = node as? OGNitric
             moleculeAux?.update()
             
-            //stop.memory = true
             
         }
         
-        
-        
-        //fatalError("MUST OVERRIDE THIS FUNCTION")
         
     }
     

@@ -1,20 +1,26 @@
 //
-//  OGScoreNode.swift
+//  OGOzoneLayer.swift
 //  OzonioGame
 //
-//  Created by Leonardo Rubio 1 on 02/06/15.
+//  Created by Leonardo Rubio 1 on 25/05/15.
 //  Copyright (c) 2015 FantasyName. All rights reserved.
 //
 
 import UIKit
 import SpriteKit
 
-class OGScoreNode : SKSpriteNode {
-    
+class OGOzoneLayerGlow : SKSpriteNode {
+   
     init( texture: SKTexture ){
         
         super.init(texture: texture, color: UIColor.clearColor(), size: texture.size())
-        self.name = "score"
+//        name = "OZONE"
+        self.size.width *= 1.6
+        self.size.height *= 1.6
+        
+        self.color = SKColor.redColor()
+        self.colorBlendFactor = 1.0
+        self.zPosition = 1
     }
     
     

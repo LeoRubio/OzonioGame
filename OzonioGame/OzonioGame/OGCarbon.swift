@@ -19,14 +19,14 @@ class OGCarbon : OGMolecule {
         
         self.lifeMax = 1
         
-        self.destroyScore = 10
+        self.scoreGiven = 10
         
         self.name = "CARBONMOLECULE"
 
         self.size.width *= 1.8
         self.size.height *= 1.8
 
-        self.physicsBody = SKPhysicsBody (circleOfRadius: self.size.width / 1.5)
+        self.physicsBody = SKPhysicsBody (circleOfRadius: self.size.width / 5.0)
         self.physicsBody?.dynamic = true
 
         self.physicsBody?.mass = 0.01
@@ -45,7 +45,6 @@ class OGCarbon : OGMolecule {
         
         var childXPosition = self.position.x + self.parent!.position.x
         var childYPosition = self.position.y + self.parent!.position.y
-        //self.physicsBody!.applyImpulse(CGVectorMake(1.0, 1.0))
 
 <<<<<<< HEAD
 <<<<<<< HEAD

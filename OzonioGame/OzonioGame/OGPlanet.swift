@@ -23,7 +23,7 @@ class OGPlanet : SKSpriteNode {
         self.size.width *= 1.3
         self.size.height *= 1.3
         //açao de girar Terra e Camadas
-        let rotate = SKAction.rotateByAngle(1, duration: 60)
+        let rotate = SKAction.rotateByAngle(10, duration: 60)
         self.runAction(SKAction.repeatActionForever(rotate))
         
 
@@ -37,19 +37,6 @@ class OGPlanet : SKSpriteNode {
     }
     
     
-    func createOzoneLayer (imageName: String){
-        
-        let ozoneNode : OGOzoneLayer?
-        
-        let texture = SKTexture(imageNamed: imageName)
-        
-        ozoneNode = OGOzoneLayer(texture: texture)
-        ozoneNode!.position = CGPoint (x: 0.0, y: 0.0)
-        self.addChild(ozoneNode!)
-    }
-    
-
-    
     func createAtmosphere (imageName: String){
         
         let atmosphereNode : OGAtmosphere?
@@ -62,51 +49,37 @@ class OGPlanet : SKSpriteNode {
     }
     
     
-    
-    
-    func createFactory(positionFactory: CGPoint){
+    func createFactory(factoryPosition: CGPoint, factoryType: String){
         
-        let factoryNode = OGCarbonFactory(factoryPosition: positionFactory)
-        self.addChild(factoryNode)
+        var factoryNode : OGFactory?
         
-        var smokeParticle : SKEmitterNode?
-        let smokePath = NSBundle.mainBundle().pathForResource("smoke", ofType: "sks")
-        smokeParticle = NSKeyedUnarchiver.unarchiveObjectWithFile(smokePath!) as? SKEmitterNode
-        smokeParticle?.position = factoryNode.position
-        self.addChild(smokeParticle!)
-        
-    }
-    
-    
-    
-    
-    func createOil (positionFactory: CGPoint){
-    
-        let factoryNitrousNode = OGNitrousFactory(factoryPosition: positionFactory)
-        self.addChild(factoryNitrousNode)
+        if factoryType == "Carbon"{
+            //FÁBRICA BARCO
+            factoryNode = OGCarbonFactory(factoryPosition: factoryPosition)
+        }
+        else if factoryType == "Nitrous"{
+            //FÁBRICA PETROLEO
+            factoryNode = OGNitrousFactory(factoryPosition: factoryPosition)
+        }
+        else if factoryType == "Nitric"{
+            //FABRICA TERRESTRE
+            factoryNode = OGNitricFactory(factoryPosition: factoryPosition)
+        }
+
+        self.addChild(factoryNode!)
         
         var smokeParticle : SKEmitterNode?
         let smokePath = NSBundle.mainBundle().pathForResource("smoke", ofType: "sks")
         smokeParticle = NSKeyedUnarchiver.unarchiveObjectWithFile(smokePath!) as? SKEmitterNode
-        smokeParticle?.position = factoryNitrousNode.position
-        self.addChild(smokeParticle!)
-    
-    }
-    
-    
-    
-    
-    func createBoat (positionFactory: CGPoint){
-        let factoryNitricNode = OGNitricFactory(factoryPosition: positionFactory)
-        self.addChild(factoryNitricNode)
+        smokeParticle?.position = factoryNode!.position
         
-        var smokeParticle : SKEmitterNode?
-        let smokePath = NSBundle.mainBundle().pathForResource("smoke", ofType: "sks")
-        smokeParticle = NSKeyedUnarchiver.unarchiveObjectWithFile(smokePath!) as? SKEmitterNode
-        smokeParticle?.position = factoryNitricNode.position
+        let rotate = SKAction.rotateByAngle(-10, duration: 60)
+        smokeParticle!.runAction(SKAction.repeatActionForever(rotate))
+        
         self.addChild(smokeParticle!)
     }
     
+
     
     
     
@@ -151,9 +124,11 @@ class OGPlanet : SKSpriteNode {
     func createObjects(){
         
         
-        createOzoneLayer("ozonio")
+        //createOzoneLayer("ozonio")
         createAtmosphere("atmosfera")
         
+        
+        //Cria as camadas de ozonio com suas angulações
         
         for i in 0..<32 {
             
@@ -161,24 +136,25 @@ class OGPlanet : SKSpriteNode {
             var yPosition = cos(M_PI*(2.0 * Double(i)/32.0)) * 780
             var rotation:CGFloat = CGFloat(-M_PI*(2.0 * Double(i)/32.0 + 1/32.0))
             createOzoneParts("ozonePart", positionPart: CGPoint(x: xPosition, y: yPosition), rotationPart: rotation)
+            createGlow("ozoneGlow", positionPart: CGPoint(x: xPosition, y: yPosition), rotationPart: rotation)
             
         }
     
-//    ********************************
-        // POSICIONAR FABRICAS
+        //   ********************************
+            // POSICIONAR FABRICAS
             // CRIAR AVIAO CHILD
         
-        createFactory(CGPointMake(randomNum(), randomNum()))
-        createBoat(CGPointMake(randomNum(), randomNum()))
-        createOil(CGPointMake(randomNum(), randomNum()))
-        createFactory(CGPointMake(randomNum(), randomNum()))
-        createFactory(CGPointMake(randomNum(), randomNum()))
-        createBoat(CGPointMake(randomNum(), randomNum()))
-        createOil(CGPointMake(randomNum(), randomNum()))
-        createFactory(CGPointMake(randomNum(), randomNum()))
-        createFactory(CGPointMake(randomNum(), randomNum()))
-        createBoat(CGPointMake(randomNum(), randomNum()))
-        createOil(CGPointMake(randomNum(), randomNum()))
+        createFactory(CGPointMake(randomNum(), randomNum()), factoryType: "Carbon")
+        createFactory(CGPointMake(randomNum(), randomNum()), factoryType: "Nitrous")
+        createFactory(CGPointMake(randomNum(), randomNum()), factoryType: "Nitric")
+
+        createFactory(CGPointMake(randomNum(), randomNum()), factoryType: "Carbon")
+        createFactory(CGPointMake(randomNum(), randomNum()), factoryType: "Nitrous")
+        createFactory(CGPointMake(randomNum(), randomNum()), factoryType: "Nitric")
+        
+        createFactory(CGPointMake(randomNum(), randomNum()), factoryType: "Carbon")
+        createFactory(CGPointMake(randomNum(), randomNum()), factoryType: "Nitrous")
+        createFactory(CGPointMake(randomNum(), randomNum()), factoryType: "Nitric")
 
         
         //    ********************************
@@ -196,6 +172,17 @@ class OGPlanet : SKSpriteNode {
         ozonePartNode!.position = positionPart
         ozonePartNode!.zRotation = rotationPart
         self.addChild(ozonePartNode!)
+        
+    }
+    
+    func createGlow (imageName: String, positionPart : CGPoint, rotationPart : CGFloat){
+        
+        let ozoneGlow : OGOzoneLayerGlow?
+        let texture = SKTexture(imageNamed: imageName)
+        ozoneGlow = OGOzoneLayerGlow(texture: texture)
+        ozoneGlow?.position = positionPart
+        ozoneGlow?.zRotation = rotationPart
+        self.addChild(ozoneGlow!)
         
     }
     

@@ -12,13 +12,31 @@ import SpriteKit
 class OGForeground : SKNode {
     
     var playNode : OGPlayPauseNode?
-    var scoreNode : OGScoreNode?
+    var labelScore : OGLabel?
+    var labelYears : OGLabel?
+    var sceneSize : CGSize?
     
-    override init(){
+    init(size: CGSize){
         
         super.init()
+        
+        sceneSize = size
         self.zPosition = -2
         createObjects()
+        
+        //Action de criação de moleculas
+        runAction(SKAction.repeatActionForever(SKAction.sequence([
+            
+            SKAction.waitForDuration(1.33),
+            
+            SKAction.runBlock({
+                labelYears?.updateYears()
+            }),
+            
+            
+            ])))
+        
+        
         
         
     }
@@ -31,28 +49,27 @@ class OGForeground : SKNode {
     
     func createObjects(){
         
-        createYearNode("ano")
-        createScoreNode("score")
+        createScoreYearLabels()
+        createYearStripNode()
         createPlayNode()
         
     }
     
     
-    func createScoreNode(imageName: String){
-
-       
-            
-        let texture = SKTexture(imageNamed: imageName)
-            
-        scoreNode = OGScoreNode(texture: texture)
-        scoreNode!.position = CGPoint (x: 100.0, y: 937.0)
-        scoreNode!.size.height =  scoreNode!.size.height
-        scoreNode!.size.width = 1.2 * scoreNode!.size.width
-        self.addChild(scoreNode!)
+    func createScoreYearLabels(){
+        
+        labelScore = OGLabel(text: "SCORE", initialValue: 0)
+        labelScore!.position = CGPoint (x: sceneSize!.width/20.0, y: sceneSize!.height/1.1)
+        self.addChild(labelScore!)
+        
+        labelYears = OGLabel(text: "YEAR", initialValue: 2015)
+        labelYears!.position = CGPoint (x: sceneSize!.width/20.0, y: sceneSize!.height/1.15)
+        self.addChild(labelYears!)
         
         
     }
     
+
     
     func createPlayNode(){
         
@@ -62,45 +79,14 @@ class OGForeground : SKNode {
         playNode!.size.width = 2 * playNode!.size.width
         addChild(self.playNode!)
         
+    }
+    
+    func createYearStripNode(){
+        let yearStrip = OGYearStrip()
+        addChild(yearStrip)
         
     }
     
-    
-    
-    
-    func createYearNode(imageName: String){
-        
-        let yearNode : OGYear?
-        
-        let texture = SKTexture(imageNamed: imageName)
-        
-        yearNode = OGYear(texture: texture)
-        yearNode!.position = CGPoint (x: 500, y: 960)
-        yearNode!.size.height = 3 * yearNode!.size.height
-        yearNode!.size.width = 3 * yearNode!.size.width
-        self.addChild(yearNode!)
-        
-        
-    }
-    
-//    func createLabel(imageName: String){
-//        
-//        let yearSpawner : OGYearLabelSpawner
-//        
-//        let texture = SKTexture(imageNamed: imageName)
-//        
-//        yearSpawner = OGYearLabelSpawner(texture: texture)
-//        yearSpawner.position = CGPoint (x: 720, y: 900)
-//        yearSpawner.size.height = 2 * yearSpawner.size.height
-//        yearSpawner.size.width = 2 * yearSpawner.size.width
-//        self.addChild(yearSpawner)
-//        
-//    }
-//
-//    
-    
-    
-
     
     
 }

@@ -10,41 +10,43 @@ import UIKit
 import SpriteKit
 
 class OGLabel: SKLabelNode {
-    var score = 0
-    init(nome: String) {
+    
+    var labelValue = 0
+    var labelName = ""
+    let labelTextNode = SKLabelNode(fontNamed: "Avenir Medium")
+    
+    
+    init(text: String, initialValue: Int) {
+        
         super.init()
         
-        //Cria a label do score
+        //Cria a label
+        labelName = text
+        labelValue = initialValue
+        labelTextNode.text = "\(labelName): \(labelValue)"
         
+        labelTextNode.fontSize = 22
+        labelTextNode.fontColor = SKColor.whiteColor()
+        labelTextNode.verticalAlignmentMode = SKLabelVerticalAlignmentMode.Center
+        labelTextNode.horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.Left
         
-        let scoreTextNode = SKLabelNode(fontNamed: "Copperplate")
+        addChild(labelTextNode)
+
         
-        scoreTextNode.text = "\(nome) : \(score)"
-        
-        
-     
-        
-        scoreTextNode.fontSize = 20
-        scoreTextNode.fontColor = SKColor.whiteColor()
-        scoreTextNode.horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.Center
-        
-        
-        addChild(scoreTextNode)
-        
-        /*
-        //Cria a labe do ano
-        
-        var year = 0
-        let yearTextNode = SKLabelNode(fontNamed: "Copperplate")
-        
-        yearTextNode.text = "YEARS : \(year)"
-        yearTextNode.fontSize = 20
-        yearTextNode.fontColor = SKColor.whiteColor()
-        
-        yearTextNode.horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.Left
-        addChild(yearTextNode)
-        */
-        
+    }
+    
+    func getValue() -> Int{
+        return labelValue
+    }
+    
+    func updateScore(#gameScore:Int){
+        labelValue += gameScore
+        labelTextNode.text = "\(labelName): \(labelValue)"
+    }
+    
+    func updateYears() {
+        labelValue++
+        labelTextNode.text = "\(labelName): \(labelValue)"
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -53,14 +55,4 @@ class OGLabel: SKLabelNode {
     
 }
 
-/*
-// adding score
-scoreTextNode = OGLabel(nome: "SCORE")
-scoreTextNode!.position = CGPointMake(size.width - 760, size.height - 20)
-addChild(scoreTextNode!)
 
-// adding years counting
-scoreTextNode = OGLabel(nome: "YEARS")
-scoreTextNode!.position = CGPointMake(size.width - 760, size.height - 40)
-addChild(scoreTextNode!)
-*/

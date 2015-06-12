@@ -14,12 +14,9 @@
 		549B57461B17ACEE00766AF7 /* OGNitrousFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549B57451B17ACEE00766AF7 /* OGNitrousFactory.swift */; };
 		549B57491B17EDE700766AF7 /* OGNitric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549B57481B17EDE700766AF7 /* OGNitric.swift */; };
 		549B574B1B17EEFA00766AF7 /* OGNitricFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549B574A1B17EEFA00766AF7 /* OGNitricFactory.swift */; };
-		A0114EED1B1E32E500F75365 /* OGYear.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0114EEC1B1E32E500F75365 /* OGYear.swift */; };
-		A0114EF51B1F691F00F75365 /* OGYearLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0114EF41B1F691F00F75365 /* OGYearLabel.swift */; };
 		A073E8FF1B179D4100286508 /* OGLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A073E8FE1B179D4100286508 /* OGLabel.swift */; };
 		E23B93DA1B1D5CD2001390EC /* OGAtmosphere.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23B93D91B1D5CD2001390EC /* OGAtmosphere.swift */; };
 		E23B93DC1B1D62CB001390EC /* OGForeground.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23B93DB1B1D62CB001390EC /* OGForeground.swift */; };
-		E23B93DE1B1D65B1001390EC /* OGScoreNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23B93DD1B1D65B1001390EC /* OGScoreNode.swift */; };
 		E23B93E41B1D72E7001390EC /* OGPlayPauseNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23B93E31B1D72E7001390EC /* OGPlayPauseNode.swift */; };
 		E23B93E81B1E3162001390EC /* OGOzonePart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23B93E71B1E3162001390EC /* OGOzonePart.swift */; };
 <<<<<<< HEAD
@@ -42,10 +39,10 @@
 		E288831B1B0E4E4900FE0C8C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E288831A1B0E4E4900FE0C8C /* Images.xcassets */; };
 		E288831E1B0E4E4900FE0C8C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E288831C1B0E4E4900FE0C8C /* LaunchScreen.xib */; };
 		E288832A1B0E4E4900FE0C8C /* OzonioGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28883291B0E4E4900FE0C8C /* OzonioGameTests.swift */; };
-		E29194F21B13A459005BB643 /* OGOzoneLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29194F11B13A459005BB643 /* OGOzoneLayer.swift */; };
+		E29194F21B13A459005BB643 /* OGOzoneLayerGlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29194F11B13A459005BB643 /* OGOzoneLayerGlow.swift */; };
 		E29194F41B13A9F2005BB643 /* OGSun.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29194F31B13A9F2005BB643 /* OGSun.swift */; };
 		E29194F61B13BDCF005BB643 /* OGBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29194F51B13BDCF005BB643 /* OGBackground.swift */; };
-		E292BE501B1F76D5003175E8 /* OGYear.swift in Sources */ = {isa = PBXBuildFile; fileRef = E292BE4F1B1F76D5003175E8 /* OGYear.swift */; };
+		E292BE501B1F76D5003175E8 /* OGYearStrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = E292BE4F1B1F76D5003175E8 /* OGYearStrip.swift */; };
 		E29DCEA21B2587DD005AC5AB /* ozoneImpact.sks in Resources */ = {isa = PBXBuildFile; fileRef = E29DCEA11B2587DD005AC5AB /* ozoneImpact.sks */; };
 		E29DCEA61B2596BB005AC5AB /* carbon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E29DCEA51B2596BB005AC5AB /* carbon@3x.png */; };
 		E2C7FE1A1B0FB169004E6A7E /* fireSun.sks in Resources */ = {isa = PBXBuildFile; fileRef = E2C7FE181B0FB169004E6A7E /* fireSun.sks */; };
@@ -86,12 +83,9 @@
 		549B57451B17ACEE00766AF7 /* OGNitrousFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGNitrousFactory.swift; sourceTree = "<group>"; };
 		549B57481B17EDE700766AF7 /* OGNitric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGNitric.swift; sourceTree = "<group>"; };
 		549B574A1B17EEFA00766AF7 /* OGNitricFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGNitricFactory.swift; sourceTree = "<group>"; };
-		A0114EEC1B1E32E500F75365 /* OGYear.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGYear.swift; sourceTree = "<group>"; };
-		A0114EF41B1F691F00F75365 /* OGYearLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGYearLabel.swift; sourceTree = "<group>"; };
 		A073E8FE1B179D4100286508 /* OGLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGLabel.swift; sourceTree = "<group>"; };
 		E23B93D91B1D5CD2001390EC /* OGAtmosphere.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGAtmosphere.swift; sourceTree = "<group>"; };
 		E23B93DB1B1D62CB001390EC /* OGForeground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGForeground.swift; sourceTree = "<group>"; };
-		E23B93DD1B1D65B1001390EC /* OGScoreNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGScoreNode.swift; sourceTree = "<group>"; };
 		E23B93E31B1D72E7001390EC /* OGPlayPauseNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGPlayPauseNode.swift; sourceTree = "<group>"; };
 		E23B93E71B1E3162001390EC /* OGOzonePart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGOzonePart.swift; sourceTree = "<group>"; };
 <<<<<<< HEAD
@@ -118,10 +112,10 @@
 		E28883231B0E4E4900FE0C8C /* OzonioGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OzonioGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E28883281B0E4E4900FE0C8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E28883291B0E4E4900FE0C8C /* OzonioGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OzonioGameTests.swift; sourceTree = "<group>"; };
-		E29194F11B13A459005BB643 /* OGOzoneLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGOzoneLayer.swift; sourceTree = "<group>"; };
+		E29194F11B13A459005BB643 /* OGOzoneLayerGlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGOzoneLayerGlow.swift; sourceTree = "<group>"; };
 		E29194F31B13A9F2005BB643 /* OGSun.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGSun.swift; sourceTree = "<group>"; };
 		E29194F51B13BDCF005BB643 /* OGBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGBackground.swift; sourceTree = "<group>"; };
-		E292BE4F1B1F76D5003175E8 /* OGYear.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGYear.swift; sourceTree = "<group>"; };
+		E292BE4F1B1F76D5003175E8 /* OGYearStrip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGYearStrip.swift; sourceTree = "<group>"; };
 		E29DCEA11B2587DD005AC5AB /* ozoneImpact.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ozoneImpact.sks; sourceTree = "<group>"; };
 		E29DCEA31B259511005AC5AB /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		E29DCEA51B2596BB005AC5AB /* carbon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "carbon@3x.png"; path = "../../ImagesOzonioGame/Imgs/UsadosAtuais/carbon@3x.png"; sourceTree = "<group>"; };
@@ -189,12 +183,9 @@
 			isa = PBXGroup;
 			children = (
 				A073E8FE1B179D4100286508 /* OGLabel.swift */,
-
-				A0114EF41B1F691F00F75365 /* OGYearLabel.swift */,
-				E292BE4F1B1F76D5003175E8 /* OGYear.swift */,
+				E292BE4F1B1F76D5003175E8 /* OGYearStrip.swift */,
 				E23B93DB1B1D62CB001390EC /* OGForeground.swift */,
 				E23B93E31B1D72E7001390EC /* OGPlayPauseNode.swift */,
-				E23B93DD1B1D65B1001390EC /* OGScoreNode.swift */,
 			);
 			name = Foreground;
 			sourceTree = "<group>";
@@ -204,7 +195,7 @@
 			children = (
 				E26209571B1397110033BC70 /* OGPlanet.swift */,
 				E23B93D91B1D5CD2001390EC /* OGAtmosphere.swift */,
-				E29194F11B13A459005BB643 /* OGOzoneLayer.swift */,
+				E29194F11B13A459005BB643 /* OGOzoneLayerGlow.swift */,
 				E23B93E71B1E3162001390EC /* OGOzonePart.swift */,
 			);
 			name = Planet;
@@ -275,6 +266,7 @@
 				E29194F31B13A9F2005BB643 /* OGSun.swift */,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 				A073E8FE1B179D4100286508 /* OGLabel.swift */,
@@ -284,6 +276,8 @@
 =======
 				A073E8FE1B179D4100286508 /* OGLabel.swift */,
 
+>>>>>>> master
+=======
 >>>>>>> master
 				E23B93DF1B1D6CEB001390EC /* Foreground */,
 				E23B93E01B1D6F23001390EC /* Planet */,
@@ -467,13 +461,12 @@
 			files = (
 				549B57401B1798EB00766AF7 /* OGNitrous.swift in Sources */,
 				E23B93DA1B1D5CD2001390EC /* OGAtmosphere.swift in Sources */,
-
 				549B57431B179D9300766AF7 /* OGCarbonFactory.swift in Sources */,
 				E242CC401B150848000E5A1C /* OGFactory.swift in Sources */,
 				E29194F61B13BDCF005BB643 /* OGBackground.swift in Sources */,
-				E292BE501B1F76D5003175E8 /* OGYear.swift in Sources */,
+				E292BE501B1F76D5003175E8 /* OGYearStrip.swift in Sources */,
 				E29194F41B13A9F2005BB643 /* OGSun.swift in Sources */,
-				E29194F21B13A459005BB643 /* OGOzoneLayer.swift in Sources */,
+				E29194F21B13A459005BB643 /* OGOzoneLayerGlow.swift in Sources */,
 				E242CC421B15085C000E5A1C /* OGMolecule.swift in Sources */,
 				E2D599261B1EBFF1001D33C5 /* EndScene.swift in Sources */,
 				E23B93E41B1D72E7001390EC /* OGPlayPauseNode.swift in Sources */,
@@ -482,11 +475,9 @@
 				E23B93E81B1E3162001390EC /* OGOzonePart.swift in Sources */,
 				549B57461B17ACEE00766AF7 /* OGNitrousFactory.swift in Sources */,
 				A073E8FF1B179D4100286508 /* OGLabel.swift in Sources */,
-				E23B93DE1B1D65B1001390EC /* OGScoreNode.swift in Sources */,
 				549B573C1B178F8E00766AF7 /* OGCarbon.swift in Sources */,
 				E28883161B0E4E4900FE0C8C /* GameViewController.swift in Sources */,
 				549B573E1B1796AE00766AF7 /* OGHideRequired.swift in Sources */,
-				A0114EF51B1F691F00F75365 /* OGYearLabel.swift in Sources */,
 				E23B93DC1B1D62CB001390EC /* OGForeground.swift in Sources */,
 				E28883101B0E4E4900FE0C8C /* AppDelegate.swift in Sources */,
 				E2D599231B1E9714001D33C5 /* MenuScene.swift in Sources */,

@@ -18,7 +18,7 @@ class OGNitric: OGMolecule {
         
         self.lifeMax = 3
         
-        self.destroyScore = 300
+        self.scoreGiven = 80
         
         self.name = "NITRICMOLECULE"
         
@@ -43,6 +43,7 @@ class OGNitric: OGMolecule {
             divideMolecule.position = CGPointMake(self.position.x + auxX, self.position.y)
             self.parent!.addChild(divideMolecule)
         }
+        
         self.size.width *= 1.5
         self.size.height *= 1.5
         self.physicsBody = SKPhysicsBody (circleOfRadius: self.size.width / 1.5)
@@ -66,7 +67,6 @@ class OGNitric: OGMolecule {
     override func update() {
         var childXPosition = self.position.x + self.parent!.position.x
         var childYPosition = self.position.y + self.parent!.position.y
-        //self.physicsBody!.applyImpulse(CGVectorMake(1.0, 1.0))
 
 <<<<<<< HEAD
 <<<<<<< HEAD

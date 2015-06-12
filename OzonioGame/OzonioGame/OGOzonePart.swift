@@ -33,6 +33,9 @@ class OGOzonePart : SKSpriteNode {
         self.physicsBody!.contactTestBitMask = CollisionCategoryMolecules
         self.physicsBody!.collisionBitMask = 0
         
+        self.zPosition = 2
+        
+        
     }
     
     
@@ -64,8 +67,6 @@ class OGOzonePart : SKSpriteNode {
     
     
 
-    
-    
     
     func playAudio(name: String){
         let playSoundAction = SKAction.playSoundFileNamed(name, waitForCompletion: false)
