@@ -1,5 +1,5 @@
 //
-//  OGLabel.swift
+//  OGValueLabel.swift
 //  OzonioGame
 //
 //  Created by Pedro Lopes on 5/28/15.
@@ -9,10 +9,10 @@
 import UIKit
 import SpriteKit
 
-class OGLabel: SKLabelNode {
+class OGValueLabel : SKLabelNode {
     
     var labelValue = 0
-    var labelName = ""
+    var labelName = "", labelText = ""
     let labelTextNode = SKLabelNode(fontNamed: "Avenir Medium")
     
     
@@ -23,7 +23,10 @@ class OGLabel: SKLabelNode {
         //Cria a label
         labelName = text
         labelValue = initialValue
-        labelTextNode.text = "\(labelName): \(labelValue)"
+        
+        labelText = "\(labelName): \(labelValue)"
+        
+        labelTextNode.text = labelText
         
         labelTextNode.fontSize = 22
         labelTextNode.fontColor = SKColor.whiteColor()
@@ -48,12 +51,12 @@ class OGLabel: SKLabelNode {
             labelValue = 0
         }
         
-        labelTextNode.text = "\(labelName): \(labelValue)"
+        labelTextNode.text = labelText
     }
     
     func updateYears() {
         labelValue++
-        labelTextNode.text = "\(labelName): \(labelValue)"
+        labelTextNode.text = labelText
     }
     
     required init?(coder aDecoder: NSCoder) {

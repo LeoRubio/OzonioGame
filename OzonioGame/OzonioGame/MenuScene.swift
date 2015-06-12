@@ -114,7 +114,7 @@ class MenuScene: SKScene {
                     
                     
                     self.runAction(SKAction.waitForDuration(0.2))
-                    let endTransition = SKTransition.pushWithDirection(SKTransitionDirection.Up, duration: 1.0)
+                    let endTransition = SKTransition.moveInWithDirection(SKTransitionDirection.Down, duration: 1.0)
                     self.scene?.view?.presentScene(gameScene, transition: endTransition)
                 
                 } else if touch == "sair" {

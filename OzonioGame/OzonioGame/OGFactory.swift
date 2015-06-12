@@ -38,10 +38,21 @@ class OGFactory : OGHideRequired {
     
     func update(){
         
+        self.enumerateChildNodesWithName("OZONEMOLECULE") {
+            node, stop in
+            
+            // CHAMA O UPDATE DE TODOS OS FILHOS MOLECULA OZONE
+            var moleculeAux : OGOzone?
+            moleculeAux = node as? OGOzone
+            moleculeAux?.update()
+            
+            
+        }
+        
         self.enumerateChildNodesWithName("CARBONMOLECULE") {
             node, stop in
             
-            // CHAMA O UPDATE DE TODOS OS FILHOS MOLECULA
+            // CHAMA O UPDATE DE TODOS OS FILHOS MOLECULA CARBON
             var moleculeAux : OGCarbon?
             moleculeAux = node as? OGCarbon
             moleculeAux?.update()

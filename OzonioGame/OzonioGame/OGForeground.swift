@@ -12,8 +12,8 @@ import SpriteKit
 class OGForeground : SKNode {
     
     var playNode : OGPlayPauseNode?
-    var labelScore : OGLabel?
-    var labelYears : OGLabel?
+    var labelScore : OGValueLabel?
+    var labelYears : OGValueLabel?
     var sceneSize : CGSize?
     
     init(size: CGSize){
@@ -56,11 +56,11 @@ class OGForeground : SKNode {
     
     func createScoreYearLabels(){
         
-        labelScore = OGLabel(text: "SCORE", initialValue: 0)
+        labelScore = OGValueLabel(text: "SCORE", initialValue: 0)
         labelScore!.position = CGPoint (x: sceneSize!.width/20.0, y: sceneSize!.height/1.1)
         self.addChild(labelScore!)
         
-        labelYears = OGLabel(text: "YEAR", initialValue: 2015)
+        labelYears = OGValueLabel(text: "YEAR", initialValue: 2015)
         labelYears!.position = CGPoint (x: sceneSize!.width/20.0, y: sceneSize!.height/1.15)
         self.addChild(labelYears!)
         

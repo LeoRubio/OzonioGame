@@ -51,7 +51,7 @@ class OGOzonePart : SKSpriteNode {
             playAudio("coracao.wav")
         }
             
-        else if self.layerLife < 3{
+        else if self.layerLife == 1{
             self.color = SKColor.redColor()
         }
             

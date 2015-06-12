@@ -22,8 +22,8 @@ class OGOzone: OGMolecule {
         
         self.name = "OZONEMOLECULE"
         
-        self.size.width *= 2.5
-        self.size.height *= 2.5
+        self.size.width *= 5.0
+        self.size.height *= 5.0
         
         self.physicsBody = SKPhysicsBody (circleOfRadius: self.size.width / 1.5)
         self.physicsBody?.dynamic = true
@@ -46,7 +46,12 @@ class OGOzone: OGMolecule {
             
             let divideMolecule = OGNitric()
             
-            auxX = CGFloat(i*90)
+            //Se for a primeira molecula, cria pro lado oposto
+            if i == 0{
+                i * -1
+            }
+            
+            auxX = CGFloat(i*130)
             
             divideMolecule.position = CGPointMake(self.position.x + auxX, self.position.y)
             self.parent!.addChild(divideMolecule)

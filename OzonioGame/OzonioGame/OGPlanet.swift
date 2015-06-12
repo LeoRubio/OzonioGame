@@ -26,12 +26,12 @@ class OGPlanet : SKSpriteNode {
         let rotate = SKAction.rotateByAngle(10, duration: 60)
         self.runAction(SKAction.repeatActionForever(rotate))
         
-
+        
         createObjects()
-
+        
         
     }
-
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -48,7 +48,7 @@ class OGPlanet : SKSpriteNode {
         self.addChild(ozoneNode!)
     }
     
-
+    
     
     func createAtmosphere (imageName: String){
         
@@ -78,26 +78,43 @@ class OGPlanet : SKSpriteNode {
             //FABRICA TERRESTRE
             factoryNode = OGNitricFactory(factoryPosition: factoryPosition)
         }
-
+        else if factoryType == "Ozone"{
+            //FABRICA CURA (OZONE?)
+            factoryNode = OGOzoneFactory(factoryPosition: factoryPosition)
+        }
+        
         self.addChild(factoryNode!)
         
-        var smokeParticle : SKEmitterNode?
-        let smokePath = NSBundle.mainBundle().pathForResource("smoke", ofType: "sks")
-        smokeParticle = NSKeyedUnarchiver.unarchiveObjectWithFile(smokePath!) as? SKEmitterNode
-        smokeParticle?.position = factoryNode!.position
-        
-        let rotate = SKAction.rotateByAngle(-10, duration: 60)
-        smokeParticle!.runAction(SKAction.repeatActionForever(rotate))
-        
-        self.addChild(smokeParticle!)
+        if (factoryType != "Ozone"){
+            var smokeParticle : SKEmitterNode?
+            let smokePath = NSBundle.mainBundle().pathForResource("smoke", ofType: "sks")
+            smokeParticle = NSKeyedUnarchiver.unarchiveObjectWithFile(smokePath!) as? SKEmitterNode
+            smokeParticle?.position = factoryNode!.position
+            
+            let rotate = SKAction.rotateByAngle(-10, duration: 60)
+            smokeParticle!.runAction(SKAction.repeatActionForever(rotate))
+            
+            self.addChild(smokeParticle!)
+        }
     }
     
-
+    
     
     
     
     //Chama o update de todos os filhos de Planeta
     func update(){
+        
+        self.enumerateChildNodesWithName("OZONEFACTORY") {
+            node, stop in
+            
+            // CHAMA O UPDATE DE TODOS OS FILHOS OZONE FACTORY
+            var factoryAux : OGOzoneFactory?
+            factoryAux = node as? OGOzoneFactory
+            factoryAux?.update()
+            
+            
+        }
         
         self.enumerateChildNodesWithName("CARBONFACTORY") {
             node, stop in
@@ -151,15 +168,15 @@ class OGPlanet : SKSpriteNode {
             createOzoneParts("ozonePart", positionPart: CGPoint(x: xPosition, y: yPosition), rotationPart: rotation)
             
         }
-    
+        
         //   ********************************
-            // POSICIONAR FABRICAS
-            // CRIAR AVIAO CHILD
+        // POSICIONAR FABRICAS
+        // CRIAR AVIAO CHILD
         
         createFactory(CGPointMake(randomNum(), randomNum()), factoryType: "Carbon")
         createFactory(CGPointMake(randomNum(), randomNum()), factoryType: "Nitrous")
         createFactory(CGPointMake(randomNum(), randomNum()), factoryType: "Nitric")
-
+        
         createFactory(CGPointMake(randomNum(), randomNum()), factoryType: "Carbon")
         createFactory(CGPointMake(randomNum(), randomNum()), factoryType: "Nitrous")
         createFactory(CGPointMake(randomNum(), randomNum()), factoryType: "Nitric")
@@ -167,10 +184,11 @@ class OGPlanet : SKSpriteNode {
         createFactory(CGPointMake(randomNum(), randomNum()), factoryType: "Carbon")
         createFactory(CGPointMake(randomNum(), randomNum()), factoryType: "Nitrous")
         createFactory(CGPointMake(randomNum(), randomNum()), factoryType: "Nitric")
-
+        
+        createFactory(CGPointMake(randomNum(), randomNum()), factoryType: "Ozone")
         
         //    ********************************
-
+        
         
     }
     

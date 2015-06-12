@@ -52,6 +52,7 @@ class EndScene: SKScene {
         rectColor.size.height *= 1.5
         rectColor.size.width *= 1.5
         self.addChild(rectColor)
+        
         labelGameOverText.fontColor = SKColor.redColor()
         labelGameOverText.text = "\(foregroundNode!.labelYears!.getValue())"
         labelGameOverText.position = CGPoint(x: self.size.width/4 + 60, y: self.size.height/2 + 3)
