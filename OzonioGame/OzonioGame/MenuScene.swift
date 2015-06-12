@@ -13,9 +13,7 @@ import SpriteKit
 
 var nodeMenu : SKSpriteNode?
 var optionNode : SKSpriteNode?
-
-
-
+var gameScene : GameScene?
 
 
 class MenuScene: SKScene {
@@ -34,6 +32,7 @@ class MenuScene: SKScene {
         
         
         super.init(size: size)
+        
         nodeMenu = SKSpriteNode(imageNamed: "menu")
         nodeMenu?.name = "menu"
         nodeMenu?.position = CGPoint(x: size.width/2, y: size.height/2)
@@ -47,6 +46,8 @@ class MenuScene: SKScene {
         optionNode?.size.width *= 2.2
         optionNode?.size.height *= 2.2
         //self.addChild(optionNode!)
+        
+        gameScene = GameScene(size: size)
         
         playAudioBegin("intro.mp3")
     }
@@ -111,9 +112,10 @@ class MenuScene: SKScene {
                     labelQuit.removeFromParent()
                     labelContinue.removeFromParent()
                     
-                    let doorsTransition = SKTransition.doorwayWithDuration(1.0)
-                    let gameScene = GameScene(size: size)
-                    self.scene?.view?.presentScene(gameScene, transition: doorsTransition)
+                    
+                    self.runAction(SKAction.waitForDuration(0.2))
+                    let endTransition = SKTransition.pushWithDirection(SKTransitionDirection.Up, duration: 1.0)
+                    self.scene?.view?.presentScene(gameScene, transition: endTransition)
                 
                 } else if touch == "sair" {
                     playAudio("pngs.wav")

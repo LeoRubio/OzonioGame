@@ -14,12 +14,15 @@ var endNode : SKSpriteNode?
 var rectColor = SKSpriteNode(imageNamed: "colorRect")
 var rectColor2 = SKSpriteNode(imageNamed: "colorRect")
 
+var fontName = "Avenir Medium"
+
 class EndScene: SKScene {
     
     var labelContinue = SKLabelNode(fontNamed: "Arial-BoldMT")
     var labelQuit = SKLabelNode(fontNamed: "Arial-BoldMT")
-    var labelGameOverText = SKLabelNode(fontNamed: "Arial-BoldMT")
-    var labelGameOverScore = SKLabelNode(fontNamed: "Arial-BoldMT")
+    
+    var labelGameOverText = SKLabelNode(fontNamed: fontName)
+    var labelGameOverScore = SKLabelNode(fontNamed: fontName)
     
     
     required init? (coder aDecoder: NSCoder) {
@@ -31,6 +34,8 @@ class EndScene: SKScene {
         
         
         super.init(size: size)
+        
+        paused = false
         
         endNode = SKSpriteNode(imageNamed: "gameOver")
         endNode?.name = "retry"
@@ -129,9 +134,9 @@ class EndScene: SKScene {
                     labelContinue.removeFromParent()
                     layerCount = 32
                     
-                    let doorsTransition = SKTransition.doorwayWithDuration(1.0)
+                    let endTransition = SKTransition.crossFadeWithDuration(0.7)
                     let gameScene = GameScene(size: size)
-                    self.scene?.view?.presentScene(gameScene, transition: doorsTransition)
+                    self.scene?.view?.presentScene(gameScene, transition: endTransition)
                     
                 } else if touch == "sair" {
                     playAudio("pngs.wav")

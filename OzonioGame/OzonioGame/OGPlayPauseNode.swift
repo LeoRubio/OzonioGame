@@ -20,6 +20,8 @@ class OGPlayPauseNode : SKSpriteNode {
         let texture = SKTexture(imageNamed: "pause")
         
         super.init(texture: texture, color: UIColor.clearColor(), size: texture.size())
+        
+        self.zPosition = 100 // Só pra garantir
         self.name = "PLAYPAUSE"
         
     }
