@@ -124,7 +124,6 @@ class OGPlanet : SKSpriteNode {
     func createObjects(){
         
         
-        //createOzoneLayer("ozonio")
         createAtmosphere("atmosfera")
         
         
@@ -139,6 +138,8 @@ class OGPlanet : SKSpriteNode {
             createGlow("ozoneGlow", positionPart: CGPoint(x: xPosition, y: yPosition), rotationPart: rotation)
             
         }
+        
+        
     
         //   ********************************
             // POSICIONAR FABRICAS

@@ -40,7 +40,14 @@ class OGLabel: SKLabelNode {
     }
     
     func updateScore(#gameScore:Int){
+        
         labelValue += gameScore
+        
+        //Garante que não tenha score negativo!
+        if labelValue < 0{
+            labelValue = 0
+        }
+        
         labelTextNode.text = "\(labelName): \(labelValue)"
     }
     

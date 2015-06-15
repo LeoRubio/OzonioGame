@@ -21,6 +21,8 @@ class OGOzoneLayerGlow : SKSpriteNode {
         self.color = SKColor.redColor()
         self.colorBlendFactor = 1.0
         self.zPosition = 1
+        
+        
     }
     
     
