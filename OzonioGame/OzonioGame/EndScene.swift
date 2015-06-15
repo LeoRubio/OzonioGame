@@ -51,12 +51,20 @@ class EndScene: SKScene {
         
         
         //Label1 = YEAR
+<<<<<<< HEAD
         rectColor = SKSpriteNode(imageNamed: "colorRect")
         
         rectColor?.position = CGPoint(x: self.size.width/4 + 62, y: self.size.height/2 + 15)
         rectColor?.size.height *= 1.5
         rectColor?.size.width *= 1.5
         self.addChild(rectColor!)
+=======
+        rectColor.position = CGPoint(x: self.size.width/4 + 62, y: self.size.height/2 + 15)
+        rectColor.size.height *= 1.5
+        rectColor.size.width *= 1.5
+        self.addChild(rectColor)
+        
+>>>>>>> victor-branche
         labelGameOverText.fontColor = SKColor.redColor()
         labelGameOverText.text = "\(foregroundNode!.labelYears!.getValue())"
         labelGameOverText.position = CGPoint(x: self.size.width/4 + 60, y: self.size.height/2 + 3)

@@ -32,11 +32,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     override init(size: CGSize) {
         
-        
-        
         super.init(size: size)
         
-        playSound("yoda.wav")
+        playMusic("yoda.wav")
         
         //gravity
         physicsWorld.gravity = CGVectorMake(0.0, -0.1)
@@ -87,10 +85,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             //var nodeTouched = self.nodeAtPoint(location)
             
+<<<<<<< HEAD
             for anyNode: AnyObject in self.nodesAtPoint(location) {
+=======
+            var carbonMolecule = OGCarbon()
+            var nitrousMolecule = OGNitrous()
+            var nitricMolecule = OGNitric()
+            var ozoneMolecule = OGOzone()
+>>>>>>> victor-branche
             
                 let nodeTouched:SKNode = anyNode as! SKNode
                 
+<<<<<<< HEAD
                 var carbonMolecule = OGCarbon()
                 var nitrousMolecule = OGNitrous()
                 var nitricMolecule = OGNitric()
@@ -98,21 +104,35 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 
                 if let touch = nodeTouched.name {
                     
+=======
+                if !self.paused {
+>>>>>>> victor-branche
                     if touch == "CARBONMOLECULE" {
                         carbonMolecule = nodeTouched as! OGCarbon
                         foregroundNode?.labelScore!.updateScore(gameScore: carbonMolecule.removeLife())
                         playSound("Plop.wav")
                         moleculeParticle(location)
                         
+<<<<<<< HEAD
                     } else if touch == "NITROUSMOLECULE" {
+=======
+                    }
+                    else if touch == "NITROUSMOLECULE" {
+>>>>>>> victor-branche
                         
                         nitrousMolecule = nodeTouched as! OGNitrous
                         foregroundNode?.labelScore!.updateScore(gameScore: nitrousMolecule.removeLife())
                         playSound("Plop.wav")
                         moleculeParticle(location)
                         
+<<<<<<< HEAD
                         
                     } else if touch == "NITRICMOLECULE" {
+=======
+                    }
+                        
+                    else if touch == "NITRICMOLECULE" {
+>>>>>>> victor-branche
                         
                         nitricMolecule = nodeTouched as! OGNitric
                         foregroundNode?.labelScore!.updateScore(gameScore: nitricMolecule.removeLife())
@@ -120,10 +140,26 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                         moleculeParticle(location)
                         
                     }
+<<<<<<< HEAD
                     else if touch == "PLAYPAUSE" {
                         self.paused = !self.paused
                         foregroundNode?.playNode!.switchState()
                     }
+=======
+                        
+                    else if touch == "OZONEMOLECULE" {
+                        ozoneMolecule = nodeTouched as! OGOzone
+                        foregroundNode?.labelScore!.updateScore(gameScore: ozoneMolecule.removeLife())
+                        playSound("Plop.wav")
+                        moleculeParticle(location)
+                    }
+                }
+                
+                //Touch do botao PlayPause que não depende do pause true ou não
+                if touch == "PLAYPAUSE" {
+                    self.paused = !self.paused
+                    foregroundNode?.playNode!.switchState()
+>>>>>>> victor-branche
                 }
             }
         }
@@ -141,15 +177,35 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             var nodeB = contact.bodyB!.node!
             
             if nodeB.name == "CARBONMOLECULE" || nodeB.name == "NITROUSMOLECULE" || nodeB.name == "NITRICMOLECULE" {
+               // O que acontece quando a molecula de dano acerta a camada
+                
                 playSound("impact.wav")
                 ozoneImpactParticle(nodeA)
                 nodeB.removeFromParent()
+                
+                var damage : OGOzonePart
+                damage = nodeA as! OGOzonePart
+                damage.layerDamage()
+            }
+            else if nodeB.name == "OZONEMOLECULE" {
+                // O que acontece quando a molecula de cura acerta a camada
+                
+                playSound("impact.wav")
+                ozoneImpactParticle(nodeA)
+                nodeB.removeFromParent()
+            
+                var heal : OGOzonePart
+                heal = nodeA as! OGOzonePart
+                heal.layerHeal()
             }
             
+<<<<<<< HEAD
             var damage : OGOzonePart
             damage = nodeA as! OGOzonePart
             damage.layerDamage()
             
+=======
+>>>>>>> victor-branche
             if layerCount <= 31 {
                 playSound("gameOver.wav")
                 playSound("strange.wav")
@@ -205,12 +261,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
     }
     
-    
+    //Toca um Som curto
     func playSound (nome: String){
         let playSoundAction = SKAction.playSoundFileNamed(nome, waitForCompletion: false)
         runAction(playSoundAction)
     }
+    
+    //Toca uma musica em loop, esperando o tempo dela completar
+    func playMusic (nome: String){
+        
+        let playMusicAction = SKAction.playSoundFileNamed(nome, waitForCompletion: true)
+        runAction(SKAction.repeatActionForever(playMusicAction))
 
+    }
+    
     
     
 }
