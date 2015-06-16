@@ -52,6 +52,7 @@
 		E2D5993B1B1F068C001D33C5 /* coracao.wav in Resources */ = {isa = PBXBuildFile; fileRef = E2D5993A1B1F068C001D33C5 /* coracao.wav */; };
 		E2D5993D1B1F075E001D33C5 /* gameOver2.wav in Resources */ = {isa = PBXBuildFile; fileRef = E2D5993C1B1F075E001D33C5 /* gameOver2.wav */; };
 		E2D5993F1B1F0795001D33C5 /* yoda.wav in Resources */ = {isa = PBXBuildFile; fileRef = E2D5993E1B1F0795001D33C5 /* yoda.wav */; };
+		E2E075641B30CE04008CDEA1 /* healerExplode.sks in Resources */ = {isa = PBXBuildFile; fileRef = E2E075631B30CE04008CDEA1 /* healerExplode.sks */; };
 		E2E372AE1B25686F004F6255 /* finalEffect.sks in Resources */ = {isa = PBXBuildFile; fileRef = E2E372AC1B25686F004F6255 /* finalEffect.sks */; };
 		E2E372B51B2568F2004F6255 /* smoke.sks in Resources */ = {isa = PBXBuildFile; fileRef = E2E372B41B2568F2004F6255 /* smoke.sks */; };
 		E2E372B91B25692A004F6255 /* explodeMolecule7.sks in Resources */ = {isa = PBXBuildFile; fileRef = E2E372B81B25692A004F6255 /* explodeMolecule7.sks */; };
@@ -117,6 +118,7 @@
 		E2D5993A1B1F068C001D33C5 /* coracao.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = coracao.wav; sourceTree = "<group>"; };
 		E2D5993C1B1F075E001D33C5 /* gameOver2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = gameOver2.wav; sourceTree = "<group>"; };
 		E2D5993E1B1F0795001D33C5 /* yoda.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = yoda.wav; sourceTree = "<group>"; };
+		E2E075631B30CE04008CDEA1 /* healerExplode.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = healerExplode.sks; sourceTree = "<group>"; };
 		E2E372AC1B25686F004F6255 /* finalEffect.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = finalEffect.sks; sourceTree = "<group>"; };
 		E2E372B41B2568F2004F6255 /* smoke.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = smoke.sks; sourceTree = "<group>"; };
 		E2E372B81B25692A004F6255 /* explodeMolecule7.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = explodeMolecule7.sks; sourceTree = "<group>"; };
@@ -274,6 +276,7 @@
 				E2E372B81B25692A004F6255 /* explodeMolecule7.sks */,
 				E2E372B41B2568F2004F6255 /* smoke.sks */,
 				E29DCEA11B2587DD005AC5AB /* ozoneImpact.sks */,
+				E2E075631B30CE04008CDEA1 /* healerExplode.sks */,
 				E2E372AC1B25686F004F6255 /* finalEffect.sks */,
 				E2C7FE191B0FB169004E6A7E /* spark.png */,
 				E29DCEA51B2596BB005AC5AB /* carbon@3x.png */,
@@ -394,6 +397,7 @@
 				E2E372B91B25692A004F6255 /* explodeMolecule7.sks in Resources */,
 				E2D5993F1B1F0795001D33C5 /* yoda.wav in Resources */,
 				E2D599371B1F0528001D33C5 /* pngs.wav in Resources */,
+				E2E075641B30CE04008CDEA1 /* healerExplode.sks in Resources */,
 				E29DCEA61B2596BB005AC5AB /* carbon@3x.png in Resources */,
 				E2D599391B1F05DF001D33C5 /* impact.wav in Resources */,
 				E2E372AE1B25686F004F6255 /* finalEffect.sks in Resources */,

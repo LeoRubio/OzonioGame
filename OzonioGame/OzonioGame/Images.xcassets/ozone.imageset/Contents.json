@@ -3,17 +3,17 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "option.png"
+      "filename" : "healer.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "option@2x.png"
+      "filename" : "healer@2x.png"
     },
     {
       "idiom" : "universal",
       "scale" : "3x",
-      "filename" : "option@3x.png"
+      "filename" : "healer@3x.png"
     }
   ],
   "info" : {

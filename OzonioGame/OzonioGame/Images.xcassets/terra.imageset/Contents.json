@@ -3,17 +3,17 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "terra.png"
+      "filename" : "newEarth.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "terra@2x.png"
+      "filename" : "newEarth@2x.png"
     },
     {
       "idiom" : "universal",
       "scale" : "3x",
-      "filename" : "terra@3x.png"
+      "filename" : "newEarth@3x.png"
     }
   ],
   "info" : {

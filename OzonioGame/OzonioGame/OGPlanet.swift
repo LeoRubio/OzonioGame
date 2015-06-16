@@ -37,22 +37,6 @@ class OGPlanet : SKSpriteNode {
     }
     
     
-//<<<<<<< HEAD
-//=======
-//    func createOzoneLayer (imageName: String){
-//        
-//        let ozoneNode : OGOzoneLayer?
-//        
-//        let texture = SKTexture(imageNamed: imageName)
-//        
-//        ozoneNode = OGOzoneLayer(texture: texture)
-//        ozoneNode!.position = CGPoint (x: 0.0, y: 0.0)
-//        self.addChild(ozoneNode!)
-//    }
-//    
-//    
-//    
-//>>>>>>> victor-branche
     func createAtmosphere (imageName: String){
         
         let atmosphereNode : OGAtmosphere?
@@ -148,8 +132,15 @@ class OGPlanet : SKSpriteNode {
             var factoryAux : OGNitricFactory?
             factoryAux = node as? OGNitricFactory
             factoryAux?.update()
+
+        }
+        
+        self.enumerateChildNodesWithName("ozoneGlow") {
+            node, stop in
             
-            
+            var glowAux : OGOzoneLayerGlow?
+            glowAux = node as? OGOzoneLayerGlow
+            glowAux?.update()
         }
         
     }
@@ -216,9 +207,12 @@ class OGPlanet : SKSpriteNode {
         ozoneGlow = OGOzoneLayerGlow(texture: texture)
         ozoneGlow?.position = positionPart
         ozoneGlow?.zRotation = rotationPart
+//        ozoneGlow?.name = "ozoneGlow"
         self.addChild(ozoneGlow!)
         
     }
+    
+
     
     
     

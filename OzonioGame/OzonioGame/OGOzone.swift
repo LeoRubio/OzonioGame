@@ -14,7 +14,7 @@ import SpriteKit
 class OGOzone: OGMolecule {
     init(){
         
-        super.init(imageNamed: "option")
+        super.init(imageNamed: "ozone")
         
         self.lifeMax = 1
         
@@ -22,10 +22,10 @@ class OGOzone: OGMolecule {
         
         self.name = "OZONEMOLECULE"
         
-        self.size.width *= 5.0
-        self.size.height *= 5.0
+        self.size.width *= 0.09
+        self.size.height *= 0.09
         
-        self.physicsBody = SKPhysicsBody (circleOfRadius: self.size.width / 1.5)
+        self.physicsBody = SKPhysicsBody (circleOfRadius: self.size.width / 4.0)
         self.physicsBody?.dynamic = true
         
         self.physicsBody?.mass = 0.01
@@ -41,23 +41,35 @@ class OGOzone: OGMolecule {
     override func mitosis(){
         
         var auxX:CGFloat = 0.0
+        var auxY:CGFloat = 0.0
         
-        for(var i = 0; i < 3; i++){
+        for(var i = 0; i < 15; i++){
             
             let divideMolecule = OGNitric()
             
             //Se for a primeira molecula, cria pro lado oposto
-            if i == 0{
-                i * -1
-            }
+//            if i%2 == 0{
+//                i * -1
+//            }
+            var randomNumber = randNum()
+            auxX = CGFloat(i * randomNumber)
+            randomNumber = randNum()
+            auxY = CGFloat(i * randomNumber)
             
-            auxX = CGFloat(i*130)
+            divideMolecule.position = CGPointMake(self.position.x + auxX, self.position.y + auxY)
             
-            divideMolecule.position = CGPointMake(self.position.x + auxX, self.position.y)
             self.parent!.addChild(divideMolecule)
+
         }
         
         
+        
+    }
+    
+    func randNum () -> Int {
+    
+        var randomNum = Int (arc4random_uniform(120)) - 60
+        return randomNum
         
     }
     
