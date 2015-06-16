@@ -44,6 +44,10 @@ class OGNitrous: OGMolecule {
         for(var i = 0; i < 2; i++){
             let divideMolecule = OGCarbon()
             
+            //Se for a primeira molecula, cria pro lado oposto
+            if i == 0{
+                i * -1
+            }
             auxX = CGFloat(i*90)
             
             divideMolecule.position = CGPointMake(self.position.x + auxX, self.position.y)

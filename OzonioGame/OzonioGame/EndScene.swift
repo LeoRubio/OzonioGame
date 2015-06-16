@@ -78,10 +78,6 @@ class EndScene: SKScene {
         labelGameOverScore.horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.Center
         self.addChild(labelGameOverScore)
         
-        
-        
-        
-        
         playAudio("strange.wav")
     }
     
@@ -96,41 +92,9 @@ class EndScene: SKScene {
             
             if let touch = nodeTouched.name {
                 
-                if touch == "option" {
+                if touch == "retry" {
                     
                     playAudio("buttons.wav")
-                    
-                    labelQuit.removeFromParent()
-                    labelContinue.removeFromParent()
-                    
-                    labelContinue.name = "continue"
-                    labelContinue.text = " CONTINUE? "
-                    labelContinue.fontSize = 30
-                    labelContinue.fontColor = SKColor.whiteColor()
-                    labelContinue.position = CGPoint(x: size.width/2 + 128, y: 60)
-                    addChild(labelContinue)
-                    
-                    labelQuit.name = "sair"
-                    labelQuit.text = " SAIR? "
-                    labelQuit.fontSize = 30
-                    labelQuit.fontColor = SKColor.whiteColor()
-                    labelQuit.position = CGPoint(x: size.width/2 + 75, y: 20)
-                    addChild(labelQuit)
-                    
-                    
-                } else if touch == "continue"{
-                    
-                    playAudio("buttons.wav")
-                    
-                    labelQuit.removeFromParent()
-                    labelContinue.removeFromParent()
-                    
-                } else if touch == "retry" {
-                    
-                    playAudio("buttons.wav")
-                    
-                    labelQuit.removeFromParent()
-                    labelContinue.removeFromParent()
                     layerCount = 32
                     
                     
@@ -138,10 +102,6 @@ class EndScene: SKScene {
                     let gameScene = GameScene(size: size)
                     self.scene?.view?.presentScene(gameScene, transition: endTransition)
                     
-                    
-//                } else if touch == "sair" {
-//                    playAudio("pngs.wav")
-//                    exit(0)
                     
                 }
             }
