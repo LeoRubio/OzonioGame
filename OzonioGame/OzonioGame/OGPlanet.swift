@@ -37,22 +37,22 @@ class OGPlanet : SKSpriteNode {
     }
     
     
-<<<<<<< HEAD
-=======
-    func createOzoneLayer (imageName: String){
-        
-        let ozoneNode : OGOzoneLayer?
-        
-        let texture = SKTexture(imageNamed: imageName)
-        
-        ozoneNode = OGOzoneLayer(texture: texture)
-        ozoneNode!.position = CGPoint (x: 0.0, y: 0.0)
-        self.addChild(ozoneNode!)
-    }
-    
-    
-    
->>>>>>> victor-branche
+//<<<<<<< HEAD
+//=======
+//    func createOzoneLayer (imageName: String){
+//        
+//        let ozoneNode : OGOzoneLayer?
+//        
+//        let texture = SKTexture(imageNamed: imageName)
+//        
+//        ozoneNode = OGOzoneLayer(texture: texture)
+//        ozoneNode!.position = CGPoint (x: 0.0, y: 0.0)
+//        self.addChild(ozoneNode!)
+//    }
+//    
+//    
+//    
+//>>>>>>> victor-branche
     func createAtmosphere (imageName: String){
         
         let atmosphereNode : OGAtmosphere?
@@ -171,12 +171,8 @@ class OGPlanet : SKSpriteNode {
             createGlow("ozoneGlow", positionPart: CGPoint(x: xPosition, y: yPosition), rotationPart: rotation)
             
         }
+
         
-<<<<<<< HEAD
-        
-    
-=======
->>>>>>> victor-branche
         //   ********************************
         // POSICIONAR FABRICAS
         // CRIAR AVIAO CHILD

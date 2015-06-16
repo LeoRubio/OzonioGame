@@ -101,7 +101,6 @@
 		E29194F51B13BDCF005BB643 /* OGBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGBackground.swift; sourceTree = "<group>"; };
 		E292BE4F1B1F76D5003175E8 /* OGYearStrip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGYearStrip.swift; sourceTree = "<group>"; };
 		E29DCEA11B2587DD005AC5AB /* ozoneImpact.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ozoneImpact.sks; sourceTree = "<group>"; };
-		E29DCEA31B259511005AC5AB /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		E29DCEA51B2596BB005AC5AB /* carbon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "carbon@3x.png"; path = "../../ImagesOzonioGame/Imgs/UsadosAtuais/carbon@3x.png"; sourceTree = "<group>"; };
 		E2C7FE181B0FB169004E6A7E /* fireSun.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = fireSun.sks; sourceTree = "<group>"; };
 		E2C7FE191B0FB169004E6A7E /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
@@ -190,7 +189,6 @@
 		E28883011B0E4E4900FE0C8C = {
 			isa = PBXGroup;
 			children = (
-				E29DCEA31B259511005AC5AB /* AudioToolbox.framework */,
 				E288830C1B0E4E4900FE0C8C /* OzonioGame */,
 				E28883261B0E4E4900FE0C8C /* OzonioGameTests */,
 				E288830B1B0E4E4900FE0C8C /* Products */,
