@@ -70,7 +70,7 @@ class MenuScene: SKScene {
                     playAudio("buttons.wav")
 
                     self.runAction(SKAction.waitForDuration(0.2))
-                    let endTransition = SKTransition.moveInWithDirection(SKTransitionDirection.Down, duration: 1.0)
+                    let endTransition = SKTransition.crossFadeWithDuration(1.5)
                     self.scene?.view?.presentScene(gameScene, transition: endTransition)
                 
                 } 
