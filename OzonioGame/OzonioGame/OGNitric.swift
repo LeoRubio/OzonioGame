@@ -22,10 +22,10 @@ class OGNitric: OGMolecule {
         
         self.name = "NITRICMOLECULE"
         
-        self.size.width *= 2.5
-        self.size.height *= 2.5
+        self.size.width *= 0.11
+        self.size.height *= 0.11
  
-        self.physicsBody = SKPhysicsBody (circleOfRadius: self.size.width / 3.0)
+        self.physicsBody = SKPhysicsBody (circleOfRadius: self.size.width / 6.0)
         self.physicsBody?.dynamic = true
         
         self.physicsBody?.mass = 0.01
@@ -54,6 +54,8 @@ class OGNitric: OGMolecule {
             auxX = CGFloat(i*90)
             
             divideMolecule.position = CGPointMake(self.position.x + auxX, self.position.y)
+            
+            
             self.parent!.addChild(divideMolecule)
         }
         

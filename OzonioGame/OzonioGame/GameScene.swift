@@ -125,10 +125,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                         }
                             
                         else if touch == "OZONEMOLECULE" {
+                            
                             ozoneMolecule = nodeTouched as! OGOzone
                             foregroundNode?.labelScore!.updateScore(gameScore: ozoneMolecule.removeLife())
-                            playSound("Plop.wav")
-                            moleculeParticle(location)
+                            playSound("pngs.wav")
+                            healerParticle(location)
+                            
                         }
                     }
                     
@@ -162,13 +164,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 var damage : OGOzonePart
                 damage = nodeA as! OGOzonePart
                 damage.layerDamage()
+                
             }
                 
             else if nodeB.name == "OZONEMOLECULE" {
                 // O que acontece quando a molecula de cura acerta a camada
                 
-                playSound("impact.wav")
-                ozoneImpactParticle(nodeA)
+                playSound("buttons.wav")
+                ozoneImpactParticleHealer(nodeA)
                 nodeB.removeFromParent()
                 
                 var heal : OGOzonePart
@@ -177,13 +180,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
             
             
-            if layerCount <= 31 {
-                playSound("gameOver.wav")
+            if layerCount <= 30 {
+                //playSound("gameOver.wav")
                 playSound("strange.wav")
-                playSound("gameOver2.wav")
+                
                 endParticleEffect()
                 let wait = SKAction.waitForDuration(2.5)
                 self.runAction(wait, completion: { () -> Void in
+                    self.playSound("gameOver2.wav")
                     let endTransition = SKTransition.crossFadeWithDuration(1.5)
                     let gameOverScene = EndScene(size: self.size, year: foregroundNode!.labelScore!.getValue(), score: foregroundNode!.labelScore!.getValue())
                     self.scene?.view?.presentScene(gameOverScene, transition: endTransition)
@@ -206,6 +210,28 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.addChild(moleculeExplodeParticle!)
         
     }
+    
+    func healerParticle (touchPoint: CGPoint){
+        
+        var moleculeExplodeParticle : SKEmitterNode?
+        let explodePath = NSBundle.mainBundle().pathForResource("healerExplode", ofType: "sks")
+        moleculeExplodeParticle = NSKeyedUnarchiver.unarchiveObjectWithFile(explodePath!) as? SKEmitterNode
+        moleculeExplodeParticle?.position = touchPoint
+        self.addChild(moleculeExplodeParticle!)
+        
+    }
+    
+    
+    
+    func ozoneImpactParticleHealer(ozonePart : SKNode){
+        
+        var ozoneImpactParticle : SKEmitterNode?
+        let ozoneImpactPath = NSBundle.mainBundle().pathForResource("healerExplode", ofType: "sks")
+        ozoneImpactParticle = NSKeyedUnarchiver.unarchiveObjectWithFile(ozoneImpactPath!) as? SKEmitterNode
+        ozonePart.addChild(ozoneImpactParticle!)
+    }
+    
+    
     
     
     
