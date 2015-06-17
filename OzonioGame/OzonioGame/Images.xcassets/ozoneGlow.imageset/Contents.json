@@ -3,17 +3,17 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "camada.png"
+      "filename" : "ozonePart.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "camada@2x.png"
+      "filename" : "ozonePart@2x.png"
     },
     {
       "idiom" : "universal",
       "scale" : "3x",
-      "filename" : "camada@3x.png"
+      "filename" : "ozonePart@3x.png"
     }
   ],
   "info" : {

@@ -12,7 +12,7 @@ import SpriteKit
 class OGOzoneFactory: OGFactory {
     init(factoryPosition position: CGPoint){
         
-        super.init(imageNamed: "option")
+        super.init(imageNamed: "fabrica")
         
         self.name = "OZONEFACTORY"
         

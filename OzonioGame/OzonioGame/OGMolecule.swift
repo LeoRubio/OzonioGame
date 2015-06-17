@@ -14,6 +14,8 @@ class OGMolecule : OGHideRequired {
     
     var lifeMax: Int
     var scoreGiven: Int
+    //    var adjustSize : SKAction
+    
     
     init(imageNamed imageName:String){
         
@@ -22,14 +24,14 @@ class OGMolecule : OGHideRequired {
         let texture = SKTexture(imageNamed: imageName)
         let size = texture.size()
         
-        
         self.lifeMax = 1
         self.scoreGiven = 10
+        
         
         super.init(texture: texture, color: UIColor.clearColor(), size: texture.size())
         self.name = "MOLECULE"
         
-
+        
         self.physicsBody = SKPhysicsBody (circleOfRadius: self.size.width / 3.0)
         self.physicsBody?.dynamic = true
         
@@ -38,11 +40,19 @@ class OGMolecule : OGHideRequired {
         
         self.physicsBody!.categoryBitMask = CollisionCategoryMolecules
         self.physicsBody!.collisionBitMask = 0
-
+        
         self.zPosition += 1
+        
+        animateMolecules()
         
         
     }
+    
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     
     func update(){
         
@@ -50,22 +60,31 @@ class OGMolecule : OGHideRequired {
         
     }
     
+    
     func mitosis(){
         
         fatalError("MUST OVERRIDE THIS FUNCTION")
         
     }
     
+    
+    
+    
+    
     func giveScore() -> Int{
         return self.scoreGiven
     }
+    
+    
+    
+    
     
     func removeLife() -> Int{
         
         self.lifeMax--
         
         if self.lifeMax <= 0{
-
+            
             self.mitosis()
             self.removeFromParent()
             return self.giveScore()
@@ -81,11 +100,31 @@ class OGMolecule : OGHideRequired {
         
         return 0
     }
-
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    
+    
+    
+    func animateMolecules () {
+        
+        let adjustSize = SKAction.scaleBy(23.0, duration: 0.6)
+        
+        let rotateClokAction = SKAction.rotateByAngle(3.14, duration: 1.3)
+        let rotateClokAction2 = SKAction.rotateByAngle(-3.14, duration: 1.3)
+        let adjustSize3 = SKAction.scaleBy(1.1, duration: 0.001)
+        
+        var rand = arc4random_uniform(10)
+        var sequenceArray = SKAction.sequence([rotateClokAction, adjustSize3])
+        
+        if rand%2 == 0{
+            sequenceArray = SKAction.sequence([rotateClokAction2, adjustSize3])
+        }
+        
+        self.runAction(adjustSize)
+        self.runAction(SKAction.repeatActionForever(sequenceArray))
     }
+    
+    
+    
     
     
     

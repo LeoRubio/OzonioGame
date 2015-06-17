@@ -37,19 +37,6 @@ class OGPlanet : SKSpriteNode {
     }
     
     
-    func createOzoneLayer (imageName: String){
-        
-        let ozoneNode : OGOzoneLayer?
-        
-        let texture = SKTexture(imageNamed: imageName)
-        
-        ozoneNode = OGOzoneLayer(texture: texture)
-        ozoneNode!.position = CGPoint (x: 0.0, y: 0.0)
-        self.addChild(ozoneNode!)
-    }
-    
-    
-    
     func createAtmosphere (imageName: String){
         
         let atmosphereNode : OGAtmosphere?
@@ -145,8 +132,15 @@ class OGPlanet : SKSpriteNode {
             var factoryAux : OGNitricFactory?
             factoryAux = node as? OGNitricFactory
             factoryAux?.update()
+
+        }
+        
+        self.enumerateChildNodesWithName("ozoneGlow") {
+            node, stop in
             
-            
+            var glowAux : OGOzoneLayerGlow?
+            glowAux = node as? OGOzoneLayerGlow
+            glowAux?.update()
         }
         
     }
@@ -154,7 +148,6 @@ class OGPlanet : SKSpriteNode {
     func createObjects(){
         
         
-        createOzoneLayer("ozonio")
         createAtmosphere("atmosfera")
         
         
@@ -166,8 +159,10 @@ class OGPlanet : SKSpriteNode {
             var yPosition = cos(M_PI*(2.0 * Double(i)/32.0)) * 780
             var rotation:CGFloat = CGFloat(-M_PI*(2.0 * Double(i)/32.0 + 1/32.0))
             createOzoneParts("ozonePart", positionPart: CGPoint(x: xPosition, y: yPosition), rotationPart: rotation)
+            createGlow("ozoneGlow", positionPart: CGPoint(x: xPosition, y: yPosition), rotationPart: rotation)
             
         }
+
         
         //   ********************************
         // POSICIONAR FABRICAS
@@ -204,6 +199,20 @@ class OGPlanet : SKSpriteNode {
         self.addChild(ozonePartNode!)
         
     }
+    
+    func createGlow (imageName: String, positionPart : CGPoint, rotationPart : CGFloat){
+        
+        let ozoneGlow : OGOzoneLayerGlow?
+        let texture = SKTexture(imageNamed: imageName)
+        ozoneGlow = OGOzoneLayerGlow(texture: texture)
+        ozoneGlow?.position = positionPart
+        ozoneGlow?.zRotation = rotationPart
+//        ozoneGlow?.name = "ozoneGlow"
+        self.addChild(ozoneGlow!)
+        
+    }
+    
+
     
     
     
