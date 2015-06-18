@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		54383E2F1B2B504900CAD475 /* OGOzoneFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54383E2E1B2B504900CAD475 /* OGOzoneFactory.swift */; };
+		54383E311B33429E00CAD475 /* OGScorePoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54383E301B33429E00CAD475 /* OGScorePoints.swift */; };
 		549B573C1B178F8E00766AF7 /* OGCarbon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549B573B1B178F8E00766AF7 /* OGCarbon.swift */; };
 		549B573E1B1796AE00766AF7 /* OGHideRequired.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549B573D1B1796AE00766AF7 /* OGHideRequired.swift */; };
 		549B57401B1798EB00766AF7 /* OGNitrous.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549B573F1B1798EB00766AF7 /* OGNitrous.swift */; };
@@ -70,6 +71,7 @@
 
 /* Begin PBXFileReference section */
 		54383E2E1B2B504900CAD475 /* OGOzoneFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGOzoneFactory.swift; sourceTree = "<group>"; };
+		54383E301B33429E00CAD475 /* OGScorePoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGScorePoints.swift; sourceTree = "<group>"; };
 		549B573B1B178F8E00766AF7 /* OGCarbon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGCarbon.swift; sourceTree = "<group>"; };
 		549B573D1B1796AE00766AF7 /* OGHideRequired.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGHideRequired.swift; sourceTree = "<group>"; };
 		549B573F1B1798EB00766AF7 /* OGNitrous.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGNitrous.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 				E292BE4F1B1F76D5003175E8 /* OGYearStrip.swift */,
 				E23B93DB1B1D62CB001390EC /* OGForeground.swift */,
 				E23B93E31B1D72E7001390EC /* OGPlayPauseNode.swift */,
+				54383E301B33429E00CAD475 /* OGScorePoints.swift */,
 			);
 			name = Foreground;
 			sourceTree = "<group>";
@@ -446,6 +449,7 @@
 				54B34B2F1B2A30E500BC8F3A /* OGOzone.swift in Sources */,
 				E23B93E41B1D72E7001390EC /* OGPlayPauseNode.swift in Sources */,
 				E28883141B0E4E4900FE0C8C /* GameScene.swift in Sources */,
+				54383E311B33429E00CAD475 /* OGScorePoints.swift in Sources */,
 				549B57491B17EDE700766AF7 /* OGNitric.swift in Sources */,
 				E23B93E81B1E3162001390EC /* OGOzonePart.swift in Sources */,
 				549B57461B17ACEE00766AF7 /* OGNitrousFactory.swift in Sources */,

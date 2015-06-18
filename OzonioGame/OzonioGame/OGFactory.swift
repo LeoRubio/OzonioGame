@@ -81,6 +81,16 @@ class OGFactory : OGHideRequired {
             
             
         }
+        self.enumerateChildNodesWithName("SCOREPOINTS") {
+            node, stop in
+            
+            // CHAMA O UPDATE DE TODOS OS FILHOS SCORE POINTS
+            var scorePointsAux : OGScorePoints?
+            scorePointsAux = node as? OGScorePoints
+            scorePointsAux?.update()
+            
+            
+        }
         
         
     }

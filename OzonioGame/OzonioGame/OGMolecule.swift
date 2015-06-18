@@ -19,7 +19,6 @@ class OGMolecule : OGHideRequired {
     
     init(imageNamed imageName:String){
         
-        
         let color = UIColor.clearColor()
         let texture = SKTexture(imageNamed: imageName)
         let size = texture.size()
@@ -68,15 +67,17 @@ class OGMolecule : OGHideRequired {
     }
     
     
-    
-    
-    
     func giveScore() -> Int{
         return self.scoreGiven
     }
     
     
-    
+    func spawnScoreNode(){
+        let spawnScoreNode : OGScorePoints?
+        spawnScoreNode = OGScorePoints(scorePoints: giveScore())
+        spawnScoreNode!.position = CGPointMake(self.position.x, self.position.y)
+        self.parent!.addChild(spawnScoreNode!)
+    }
     
     
     func removeLife() -> Int{
@@ -86,6 +87,7 @@ class OGMolecule : OGHideRequired {
         if self.lifeMax <= 0{
             
             self.mitosis()
+            self.spawnScoreNode()
             self.removeFromParent()
             return self.giveScore()
         }

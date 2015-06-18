@@ -21,6 +21,8 @@ class OGBackground : SKSpriteNode {
         self.anchorPoint = CGPoint(x: 0.5, y: 0.0)
         self.zPosition = -3
         
+        let rotate = SKAction.rotateByAngle(-1, duration: 60)
+        self.runAction(SKAction.repeatActionForever(rotate))
     }
 
     required init?(coder aDecoder: NSCoder) {

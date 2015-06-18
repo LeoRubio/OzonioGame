@@ -45,7 +45,7 @@ class OGOzone: OGMolecule {
         
         for(var i = 0; i < 15; i++){
             
-            let divideMolecule = OGNitric()
+            let divideMolecule = OGNitrous()
             
             //Se for a primeira molecula, cria pro lado oposto
 //            if i%2 == 0{
