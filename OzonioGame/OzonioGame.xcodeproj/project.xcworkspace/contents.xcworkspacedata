@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:OzonioGame.xcodeproj">
+      location = "self:/Users/victordsavariego/Desktop/Desktop/Apps Swift/OzonioGame/OzonioGame/OzonioGame.xcodeproj">
    </FileRef>
 </Workspace>

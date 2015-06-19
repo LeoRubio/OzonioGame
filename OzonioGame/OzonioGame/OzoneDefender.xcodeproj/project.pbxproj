@@ -1,0 +1,679 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		54383E2F1B2B504900CAD475 /* OGOzoneFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54383E2E1B2B504900CAD475 /* OGOzoneFactory.swift */; };
+		54383E311B33429E00CAD475 /* OGScorePoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54383E301B33429E00CAD475 /* OGScorePoints.swift */; };
+		549B573C1B178F8E00766AF7 /* OGCarbon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549B573B1B178F8E00766AF7 /* OGCarbon.swift */; };
+		549B573E1B1796AE00766AF7 /* OGHideRequired.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549B573D1B1796AE00766AF7 /* OGHideRequired.swift */; };
+		549B57401B1798EB00766AF7 /* OGNitrous.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549B573F1B1798EB00766AF7 /* OGNitrous.swift */; };
+		549B57431B179D9300766AF7 /* OGCarbonFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549B57421B179D9300766AF7 /* OGCarbonFactory.swift */; };
+		549B57461B17ACEE00766AF7 /* OGNitrousFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549B57451B17ACEE00766AF7 /* OGNitrousFactory.swift */; };
+		549B57491B17EDE700766AF7 /* OGNitric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549B57481B17EDE700766AF7 /* OGNitric.swift */; };
+		549B574B1B17EEFA00766AF7 /* OGNitricFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549B574A1B17EEFA00766AF7 /* OGNitricFactory.swift */; };
+		54B34B2F1B2A30E500BC8F3A /* OGOzone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B34B2E1B2A30E500BC8F3A /* OGOzone.swift */; };
+		A073E8FF1B179D4100286508 /* OGValueLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A073E8FE1B179D4100286508 /* OGValueLabel.swift */; };
+		E23B93DA1B1D5CD2001390EC /* OGAtmosphere.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23B93D91B1D5CD2001390EC /* OGAtmosphere.swift */; };
+		E23B93DC1B1D62CB001390EC /* OGForeground.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23B93DB1B1D62CB001390EC /* OGForeground.swift */; };
+		E23B93E41B1D72E7001390EC /* OGPlayPauseNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23B93E31B1D72E7001390EC /* OGPlayPauseNode.swift */; };
+		E23B93E81B1E3162001390EC /* OGOzonePart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23B93E71B1E3162001390EC /* OGOzonePart.swift */; };
+		E242CC401B150848000E5A1C /* OGFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242CC3F1B150847000E5A1C /* OGFactory.swift */; };
+		E242CC421B15085C000E5A1C /* OGMolecule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242CC411B15085C000E5A1C /* OGMolecule.swift */; };
+		E26209581B1397110033BC70 /* OGPlanet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26209571B1397110033BC70 /* OGPlanet.swift */; };
+		E28883101B0E4E4900FE0C8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E288830F1B0E4E4900FE0C8C /* AppDelegate.swift */; };
+		E28883141B0E4E4900FE0C8C /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28883131B0E4E4900FE0C8C /* GameScene.swift */; };
+		E28883161B0E4E4900FE0C8C /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28883151B0E4E4900FE0C8C /* GameViewController.swift */; };
+		E28883191B0E4E4900FE0C8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E28883171B0E4E4900FE0C8C /* Main.storyboard */; };
+		E288831B1B0E4E4900FE0C8C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E288831A1B0E4E4900FE0C8C /* Images.xcassets */; };
+		E288831E1B0E4E4900FE0C8C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E288831C1B0E4E4900FE0C8C /* LaunchScreen.xib */; };
+		E288832A1B0E4E4900FE0C8C /* OzonioGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28883291B0E4E4900FE0C8C /* OzonioGameTests.swift */; };
+		E29194F21B13A459005BB643 /* OGOzoneLayerGlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29194F11B13A459005BB643 /* OGOzoneLayerGlow.swift */; };
+		E29194F41B13A9F2005BB643 /* OGSun.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29194F31B13A9F2005BB643 /* OGSun.swift */; };
+		E29194F61B13BDCF005BB643 /* OGBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29194F51B13BDCF005BB643 /* OGBackground.swift */; };
+		E292BE501B1F76D5003175E8 /* OGYearStrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = E292BE4F1B1F76D5003175E8 /* OGYearStrip.swift */; };
+		E29DCEA21B2587DD005AC5AB /* ozoneImpact.sks in Resources */ = {isa = PBXBuildFile; fileRef = E29DCEA11B2587DD005AC5AB /* ozoneImpact.sks */; };
+		E29DCEA61B2596BB005AC5AB /* carbon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E29DCEA51B2596BB005AC5AB /* carbon@3x.png */; };
+		E2C7FE1A1B0FB169004E6A7E /* fireSun.sks in Resources */ = {isa = PBXBuildFile; fileRef = E2C7FE181B0FB169004E6A7E /* fireSun.sks */; };
+		E2C7FE1B1B0FB169004E6A7E /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = E2C7FE191B0FB169004E6A7E /* spark.png */; };
+		E2D599231B1E9714001D33C5 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D599221B1E9714001D33C5 /* MenuScene.swift */; };
+		E2D599261B1EBFF1001D33C5 /* EndScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D599251B1EBFF1001D33C5 /* EndScene.swift */; };
+		E2D599291B1EF172001D33C5 /* Plop.wav in Resources */ = {isa = PBXBuildFile; fileRef = E2D599281B1EF172001D33C5 /* Plop.wav */; };
+		E2D5992B1B1EF2ED001D33C5 /* gameOver.wav in Resources */ = {isa = PBXBuildFile; fileRef = E2D5992A1B1EF2ED001D33C5 /* gameOver.wav */; };
+		E2D5992D1B1EF35F001D33C5 /* begin.wav in Resources */ = {isa = PBXBuildFile; fileRef = E2D5992C1B1EF35F001D33C5 /* begin.wav */; };
+		E2D5992F1B1F00C4001D33C5 /* intro.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E2D5992E1B1F00C4001D33C5 /* intro.mp3 */; };
+		E2D599311B1F0289001D33C5 /* buttons.wav in Resources */ = {isa = PBXBuildFile; fileRef = E2D599301B1F0289001D33C5 /* buttons.wav */; };
+		E2D599351B1F04B8001D33C5 /* strange.wav in Resources */ = {isa = PBXBuildFile; fileRef = E2D599341B1F04B8001D33C5 /* strange.wav */; };
+		E2D599371B1F0528001D33C5 /* pngs.wav in Resources */ = {isa = PBXBuildFile; fileRef = E2D599361B1F0528001D33C5 /* pngs.wav */; };
+		E2D599391B1F05DF001D33C5 /* impact.wav in Resources */ = {isa = PBXBuildFile; fileRef = E2D599381B1F05DF001D33C5 /* impact.wav */; };
+		E2D5993B1B1F068C001D33C5 /* coracao.wav in Resources */ = {isa = PBXBuildFile; fileRef = E2D5993A1B1F068C001D33C5 /* coracao.wav */; };
+		E2D5993D1B1F075E001D33C5 /* gameOver2.wav in Resources */ = {isa = PBXBuildFile; fileRef = E2D5993C1B1F075E001D33C5 /* gameOver2.wav */; };
+		E2D5993F1B1F0795001D33C5 /* yoda.wav in Resources */ = {isa = PBXBuildFile; fileRef = E2D5993E1B1F0795001D33C5 /* yoda.wav */; };
+		E2E075641B30CE04008CDEA1 /* healerExplode.sks in Resources */ = {isa = PBXBuildFile; fileRef = E2E075631B30CE04008CDEA1 /* healerExplode.sks */; };
+		E2E372AE1B25686F004F6255 /* finalEffect.sks in Resources */ = {isa = PBXBuildFile; fileRef = E2E372AC1B25686F004F6255 /* finalEffect.sks */; };
+		E2E372B51B2568F2004F6255 /* smoke.sks in Resources */ = {isa = PBXBuildFile; fileRef = E2E372B41B2568F2004F6255 /* smoke.sks */; };
+		E2E372B91B25692A004F6255 /* explodeMolecule7.sks in Resources */ = {isa = PBXBuildFile; fileRef = E2E372B81B25692A004F6255 /* explodeMolecule7.sks */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E28883241B0E4E4900FE0C8C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E28883021B0E4E4900FE0C8C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E28883091B0E4E4900FE0C8C;
+			remoteInfo = OzonioGame;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		54383E2E1B2B504900CAD475 /* OGOzoneFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGOzoneFactory.swift; sourceTree = "<group>"; };
+		54383E301B33429E00CAD475 /* OGScorePoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGScorePoints.swift; sourceTree = "<group>"; };
+		549B573B1B178F8E00766AF7 /* OGCarbon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGCarbon.swift; sourceTree = "<group>"; };
+		549B573D1B1796AE00766AF7 /* OGHideRequired.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGHideRequired.swift; sourceTree = "<group>"; };
+		549B573F1B1798EB00766AF7 /* OGNitrous.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGNitrous.swift; sourceTree = "<group>"; };
+		549B57421B179D9300766AF7 /* OGCarbonFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGCarbonFactory.swift; sourceTree = "<group>"; };
+		549B57451B17ACEE00766AF7 /* OGNitrousFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGNitrousFactory.swift; sourceTree = "<group>"; };
+		549B57481B17EDE700766AF7 /* OGNitric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGNitric.swift; sourceTree = "<group>"; };
+		549B574A1B17EEFA00766AF7 /* OGNitricFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGNitricFactory.swift; sourceTree = "<group>"; };
+		54B34B2E1B2A30E500BC8F3A /* OGOzone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGOzone.swift; sourceTree = "<group>"; };
+		A073E8FE1B179D4100286508 /* OGValueLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGValueLabel.swift; sourceTree = "<group>"; };
+		E23B93D91B1D5CD2001390EC /* OGAtmosphere.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGAtmosphere.swift; sourceTree = "<group>"; };
+		E23B93DB1B1D62CB001390EC /* OGForeground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGForeground.swift; sourceTree = "<group>"; };
+		E23B93E31B1D72E7001390EC /* OGPlayPauseNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGPlayPauseNode.swift; sourceTree = "<group>"; };
+		E23B93E71B1E3162001390EC /* OGOzonePart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGOzonePart.swift; sourceTree = "<group>"; };
+		E242CC3F1B150847000E5A1C /* OGFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGFactory.swift; sourceTree = "<group>"; };
+		E242CC411B15085C000E5A1C /* OGMolecule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGMolecule.swift; sourceTree = "<group>"; };
+		E26209571B1397110033BC70 /* OGPlanet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGPlanet.swift; sourceTree = "<group>"; };
+		E288830A1B0E4E4900FE0C8C /* OzonioGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OzonioGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E288830E1B0E4E4900FE0C8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E288830F1B0E4E4900FE0C8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E28883131B0E4E4900FE0C8C /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		E28883151B0E4E4900FE0C8C /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		E28883181B0E4E4900FE0C8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E288831A1B0E4E4900FE0C8C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E288831D1B0E4E4900FE0C8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		E28883231B0E4E4900FE0C8C /* OzonioGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OzonioGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E28883281B0E4E4900FE0C8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E28883291B0E4E4900FE0C8C /* OzonioGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OzonioGameTests.swift; sourceTree = "<group>"; };
+		E29194F11B13A459005BB643 /* OGOzoneLayerGlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGOzoneLayerGlow.swift; sourceTree = "<group>"; };
+		E29194F31B13A9F2005BB643 /* OGSun.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGSun.swift; sourceTree = "<group>"; };
+		E29194F51B13BDCF005BB643 /* OGBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGBackground.swift; sourceTree = "<group>"; };
+		E292BE4F1B1F76D5003175E8 /* OGYearStrip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGYearStrip.swift; sourceTree = "<group>"; };
+		E29DCEA11B2587DD005AC5AB /* ozoneImpact.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ozoneImpact.sks; sourceTree = "<group>"; };
+		E29DCEA51B2596BB005AC5AB /* carbon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "carbon@3x.png"; path = "../../ImagesOzonioGame/Imgs/UsadosAtuais/carbon@3x.png"; sourceTree = "<group>"; };
+		E2C7FE181B0FB169004E6A7E /* fireSun.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = fireSun.sks; sourceTree = "<group>"; };
+		E2C7FE191B0FB169004E6A7E /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		E2D599221B1E9714001D33C5 /* MenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
+		E2D599251B1EBFF1001D33C5 /* EndScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndScene.swift; sourceTree = "<group>"; };
+		E2D599281B1EF172001D33C5 /* Plop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Plop.wav; sourceTree = "<group>"; };
+		E2D5992A1B1EF2ED001D33C5 /* gameOver.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = gameOver.wav; sourceTree = "<group>"; };
+		E2D5992C1B1EF35F001D33C5 /* begin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = begin.wav; sourceTree = "<group>"; };
+		E2D5992E1B1F00C4001D33C5 /* intro.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = intro.mp3; sourceTree = "<group>"; };
+		E2D599301B1F0289001D33C5 /* buttons.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = buttons.wav; sourceTree = "<group>"; };
+		E2D599341B1F04B8001D33C5 /* strange.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = strange.wav; sourceTree = "<group>"; };
+		E2D599361B1F0528001D33C5 /* pngs.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = pngs.wav; sourceTree = "<group>"; };
+		E2D599381B1F05DF001D33C5 /* impact.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = impact.wav; sourceTree = "<group>"; };
+		E2D5993A1B1F068C001D33C5 /* coracao.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = coracao.wav; sourceTree = "<group>"; };
+		E2D5993C1B1F075E001D33C5 /* gameOver2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = gameOver2.wav; sourceTree = "<group>"; };
+		E2D5993E1B1F0795001D33C5 /* yoda.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = yoda.wav; sourceTree = "<group>"; };
+		E2E075631B30CE04008CDEA1 /* healerExplode.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = healerExplode.sks; sourceTree = "<group>"; };
+		E2E372AC1B25686F004F6255 /* finalEffect.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = finalEffect.sks; sourceTree = "<group>"; };
+		E2E372B41B2568F2004F6255 /* smoke.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = smoke.sks; sourceTree = "<group>"; };
+		E2E372B81B25692A004F6255 /* explodeMolecule7.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = explodeMolecule7.sks; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E28883071B0E4E4900FE0C8C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E28883201B0E4E4900FE0C8C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		549B57411B1799AC00766AF7 /* Molecule */ = {
+			isa = PBXGroup;
+			children = (
+				E242CC411B15085C000E5A1C /* OGMolecule.swift */,
+				54B34B2E1B2A30E500BC8F3A /* OGOzone.swift */,
+				549B573B1B178F8E00766AF7 /* OGCarbon.swift */,
+				549B573F1B1798EB00766AF7 /* OGNitrous.swift */,
+				549B57481B17EDE700766AF7 /* OGNitric.swift */,
+			);
+			name = Molecule;
+			sourceTree = "<group>";
+		};
+		549B57471B17AD5200766AF7 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				E242CC3F1B150847000E5A1C /* OGFactory.swift */,
+				54383E2E1B2B504900CAD475 /* OGOzoneFactory.swift */,
+				549B57421B179D9300766AF7 /* OGCarbonFactory.swift */,
+				549B57451B17ACEE00766AF7 /* OGNitrousFactory.swift */,
+				549B574A1B17EEFA00766AF7 /* OGNitricFactory.swift */,
+			);
+			name = Factory;
+			sourceTree = "<group>";
+		};
+		E23B93DF1B1D6CEB001390EC /* Foreground */ = {
+			isa = PBXGroup;
+			children = (
+				A073E8FE1B179D4100286508 /* OGValueLabel.swift */,
+				E292BE4F1B1F76D5003175E8 /* OGYearStrip.swift */,
+				E23B93DB1B1D62CB001390EC /* OGForeground.swift */,
+				E23B93E31B1D72E7001390EC /* OGPlayPauseNode.swift */,
+				54383E301B33429E00CAD475 /* OGScorePoints.swift */,
+			);
+			name = Foreground;
+			sourceTree = "<group>";
+		};
+		E23B93E01B1D6F23001390EC /* Planet */ = {
+			isa = PBXGroup;
+			children = (
+				E26209571B1397110033BC70 /* OGPlanet.swift */,
+				E23B93D91B1D5CD2001390EC /* OGAtmosphere.swift */,
+				E29194F11B13A459005BB643 /* OGOzoneLayerGlow.swift */,
+				E23B93E71B1E3162001390EC /* OGOzonePart.swift */,
+			);
+			name = Planet;
+			sourceTree = "<group>";
+		};
+		E28883011B0E4E4900FE0C8C = {
+			isa = PBXGroup;
+			children = (
+				E288830C1B0E4E4900FE0C8C /* OzonioGame */,
+				E28883261B0E4E4900FE0C8C /* OzonioGameTests */,
+				E288830B1B0E4E4900FE0C8C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E288830B1B0E4E4900FE0C8C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E288830A1B0E4E4900FE0C8C /* OzonioGame.app */,
+				E28883231B0E4E4900FE0C8C /* OzonioGameTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E288830C1B0E4E4900FE0C8C /* OzonioGame */ = {
+			isa = PBXGroup;
+			children = (
+				E2D599271B1EF151001D33C5 /* Audio */,
+				E29194F81B13C1FA005BB643 /* GameControl */,
+				E29194F71B13C1C0005BB643 /* OGClasses */,
+				E29194F91B13C220005BB643 /* Particulas */,
+				E288831A1B0E4E4900FE0C8C /* Images.xcassets */,
+				E288830D1B0E4E4900FE0C8C /* Supporting Files */,
+			);
+			path = OzonioGame;
+			sourceTree = "<group>";
+		};
+		E288830D1B0E4E4900FE0C8C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E288830E1B0E4E4900FE0C8C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E28883261B0E4E4900FE0C8C /* OzonioGameTests */ = {
+			isa = PBXGroup;
+			children = (
+				E28883291B0E4E4900FE0C8C /* OzonioGameTests.swift */,
+				E28883271B0E4E4900FE0C8C /* Supporting Files */,
+			);
+			path = OzonioGameTests;
+			sourceTree = "<group>";
+		};
+		E28883271B0E4E4900FE0C8C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E28883281B0E4E4900FE0C8C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E29194F71B13C1C0005BB643 /* OGClasses */ = {
+			isa = PBXGroup;
+			children = (
+				549B573D1B1796AE00766AF7 /* OGHideRequired.swift */,
+				E29194F51B13BDCF005BB643 /* OGBackground.swift */,
+				E29194F31B13A9F2005BB643 /* OGSun.swift */,
+				E23B93DF1B1D6CEB001390EC /* Foreground */,
+				E23B93E01B1D6F23001390EC /* Planet */,
+				549B57471B17AD5200766AF7 /* Factory */,
+				549B57411B1799AC00766AF7 /* Molecule */,
+			);
+			name = OGClasses;
+			sourceTree = "<group>";
+		};
+		E29194F81B13C1FA005BB643 /* GameControl */ = {
+			isa = PBXGroup;
+			children = (
+				E28883171B0E4E4900FE0C8C /* Main.storyboard */,
+				E288831C1B0E4E4900FE0C8C /* LaunchScreen.xib */,
+				E288830F1B0E4E4900FE0C8C /* AppDelegate.swift */,
+				E2D599241B1EACA0001D33C5 /* Scenes */,
+			);
+			name = GameControl;
+			sourceTree = "<group>";
+		};
+		E29194F91B13C220005BB643 /* Particulas */ = {
+			isa = PBXGroup;
+			children = (
+				E2C7FE181B0FB169004E6A7E /* fireSun.sks */,
+				E2E372B81B25692A004F6255 /* explodeMolecule7.sks */,
+				E2E372B41B2568F2004F6255 /* smoke.sks */,
+				E29DCEA11B2587DD005AC5AB /* ozoneImpact.sks */,
+				E2E075631B30CE04008CDEA1 /* healerExplode.sks */,
+				E2E372AC1B25686F004F6255 /* finalEffect.sks */,
+				E2C7FE191B0FB169004E6A7E /* spark.png */,
+				E29DCEA51B2596BB005AC5AB /* carbon@3x.png */,
+			);
+			name = Particulas;
+			sourceTree = "<group>";
+		};
+		E2D599241B1EACA0001D33C5 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				E28883151B0E4E4900FE0C8C /* GameViewController.swift */,
+				E2D599221B1E9714001D33C5 /* MenuScene.swift */,
+				E28883131B0E4E4900FE0C8C /* GameScene.swift */,
+				E2D599251B1EBFF1001D33C5 /* EndScene.swift */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		E2D599271B1EF151001D33C5 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				E2D5992E1B1F00C4001D33C5 /* intro.mp3 */,
+				E2D599281B1EF172001D33C5 /* Plop.wav */,
+				E2D5992A1B1EF2ED001D33C5 /* gameOver.wav */,
+				E2D5992C1B1EF35F001D33C5 /* begin.wav */,
+				E2D599301B1F0289001D33C5 /* buttons.wav */,
+				E2D599341B1F04B8001D33C5 /* strange.wav */,
+				E2D599361B1F0528001D33C5 /* pngs.wav */,
+				E2D599381B1F05DF001D33C5 /* impact.wav */,
+				E2D5993A1B1F068C001D33C5 /* coracao.wav */,
+				E2D5993C1B1F075E001D33C5 /* gameOver2.wav */,
+				E2D5993E1B1F0795001D33C5 /* yoda.wav */,
+			);
+			name = Audio;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E28883091B0E4E4900FE0C8C /* OzonioGame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E288832D1B0E4E4900FE0C8C /* Build configuration list for PBXNativeTarget "OzonioGame" */;
+			buildPhases = (
+				E28883061B0E4E4900FE0C8C /* Sources */,
+				E28883071B0E4E4900FE0C8C /* Frameworks */,
+				E28883081B0E4E4900FE0C8C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OzonioGame;
+			productName = OzonioGame;
+			productReference = E288830A1B0E4E4900FE0C8C /* OzonioGame.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E28883221B0E4E4900FE0C8C /* OzonioGameTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E28883301B0E4E4900FE0C8C /* Build configuration list for PBXNativeTarget "OzonioGameTests" */;
+			buildPhases = (
+				E288831F1B0E4E4900FE0C8C /* Sources */,
+				E28883201B0E4E4900FE0C8C /* Frameworks */,
+				E28883211B0E4E4900FE0C8C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E28883251B0E4E4900FE0C8C /* PBXTargetDependency */,
+			);
+			name = OzonioGameTests;
+			productName = OzonioGameTests;
+			productReference = E28883231B0E4E4900FE0C8C /* OzonioGameTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E28883021B0E4E4900FE0C8C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = OzoneTeam;
+				TargetAttributes = {
+					E28883091B0E4E4900FE0C8C = {
+						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = ECD4M22565;
+					};
+					E28883221B0E4E4900FE0C8C = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = E28883091B0E4E4900FE0C8C;
+					};
+				};
+			};
+			buildConfigurationList = E28883051B0E4E4900FE0C8C /* Build configuration list for PBXProject "OzoneDefender" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E28883011B0E4E4900FE0C8C;
+			productRefGroup = E288830B1B0E4E4900FE0C8C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E28883091B0E4E4900FE0C8C /* OzonioGame */,
+				E28883221B0E4E4900FE0C8C /* OzonioGameTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E28883081B0E4E4900FE0C8C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2D5993D1B1F075E001D33C5 /* gameOver2.wav in Resources */,
+				E2E372B91B25692A004F6255 /* explodeMolecule7.sks in Resources */,
+				E2D5993F1B1F0795001D33C5 /* yoda.wav in Resources */,
+				E2D599371B1F0528001D33C5 /* pngs.wav in Resources */,
+				E2E075641B30CE04008CDEA1 /* healerExplode.sks in Resources */,
+				E29DCEA61B2596BB005AC5AB /* carbon@3x.png in Resources */,
+				E2D599391B1F05DF001D33C5 /* impact.wav in Resources */,
+				E2E372AE1B25686F004F6255 /* finalEffect.sks in Resources */,
+				E2D599311B1F0289001D33C5 /* buttons.wav in Resources */,
+				E2E372B51B2568F2004F6255 /* smoke.sks in Resources */,
+				E2D599351B1F04B8001D33C5 /* strange.wav in Resources */,
+				E2C7FE1B1B0FB169004E6A7E /* spark.png in Resources */,
+				E2D5992D1B1EF35F001D33C5 /* begin.wav in Resources */,
+				E29DCEA21B2587DD005AC5AB /* ozoneImpact.sks in Resources */,
+				E2D599291B1EF172001D33C5 /* Plop.wav in Resources */,
+				E2D5993B1B1F068C001D33C5 /* coracao.wav in Resources */,
+				E288831E1B0E4E4900FE0C8C /* LaunchScreen.xib in Resources */,
+				E2D5992B1B1EF2ED001D33C5 /* gameOver.wav in Resources */,
+				E288831B1B0E4E4900FE0C8C /* Images.xcassets in Resources */,
+				E2C7FE1A1B0FB169004E6A7E /* fireSun.sks in Resources */,
+				E28883191B0E4E4900FE0C8C /* Main.storyboard in Resources */,
+				E2D5992F1B1F00C4001D33C5 /* intro.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E28883211B0E4E4900FE0C8C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E28883061B0E4E4900FE0C8C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54383E2F1B2B504900CAD475 /* OGOzoneFactory.swift in Sources */,
+				549B57401B1798EB00766AF7 /* OGNitrous.swift in Sources */,
+				E23B93DA1B1D5CD2001390EC /* OGAtmosphere.swift in Sources */,
+				549B57431B179D9300766AF7 /* OGCarbonFactory.swift in Sources */,
+				E242CC401B150848000E5A1C /* OGFactory.swift in Sources */,
+				E29194F61B13BDCF005BB643 /* OGBackground.swift in Sources */,
+				E292BE501B1F76D5003175E8 /* OGYearStrip.swift in Sources */,
+				E29194F41B13A9F2005BB643 /* OGSun.swift in Sources */,
+				E29194F21B13A459005BB643 /* OGOzoneLayerGlow.swift in Sources */,
+				E242CC421B15085C000E5A1C /* OGMolecule.swift in Sources */,
+				E2D599261B1EBFF1001D33C5 /* EndScene.swift in Sources */,
+				54B34B2F1B2A30E500BC8F3A /* OGOzone.swift in Sources */,
+				E23B93E41B1D72E7001390EC /* OGPlayPauseNode.swift in Sources */,
+				E28883141B0E4E4900FE0C8C /* GameScene.swift in Sources */,
+				54383E311B33429E00CAD475 /* OGScorePoints.swift in Sources */,
+				549B57491B17EDE700766AF7 /* OGNitric.swift in Sources */,
+				E23B93E81B1E3162001390EC /* OGOzonePart.swift in Sources */,
+				549B57461B17ACEE00766AF7 /* OGNitrousFactory.swift in Sources */,
+				A073E8FF1B179D4100286508 /* OGValueLabel.swift in Sources */,
+				549B573C1B178F8E00766AF7 /* OGCarbon.swift in Sources */,
+				E28883161B0E4E4900FE0C8C /* GameViewController.swift in Sources */,
+				549B573E1B1796AE00766AF7 /* OGHideRequired.swift in Sources */,
+				E23B93DC1B1D62CB001390EC /* OGForeground.swift in Sources */,
+				E28883101B0E4E4900FE0C8C /* AppDelegate.swift in Sources */,
+				E2D599231B1E9714001D33C5 /* MenuScene.swift in Sources */,
+				549B574B1B17EEFA00766AF7 /* OGNitricFactory.swift in Sources */,
+				E26209581B1397110033BC70 /* OGPlanet.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E288831F1B0E4E4900FE0C8C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E288832A1B0E4E4900FE0C8C /* OzonioGameTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E28883251B0E4E4900FE0C8C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E28883091B0E4E4900FE0C8C /* OzonioGame */;
+			targetProxy = E28883241B0E4E4900FE0C8C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E28883171B0E4E4900FE0C8C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E28883181B0E4E4900FE0C8C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E288831C1B0E4E4900FE0C8C /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E288831D1B0E4E4900FE0C8C /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E288832B1B0E4E4900FE0C8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E288832C1B0E4E4900FE0C8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E288832E1B0E4E4900FE0C8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = OzonioGame/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		E288832F1B0E4E4900FE0C8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = OzonioGame/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+		E28883311B0E4E4900FE0C8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = OzonioGameTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OzonioGame.app/OzonioGame";
+			};
+			name = Debug;
+		};
+		E28883321B0E4E4900FE0C8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = OzonioGameTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OzonioGame.app/OzonioGame";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E28883051B0E4E4900FE0C8C /* Build configuration list for PBXProject "OzoneDefender" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E288832B1B0E4E4900FE0C8C /* Debug */,
+				E288832C1B0E4E4900FE0C8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E288832D1B0E4E4900FE0C8C /* Build configuration list for PBXNativeTarget "OzonioGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E288832E1B0E4E4900FE0C8C /* Debug */,
+				E288832F1B0E4E4900FE0C8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E28883301B0E4E4900FE0C8C /* Build configuration list for PBXNativeTarget "OzonioGameTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E28883311B0E4E4900FE0C8C /* Debug */,
+				E28883321B0E4E4900FE0C8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E28883021B0E4E4900FE0C8C /* Project object */;
+}
